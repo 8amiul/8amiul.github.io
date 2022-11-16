@@ -1,3 +1,4 @@
 User-agent: *
+Disallow:
 Allow: /
 Sitemap: https://8amiul.xyz/sitemap.xml
