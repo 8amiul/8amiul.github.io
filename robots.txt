@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://8amiul.xyz/sitemap.xml
+Sitemap: https://8amiul.github.io/sitemap.xml
