@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MyWebsite</title>
+    <link>/</link>
+    <description>Recent content on MyWebsite</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jan 2025 19:49:38 +0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First meal of 2025</title>
+      <link>/posts/first_meal_2025/</link>
+      <pubDate>Wed, 01 Jan 2025 19:49:38 +0600</pubDate>
+      
+      <guid>/posts/first_meal_2025/</guid>
+      <description>I just cooked my first meal of this year. So it&amp;rsquo;s a new year and Today I woke up early.
+I just thought it&amp;rsquo;s better I try something new today. So why don&amp;rsquo;t I make my own breakfast?
+Noodles was the only food I knew how to cook. So I started cooking. I took noodles, then egg and some veggies (actually left over salad from yesterday&amp;rsquo;s party).
+However it wasn&amp;rsquo;t cooked properly.</description>
+    </item>
+    
+    <item>
+      <title>Goodlock</title>
+      <link>/posts/goodlock/</link>
+      <pubDate>Tue, 04 Jul 2023 14:14:53 +0600</pubDate>
+      
+      <guid>/posts/goodlock/</guid>
+      <description>My phone has One Ui 4.1 core. Which is crap! None of the GoodLock modules are supported on my phone. But with some tweaking we can achieve this feature. But the phone has to be rooted.
+Our First aim is to download the patched version of GoodLock.
+Then we have to disable the apk signature verification check. Why do we need that? Just because those apk doesn&amp;rsquo;t come with any signature.</description>
+    </item>
+    
+  </channel>
+</rss>

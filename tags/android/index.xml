@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on MyWebsite</title>
+    <link>/tags/android/</link>
+    <description>Recent content in Android on MyWebsite</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Jul 2023 14:14:53 +0600</lastBuildDate><atom:link href="/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Goodlock</title>
+      <link>/posts/goodlock/</link>
+      <pubDate>Tue, 04 Jul 2023 14:14:53 +0600</pubDate>
+      
+      <guid>/posts/goodlock/</guid>
+      <description>My phone has One Ui 4.1 core. Which is crap! None of the GoodLock modules are supported on my phone. But with some tweaking we can achieve this feature. But the phone has to be rooted.
+Our First aim is to download the patched version of GoodLock.
+Then we have to disable the apk signature verification check. Why do we need that? Just because those apk doesn&amp;rsquo;t come with any signature.</description>
+    </item>
+    
+  </channel>
+</rss>

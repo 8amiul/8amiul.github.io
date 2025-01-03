@@ -1,0 +1,87 @@
+.blogs-list {
+    list-style: none;
+    margin: 0 20vw;
+    color: #D8C4B6;
+}
+
+.list-item {
+    margin: 1rem 0 2rem 1rem;
+}
+
+
+.blog-description {
+    margin: 1rem 0;
+}
+
+.blog-title {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #E3F0AF;
+}
+
+.blog-date {
+    color: #D8C4B6;
+}
+
+.blog-tag {
+    color: #FF9494;
+
+}
+
+.blog-summary {
+    margin: 1rem 0 1rem 0.5rem;
+    color: #FFF8E6;
+}
+
+
+/*      blog-post       */
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 10vw;
+}
+
+.blog-post-info {
+    align-self: flex-start;
+    margin: 0 1rem;
+}
+
+.post-title {
+    font-style: italic;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.post-content {
+    font-size: 1rem;
+    margin: 1rem 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-content p {
+    margin: 0.5rem 1rem 1rem 1rem;
+}
+
+.post-content a {
+    color: #FF9494;
+}
+
+.post-content img {
+    max-width: 50%;
+    align-self: center;
+}
+
+/*      Weird Shit Below    */
+.post-content li,
+.post-content ul{
+    margin: 0 1rem;
+}
+
+.post-content ol{
+    margin: 0 2rem;
+}
+
