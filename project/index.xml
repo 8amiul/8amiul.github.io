@@ -18,10 +18,10 @@ Files: main.c : initialize libraries and functions are called termus.c: Manage k
     
     <item>
       <title>Thedailystar-CLI</title>
-      <link>/project/thedailystar-cli/</link>
+      <link>/project/thedailystar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/project/thedailystar-cli/</guid>
+      <guid>/project/thedailystar/</guid>
       <description>https://github.com/8amiul/Thedailystar-CLI Video Demo: https://youtu.be/5Tp4xeqNLEc Description Thedailystar-CLI is a terminal based program written in python for CS50&amp;rsquo;s Introduction to Programming with Python. This program does scrape news from The Daily Star
 Files project.py: The main program. test_project.py: To test project.py using pytest. Used Libraries BeautifulSoup4: For scraping data from The Daily Star. curses: For handling keyboard input and user interface. requests: For sending HTTP requests. pytest: For testing functions built in program About Functions def menu(stdscr, test_= None): This function shows the start menu.</description>
     </item>
