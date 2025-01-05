@@ -32,7 +32,7 @@ body {
 }
 
 .navbar {
-    background-color: #cfb49e;
+    background-color: #ECB176;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,16 +124,12 @@ body {
 
 #content {
     flex: 1;
-    background-color: #0f1920;
+    background-color: #171010;
 }
-
-
-
-
 
 /*      Footer      */
 #footer {
-    background-color: #5c5a5bd0;
+    background-color: #ECB176;
     padding: 1rem;
 }
 
@@ -144,18 +140,13 @@ body {
 }
 
 #footer footer a {
-    color: #EEEEEE;
+    color: #000000;
     padding: 0 1rem;
 }
 
 #footer footer a span {
-    color: #FF9494;
+    color: #000000;
 }
-
-
-
-
-
 
 /*      Mobile Device   */
 
@@ -181,4 +172,3 @@ body {
         margin: 0 1rem !important;
     }
 }
-

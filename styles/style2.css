@@ -75,7 +75,22 @@
     align-self: center;
 }
 
+.project-cover {
+    max-width: 100%;
+    max-height: 360px;
+    display: block;
+}
+
+.project-cover:hover {
+    max-width: 100%;
+    max-height: 360px;
+    display: block;
+    border: 1px solid #D8C4B6;
+}
+
+
 /*      Weird Shit Below    */
+/* for some reason ul and ol doesn't have the same padding and margin*/
 .post-content li,
 .post-content ul{
     margin: 0 1rem;

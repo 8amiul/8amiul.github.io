@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head>
+      <meta charset="utf-8">
+      <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/styles/style.css">
+      <link rel="stylesheet" type="text/css" href="/styles/style2.css">
+      
+        <title>Thedailystar-CLI | 8amiul&#39;s Webpage</title>
+      
+</head>
+<body>
+	<div id="header"><nav class="navbar">
+	<span class="header-title">8amiul</span>
+	<ul class="link-list">
+		<li class="link"><a href="/">Home</a></li>
+		<li class="link"><a href="/posts">Posts</a></li>
+		<li class="link"><a href="/tags">Tags</a></li>
+		<li class="link"><a href="/project">Projects</a></li>
+	</ul>
+</nav> 
+</div>
+
+	<div id="content">
+	
+<div class="blog-post">
+	
+	<div class="blog-post-info">
+		<h2	class="post-title">Thedailystar-CLI</h2>
+		
+
+		
+	</div>
+
+	<div class="post-content"><h1 id="httpsgithubcom8amiulthedailystar-cli"><a href="https://github.com/8amiul/Thedailystar-CLI">https://github.com/8amiul/Thedailystar-CLI</a></h1>
+<h4 id="video-demo-httpsyoutube5tp4xeqnlec">Video Demo: <a href="https://youtu.be/5Tp4xeqNLEc">https://youtu.be/5Tp4xeqNLEc</a></h4>
+<h2 id="description">Description</h2>
+<p>Thedailystar-CLI is a terminal based program written in python for CS50&rsquo;s Introduction to Programming with Python. This program does scrape news from <a href="https://www.thedailystar.net/">The Daily Star</a></p>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>project.py</code>: The main program.</li>
+<li><code>test_project.py</code>: To test <code>project.py</code> using pytest.</li>
+</ul>
+<h2 id="used-libraries">Used Libraries</h2>
+<ul>
+<li><code>BeautifulSoup4</code>: For scraping data from <a href="https://www.thedailystar.net/">The Daily Star</a>.</li>
+<li><code>curses</code>: For handling keyboard input and user interface.</li>
+<li><code> requests</code>: For sending HTTP requests.</li>
+<li><code>pytest</code>:  For testing functions built in program</li>
+</ul>
+<h2 id="about-functions">About Functions</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">menu</span>(stdscr, test_<span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>):
+</span></span></code></pre></div><p>This function shows the start menu. It does have 2 options, News and Exit.</p>
+<ul>
+<li><code>stdscr</code>: Is the curses window. Which is initialized in the main function.</li>
+<li><code>test_</code>: Is used for unit testing.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span>  <span style="color:#a6e22e">get_news_lines</span>():
+</span></span></code></pre></div><p>This function scrapes latest news from <a href="https://www.thedailystar.net/todays-news">Latest News</a> and return the headlines including links in a dictionary.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span>  <span style="color:#a6e22e">select_news</span>(scr,news_data: dict, test_<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span></code></pre></div><p>This function allows a user to choose a news.  It returns the selected news and total displayed lines.</p>
+<ul>
+<li><code>scr</code>: Is the screen window.</li>
+<li><code> news_data</code>:  Is the returned list from <code>get_news_lines(args)</code> function.</li>
+<li><code>test_</code>: For unit testing</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span>  <span style="color:#a6e22e">get_news</span>(news_dict: dict, news_lines_list: list, selected_news: int):
+</span></span></code></pre></div><p>This function get the link and scrape the news paragraph from the website. and separate the headline and put all the news paragraph lines into a list. It returns headline as string and news paragraph as list.</p>
+<ul>
+<li>news_dict: It grabs the titles and links as news_dict which is a returned value of <code>get_news_lines(args)</code></li>
+<li>news_lines_list: The total displayed lines.</li>
+<li>selected_news: It returns the position of selected line. Which needs to used in news_lines_list to get the expected news.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span>  <span style="color:#a6e22e">show_news</span>(scr, hl: str, n_p: list, test_<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span></code></pre></div><p>This function is responsible for showing the whole news paragraph including title on top. It doesn&rsquo;t return anything.</p>
+<ul>
+<li><code>hl</code>: Is the headline which is from <code>get_news(args)</code> function.</li>
+<li>n_p : Is the news paragraph as a list from <code>get_news(args)</code> function.</li>
+</ul>
+<h2 id="how-the-program-works">How the program works?</h2>
+<p>At first the main function will sequentially call other functions. Inside the main function it will call <code>menu(args)</code> where selection between menu or exit will be returned. If returned value is news then <code>get_news_lines(args)</code>  will be called and from <a href="https://www.thedailystar.net/todays-news">Latest News</a> all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through <code>get_news(args)</code> and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally <code>show_news(args)</code> will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().</p>
+</div>
+</div>
+
+	</div>
+
+	<div id="footer"><footer>
+    <a href="mailto:8amiul@gmail.com">emailMe => <span>8amiul@gmail.com</span></a>
+    <a href="https://t.me/iam84wivel">textMe => <span>@iam84wivel</span></a>
+</footer>
+</div>
+  </body>
+</html>

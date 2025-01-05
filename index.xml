@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MyWebsite</title>
+    <title>8amiul&#39;s Webpage</title>
     <link>/</link>
-    <description>Recent content on MyWebsite</description>
+    <description>Recent content on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Jan 2025 19:49:38 +0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Termus</title>
+      <link>/project/termus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/project/termus/</guid>
+      <description>https://github.com/8amiul/termus Video Demo: https://youtu.be/GzHTSfeRQZU Description: Termus is a terminal based music player written in C using SDL_mixer and ncurses library.
+Files: main.c : initialize libraries and functions are called termus.c: Manage keystrokes, free up memory and helping functions file.c : Manages directories, scan music and prepares music files for playing video.c : Functions regarding displaying windows and playing music termes.h: A header file containing functon declaration and structs Used Libraries SDL2 &amp;amp; SDL2_mixer: SDL2_mixer is used for audio and music management ncurses: For displaying windows and text Functions termus.</description>
+    </item>
+    
+    <item>
+      <title>Thedailystar-CLI</title>
+      <link>/project/thedailystar-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/project/thedailystar-cli/</guid>
+      <description>https://github.com/8amiul/Thedailystar-CLI Video Demo: https://youtu.be/5Tp4xeqNLEc Description Thedailystar-CLI is a terminal based program written in python for CS50&amp;rsquo;s Introduction to Programming with Python. This program does scrape news from The Daily Star
+Files project.py: The main program. test_project.py: To test project.py using pytest. Used Libraries BeautifulSoup4: For scraping data from The Daily Star. curses: For handling keyboard input and user interface. requests: For sending HTTP requests. pytest: For testing functions built in program About Functions def menu(stdscr, test_= None): This function shows the start menu.</description>
+    </item>
+    
     <item>
       <title>First meal of 2025</title>
       <link>/posts/first_meal_2025/</link>
