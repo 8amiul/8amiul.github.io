@@ -2,21 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>daily-things on 8amiul&#39;s Webpage</title>
-    <link>/tags/daily-things/</link>
+    <link>https://8amiul.github.io/tags/daily-things/</link>
     <description>Recent content in daily-things on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2025 19:49:38 +0600</lastBuildDate><atom:link href="/tags/daily-things/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jan 2025 19:49:38 +0600</lastBuildDate>
+    
+	<atom:link href="https://8amiul.github.io/tags/daily-things/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>First meal of 2025</title>
-      <link>/posts/first_meal_2025/</link>
+      <link>https://8amiul.github.io/posts/first_meal_2025/</link>
       <pubDate>Wed, 01 Jan 2025 19:49:38 +0600</pubDate>
       
-      <guid>/posts/first_meal_2025/</guid>
-      <description>I just cooked my first meal of this year. So it&amp;rsquo;s a new year and Today I woke up early.
-I just thought it&amp;rsquo;s better I try something new today. So why don&amp;rsquo;t I make my own breakfast?
-Noodles was the only food I knew how to cook. So I started cooking. I took noodles, then egg and some veggies (actually left over salad from yesterday&amp;rsquo;s party).
-However it wasn&amp;rsquo;t cooked properly.</description>
+      <guid>https://8amiul.github.io/posts/first_meal_2025/</guid>
+      <description>&lt;p&gt;I just cooked my first meal of this year. So it&amp;rsquo;s a new year and Today I woke up early.&lt;/p&gt;
+&lt;p&gt;I just thought it&amp;rsquo;s better I try something new today. So why don&amp;rsquo;t I make my own breakfast?&lt;/p&gt;
+&lt;p&gt;Noodles was the only food I knew how to cook. So I started cooking. I took  noodles, then egg and some veggies (actually left over salad from yesterday&amp;rsquo;s party).&lt;/p&gt;
+&lt;p&gt;However it wasn&amp;rsquo;t cooked properly. But still it looked so good. But as I didn&amp;rsquo;t put salt or any other spices, it tasted&amp;hellip; okay. Not the best but one who starving will obviously eat.&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://8amiul.github.io/images/noodles.jpg&#34; alt=&#34;[Noodles Image]&#34; title=&#34;Nooooodles&#34;&gt;
+
+&lt;p&gt;I found it looking good. I wish I could make it more tasty. But I&amp;rsquo;ll try to make it any other day. Making my own breakfast was fun. But time consuming. It gives pleasure. We should try making our own food. Getting up early may also be another reason that made cooking breakfast so fun. The morning light and air is so so pure and refreshing. For me winter morning is the best!&lt;/p&gt;
+</description> 
     </item>
     
   </channel>

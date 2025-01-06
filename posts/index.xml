@@ -2,32 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 8amiul&#39;s Webpage</title>
-    <link>/posts/</link>
+    <link>https://8amiul.github.io/posts/</link>
     <description>Recent content in Posts on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2025 19:49:38 +0600</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jan 2025 19:49:38 +0600</lastBuildDate>
+    
+	<atom:link href="https://8amiul.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>First meal of 2025</title>
-      <link>/posts/first_meal_2025/</link>
+      <link>https://8amiul.github.io/posts/first_meal_2025/</link>
       <pubDate>Wed, 01 Jan 2025 19:49:38 +0600</pubDate>
       
-      <guid>/posts/first_meal_2025/</guid>
-      <description>I just cooked my first meal of this year. So it&amp;rsquo;s a new year and Today I woke up early.
-I just thought it&amp;rsquo;s better I try something new today. So why don&amp;rsquo;t I make my own breakfast?
-Noodles was the only food I knew how to cook. So I started cooking. I took noodles, then egg and some veggies (actually left over salad from yesterday&amp;rsquo;s party).
-However it wasn&amp;rsquo;t cooked properly.</description>
+      <guid>https://8amiul.github.io/posts/first_meal_2025/</guid>
+      <description>&lt;p&gt;I just cooked my first meal of this year. So it&amp;rsquo;s a new year and Today I woke up early.&lt;/p&gt;
+&lt;p&gt;I just thought it&amp;rsquo;s better I try something new today. So why don&amp;rsquo;t I make my own breakfast?&lt;/p&gt;
+&lt;p&gt;Noodles was the only food I knew how to cook. So I started cooking. I took  noodles, then egg and some veggies (actually left over salad from yesterday&amp;rsquo;s party).&lt;/p&gt;
+&lt;p&gt;However it wasn&amp;rsquo;t cooked properly. But still it looked so good. But as I didn&amp;rsquo;t put salt or any other spices, it tasted&amp;hellip; okay. Not the best but one who starving will obviously eat.&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://8amiul.github.io/images/noodles.jpg&#34; alt=&#34;[Noodles Image]&#34; title=&#34;Nooooodles&#34;&gt;
+
+&lt;p&gt;I found it looking good. I wish I could make it more tasty. But I&amp;rsquo;ll try to make it any other day. Making my own breakfast was fun. But time consuming. It gives pleasure. We should try making our own food. Getting up early may also be another reason that made cooking breakfast so fun. The morning light and air is so so pure and refreshing. For me winter morning is the best!&lt;/p&gt;
+</description> 
     </item>
     
     <item>
       <title>Goodlock</title>
-      <link>/posts/goodlock/</link>
+      <link>https://8amiul.github.io/posts/goodlock/</link>
       <pubDate>Tue, 04 Jul 2023 14:14:53 +0600</pubDate>
       
-      <guid>/posts/goodlock/</guid>
-      <description>My phone has One Ui 4.1 core. Which is crap! None of the GoodLock modules are supported on my phone. But with some tweaking we can achieve this feature. But the phone has to be rooted.
-Our First aim is to download the patched version of GoodLock.
-Then we have to disable the apk signature verification check. Why do we need that? Just because those apk doesn&amp;rsquo;t come with any signature.</description>
+      <guid>https://8amiul.github.io/posts/goodlock/</guid>
+      <description>&lt;p&gt;My phone has One Ui 4.1 core. Which is crap! None of the GoodLock modules are supported on my phone. But with some tweaking we can achieve this feature. But the phone has to be rooted.&lt;/p&gt;
+&lt;p&gt;Our First aim is to download the patched version of &lt;a href=&#34;https://downloads.corsicanu.ro/GoodLock/&#34; title=&#34;GoodLock&#34;&gt;GoodLock&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Then we have to disable the apk signature verification check. Why do we need that? Just because those apk doesn&amp;rsquo;t come with any signature. But our system looks for one.
+So that&amp;rsquo;s why.&lt;/p&gt;
+&lt;p&gt;Now we have to install,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Riru magisk module&lt;/li&gt;
+&lt;li&gt;Riru Lsposed&lt;/li&gt;
+&lt;li&gt;core patch (which is a Lsposed module).
+After this we will be able to install the program.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Installing it with the android package manager won&amp;rsquo;t work unfortunately. You need SAI or Split APKs Installer. You can find it in Google PlayStore. Use SAI to install the apk. Also don&amp;rsquo;t forget to set the installer mode to rooted mode.&lt;/p&gt;
+&lt;p&gt;Enable Sign APKs option in SAI. If you&amp;rsquo;re lucky then you will be able to open those programs at first attempt.&lt;/p&gt;
+&lt;p&gt;But if it shows &lt;code&gt;unsupported version&lt;/code&gt; then. You need to take some more steps.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now we have to install Lucky Patcher.&lt;/li&gt;
+&lt;li&gt;Then install Lucky Patcher module in Lsposed.&lt;/li&gt;
+&lt;li&gt;Inside it go to Toolbox Patch to android&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There select first three options. Most probably they will be,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Signature verification status&lt;/li&gt;
+&lt;li&gt;Disable signature verification&lt;/li&gt;
+&lt;li&gt;Disable signature verification in the package manager&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The first two of them will be selected by Lsposed. You just have to select the third one. Then click apply. Don&amp;rsquo;t forget to restart your phone lest you might not get to see the changes at first.&lt;/p&gt;
+&lt;p&gt;After going through all of these steps I was able to install most of the GoodLock modules.&lt;/p&gt;
+</description> 
     </item>
     
   </channel>
