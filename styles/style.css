@@ -178,14 +178,11 @@ body {
 
 @media (max-width: 450px) {
     #header {
+        font-size: 0.8rem;
+    }
+    .header-title {
         font-size: 0.5rem;
     }
-    .link-list a {
-        padding: 0 0.5rem;
-    }    
-
-
-
     #homepage .homepage-cover-pfp {
         width: 200px;
         height: 200px;
@@ -204,6 +201,10 @@ body {
         margin: 0 1rem !important;
     }
 
+    .music-album img{
+        width: 230px;
+        height: 230px;
+    }
 
     #footer {
         padding: 1rem;
