@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://8amiul.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://8amiul.github.io/categories/rss.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

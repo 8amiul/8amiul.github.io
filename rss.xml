@@ -6,9 +6,9 @@
     <description>Recent content on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2025 19:49:38 +0600</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2025 00:24:58 +0600</lastBuildDate>
     
-	<atom:link href="https://8amiul.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://8amiul.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -167,6 +167,23 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
 &lt;/ul&gt;
 &lt;h2 id=&#34;how-the-program-works&#34;&gt;How the program works?&lt;/h2&gt;
 &lt;p&gt;At first the main function will sequentially call other functions. Inside the main function it will call &lt;code&gt;menu(args)&lt;/code&gt; where selection between menu or exit will be returned. If returned value is news then &lt;code&gt;get_news_lines(args)&lt;/code&gt;  will be called and from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through &lt;code&gt;get_news(args)&lt;/code&gt; and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally &lt;code&gt;show_news(args)&lt;/code&gt; will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>rss feed!</title>
+      <link>https://8amiul.github.io/posts/rss/</link>
+      <pubDate>Fri, 10 Jan 2025 00:24:58 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/rss/</guid>
+      <description>&lt;p&gt;rss feed is like a magazine where you can link many favourite webpages which provides a rss.xml thing. So with that you can view all the main contents of those websites without visiting every site.&lt;/p&gt;
+&lt;p&gt;I didn&amp;rsquo;t know about rss feeds before building this site. I knew that icon on blog pages but never understood what actually rss was.&lt;/p&gt;
+&lt;p&gt;Now my site also got a rss feed. Hugo, yes that&amp;rsquo;s what I used to generate this static site of mine. So hugo auto generates a rss.xml file that contains everything we need.&lt;/p&gt;
+&lt;p&gt;But there was a problem at first. By default it wasn&amp;rsquo;t set up properly. On the rss reader my site wasn&amp;rsquo;t rendered correctly.&lt;/p&gt;
+&lt;p&gt;Just to fix this I had to implement a code in hugo&amp;rsquo;s mytheme/layouts/_default/rss.xml. Well, I didn&amp;rsquo;t bother to understand that code.
+It works for me, it doesn&amp;rsquo;t get executed in my system and once again it works for me.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gideonwolfe.com/posts/sysadmin/hugo/hugorss/&#34;&gt;Code can be found here!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I use &lt;a href=&#34;https://github.com/spacecowboy/Feeder&#34;&gt;feeder&lt;/a&gt; on my phone and on linux I use &lt;a href=&#34;https://github.com/newsboat/newsboat&#34;&gt;newsboat&lt;/a&gt; to view rss feeds.&lt;/p&gt;
 </description> 
     </item>
     
