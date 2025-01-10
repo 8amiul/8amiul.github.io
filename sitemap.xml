@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://8amiul.github.io/project/termus/</loc>
+    <loc>https://8amiul.github.io/projects/termus/</loc>
   </url><url>
-    <loc>https://8amiul.github.io/project/thedailystar/</loc>
+    <loc>https://8amiul.github.io/projects/thedailystar/</loc>
   </url><url>
     <loc>https://8amiul.github.io/</loc>
     <lastmod>2025-01-10T00:24:58+06:00</lastmod>
@@ -36,8 +36,10 @@
     <loc>https://8amiul.github.io/posts/goodlock/</loc>
     <lastmod>2023-07-04T14:14:53+06:00</lastmod>
   </url><url>
+    <loc>https://8amiul.github.io/bookmarks/</loc>
+  </url><url>
     <loc>https://8amiul.github.io/categories/</loc>
   </url><url>
-    <loc>https://8amiul.github.io/project/</loc>
+    <loc>https://8amiul.github.io/projects/</loc>
   </url>
 </urlset>
