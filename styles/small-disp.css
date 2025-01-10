@@ -68,4 +68,26 @@
         color: #FBB4A5;
         text-decoration: none;
     }
+
+    .bookmarks-content{
+        margin: 0.5rem 1rem 1rem 1rem;
+        text-overflow: ellipsis; 
+        word-break: break-all;
+    }
+    
+    .bookmarks-content li{
+        margin: 0.5rem 0;
+    }
+    .bookmarks-content a {
+        font-size: 100%;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    .bookmarks-content ul {
+        list-style: lower-greek;
+    }
+
+    .post-content pre code span{
+        font-size: 100%;
+    }
 }

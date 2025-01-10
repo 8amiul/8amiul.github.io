@@ -56,7 +56,9 @@
         <h2	class="post-title">Bookmarks</h2>
     </div>
 
-    <div class="post-content"><h1 id="music-cover-collage-maker">Music Cover Collage Maker</h1>
+    <div class="post-content bookmarks-content">
+        <p>These are my bookmarks in browser!</p>
+<h1 id="music-cover-collage-maker">Music Cover Collage Maker</h1>
 <ul>
 <li><a href="https://topsters.org/">https://topsters.org/</a></li>
 <li><a href="https://xsaardo.github.io/Album-Art-Collage-Creator/">https://xsaardo.github.io/Album-Art-Collage-Creator/</a></li>
@@ -205,8 +207,16 @@
 <li><a href="https://aapathshala.com/">https://aapathshala.com/</a></li>
 <li><a href="https://www.educationblog24.com/">https://www.educationblog24.com/</a></li>
 </ul>
+
+    </div>
 </div>
-</div>
+
+<script>
+    const anchors = document.querySelectorAll('div.bookmarks-content a');
+    anchors.forEach(anchor => {
+      anchor.setAttribute('target', '_blank');
+    });
+</script>
 
 	</div>
 
