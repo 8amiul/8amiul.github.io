@@ -1,0 +1,20 @@
+/*      Footer      */
+#footer {
+    background-color: #ECB176;
+    padding: 1rem;
+}
+
+#footer footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#footer footer a {
+    color: #000000;
+    padding: 0 1rem;
+}
+
+#footer footer a span {
+    color: #000000;
+}

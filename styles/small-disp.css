@@ -1,0 +1,71 @@
+/*      Mobile Device   */
+
+@media (max-width: 450px) {
+    #header {
+        font-size: 0.8rem;
+    }
+    .header-title {
+        font-size: 0.5rem;
+    }
+    #homepage .homepage-cover-pfp {
+        width: 200px;
+        height: 200px;
+    }
+    .blog-summary {
+        font-size: 0.8rem;
+    }
+    #homepage {
+        font-size: 80%;
+    }
+    .post-content *{
+        font-size: 80%;
+    }
+
+    .blog-post, .blogs-list {
+        margin: 0 1rem !important;
+    }
+
+    .music-album img{
+        width: 230px;
+        height: 230px;
+    }
+
+    #footer {
+        padding: 1rem;
+    }
+    #footer footer a {
+        font-size: 0.6rem;
+        padding: 0 0;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar-phone {
+        display: block;
+		margin: 1rem;
+		background-color: inherit;
+	}
+	.navbar-list {
+		display: flex;
+		gap: 1rem;
+		list-style: none;
+		justify-content: center;
+	}
+
+	.navbar-list a {
+		color: #FBB4A5;
+		text-decoration: none;
+
+	}
+
+    #footer {
+        background-color: inherit;
+    }
+
+    #footer footer a {
+        color: #FBB4A5;
+        text-decoration: none;
+    }
+}

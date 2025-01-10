@@ -1,0 +1,93 @@
+/*     homepage    */
+
+#homepage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+#homepage .homepage-cover-pfp {
+    width: 320px;
+    height: 320px;
+    margin: 1rem 0;
+}
+
+#homepage .about-me {
+    padding: 0 1rem;
+    line-height: 1.5;
+}
+
+#homepage .about-me h2 {
+    padding: 1rem 0.5rem;
+}
+
+#homepage .about-me p {
+    padding: 0.5rem;
+}
+
+.social-links {
+    padding: 1rem;
+}
+
+.social-links h2 {
+    padding: 0 1rem;
+
+}
+.social-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    list-style: none;
+    padding-top: 1rem;
+}
+
+.social-links-list li {
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.social-links-list a {
+    font-size: large;
+    color: #FBB4A5;
+}
+.social-links-list a:visited {
+    font-size: large;
+    color: #8b4b8b;
+}
+.social-links-list a:hover {
+    font-size: large;
+    color: #d6bbb5;
+}
+
+
+#content {
+    flex: 1;
+    background-color: #171010;
+}
+
+.div-3 {
+    margin: 10vh 1rem 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.div-3 img {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #8b4b8b;
+}
+
+.div-3 iframe {
+    border: 3px solid #8b4b8b;
+}
+
+.div-3 .music-album, .chatbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

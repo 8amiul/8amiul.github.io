@@ -1,0 +1,38 @@
+/*      header section      */
+#header {
+    font-size: 1rem;
+}
+
+.header-title {
+    font-style: oblique;
+    color: #222831;
+}
+
+.navbar {
+    background-color: #ECB176;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-right: 0;
+}
+
+.link-list {
+    list-style: none;
+    display: flex;
+}
+
+.link-list a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.link-list a:hover {
+    background-color: white;
+    color: black;
+}
+
+.navbar-phone {
+    display: none;
+}
