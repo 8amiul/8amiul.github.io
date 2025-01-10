@@ -69,12 +69,22 @@
         text-decoration: none;
     }
 
-    .bookmarks-content, .projects-content{
+    .bookmarks-content{
         margin: 0.5rem 1rem 1rem 1rem;
-        text-overflow: ellipsis; 
         word-break: break-all;
     }
-    
+
+    .projects-content {
+        width: 100%;
+    }
+    .projects-content pre{
+        overflow: auto;
+    }
+
+    .post-content pre code span{
+        font-size: 100%;
+    }
+
     .bookmarks-content li{
         margin: 0.5rem 0;
     }
@@ -87,7 +97,5 @@
         list-style: lower-greek;
     }
 
-    .post-content pre code span{
-        font-size: 100%;
-    }
+
 }
