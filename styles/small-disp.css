@@ -69,7 +69,7 @@
         text-decoration: none;
     }
 
-    .bookmarks-content{
+    .bookmarks-content, .projects-content{
         margin: 0.5rem 1rem 1rem 1rem;
         text-overflow: ellipsis; 
         word-break: break-all;
