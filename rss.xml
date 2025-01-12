@@ -6,7 +6,7 @@
     <description>Recent content on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2025 00:24:58 +0600</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2025 22:06:00 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
@@ -167,6 +167,82 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
 &lt;/ul&gt;
 &lt;h2 id=&#34;how-the-program-works&#34;&gt;How the program works?&lt;/h2&gt;
 &lt;p&gt;At first the main function will sequentially call other functions. Inside the main function it will call &lt;code&gt;menu(args)&lt;/code&gt; where selection between menu or exit will be returned. If returned value is news then &lt;code&gt;get_news_lines(args)&lt;/code&gt;  will be called and from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through &lt;code&gt;get_news(args)&lt;/code&gt; and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally &lt;code&gt;show_news(args)&lt;/code&gt; will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>Apps That I Use</title>
+      <link>https://8amiul.github.io/posts/apps-that-i-use/</link>
+      <pubDate>Sun, 12 Jan 2025 22:06:00 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/apps-that-i-use/</guid>
+      <description>&lt;h2 id=&#34;apps-that-i-use&#34;&gt;&lt;em&gt;Apps that I use&lt;/em&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;android&#34;&gt;&lt;em&gt;Android&lt;/em&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Auxio&lt;/li&gt;
+&lt;li&gt;Simplenote&lt;/li&gt;
+&lt;li&gt;Bitwarden&lt;/li&gt;
+&lt;li&gt;Feeder&lt;/li&gt;
+&lt;li&gt;Freebasics&lt;/li&gt;
+&lt;li&gt;JuiceSSH&lt;/li&gt;
+&lt;li&gt;Microsoft Lens&lt;/li&gt;
+&lt;li&gt;NotificationLog&lt;/li&gt;
+&lt;li&gt;Shazam&lt;/li&gt;
+&lt;li&gt;Adaway&lt;/li&gt;
+&lt;li&gt;Termux&lt;/li&gt;
+&lt;li&gt;Audiorelay&lt;/li&gt;
+&lt;li&gt;Drivedroid&lt;/li&gt;
+&lt;li&gt;Droidcam&lt;/li&gt;
+&lt;li&gt;Lawnchair&lt;/li&gt;
+&lt;li&gt;Magisk&lt;/li&gt;
+&lt;li&gt;Quick switch&lt;/li&gt;
+&lt;li&gt;Readera&lt;/li&gt;
+&lt;li&gt;V4a&lt;/li&gt;
+&lt;li&gt;AntennaPod&lt;/li&gt;
+&lt;li&gt;NewPipe&lt;/li&gt;
+&lt;li&gt;VLC Media Player&lt;/li&gt;
+&lt;li&gt;LSPosed&lt;/li&gt;
+&lt;li&gt;Telegram&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;desktop&#34;&gt;&lt;em&gt;Desktop&lt;/em&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Firefox&lt;/li&gt;
+&lt;li&gt;Krita&lt;/li&gt;
+&lt;li&gt;vim&lt;/li&gt;
+&lt;li&gt;VScode&lt;/li&gt;
+&lt;li&gt;Proxifier&lt;/li&gt;
+&lt;li&gt;VirtualBox&lt;/li&gt;
+&lt;li&gt;PCSX2&lt;/li&gt;
+&lt;li&gt;PotPlayer&lt;/li&gt;
+&lt;li&gt;VLC media player&lt;/li&gt;
+&lt;li&gt;Avro Keyboard&lt;/li&gt;
+&lt;li&gt;OBS&lt;/li&gt;
+&lt;li&gt;qBittorrent&lt;/li&gt;
+&lt;li&gt;Discord&lt;/li&gt;
+&lt;li&gt;Telegram&lt;/li&gt;
+&lt;li&gt;Steam&lt;/li&gt;
+&lt;li&gt;DroidCam&lt;/li&gt;
+&lt;li&gt;Xournal++&lt;/li&gt;
+&lt;li&gt;Soulseek&lt;/li&gt;
+&lt;li&gt;WhoCrashed&lt;/li&gt;
+&lt;li&gt;CrystalDiskMark 8&lt;/li&gt;
+&lt;li&gt;Ventoy&lt;/li&gt;
+&lt;li&gt;scrcpy&lt;/li&gt;
+&lt;li&gt;TranslucentTB&lt;/li&gt;
+&lt;li&gt;Avidemux&lt;/li&gt;
+&lt;li&gt;Kdenlive&lt;/li&gt;
+&lt;li&gt;mingw&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;htop&lt;/li&gt;
+&lt;li&gt;zsh&lt;/li&gt;
+&lt;li&gt;nvim&lt;/li&gt;
+&lt;li&gt;dwm&lt;/li&gt;
+&lt;li&gt;st&lt;/li&gt;
+&lt;li&gt;dmenu&lt;/li&gt;
+&lt;/ul&gt;
 </description> 
     </item>
     
