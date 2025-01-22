@@ -6,7 +6,7 @@ const path = '/images/randomImages/';       // Path where images are stored
 let description = document.querySelector(".randomimage-description");   // Getting description object which is above the image
 let image_position = document.querySelector('.img-position');           // This is the image page number
 let image_link = document.querySelector('#image-link');                 // This is the link or anchor tag which allows user to get the actual image by clicking the photo
-
+let loader = document.querySelector('#loader');
 
 // A function to load img tag, set the image source, set class to image so that css works,
 // `img.onload` is responsible for loading everything after the image is properly loaded. (Mainly used here to fix the delay animation that was causing due to low internet speed)
@@ -15,15 +15,19 @@ let image_link = document.querySelector('#image-link');                 // This 
 function reload() {     
     const img = document.createElement('img');
     img.setAttribute('src', path + images[current_position].img);
+    image_position.innerText = '[' + (current_position+1) + '/' + total_image + ']';    // Getting the url of current page
 
     img.onload = function () {
+        loader.style.display = 'none';                                                      // by default the loading circle should be set to none
+                                                                                            // and every reload call will set it loader display to none cause the call back function makes it visible
         img.setAttribute('class', 'randomimage-img');
 
         description.innerText = images[current_position].description;                       // Getting description
-        image_position.innerText = '[' + (current_position+1) + '/' + total_image + ']';    // Getting the url of current page
+        description.style.display = 'block';                                                // Setting description visible only when the image is loaded 
+
         image_link.setAttribute('href', path + images[current_position].img);               // Setting the href for anchor tag
 
-       image_link.appendChild(img);                                                         // Appending the img child to anchor tag
+        image_link.appendChild(img);                                                         // Appending the img child to anchor tag
     }
 
 }
@@ -34,14 +38,18 @@ let next = document.querySelector('.img-next');         // query for next button
 
 function prevFunc () {
     if (current_position > 0) {
+        loader.style.display = 'block';                                     // setting it to block can be said visible because a loading circle should load when it's loading lol
         image_link.removeChild(document.querySelector('.randomimage-img')); // at first removes the previously loaded image
+        description.style.display = 'none';                                 // Setting it to none so that it only visible when the new image is loaded
         current_position--;
         reload();
     }
 };
 function nextFunc() {
     if (current_position < total_image-1) {
+        loader.style.display = 'block';
         image_link.removeChild(document.querySelector('.randomimage-img'));
+        description.style.display = 'none'; 
         current_position++;
         reload();
     }
