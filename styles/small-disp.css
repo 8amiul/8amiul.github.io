@@ -12,6 +12,10 @@
         height: 200px;
     }
     .blog-summary {
+        font-size: 0.6rem;
+        line-height: 1.6;
+    }
+    .blog-description {
         font-size: 0.8rem;
     }
     #homepage {

@@ -8,10 +8,24 @@
     align-items: center;
     padding: 1rem;
 }
+#homepage .homepage-top {
+    margin: 1rem 0;
+    display: flex;
+}
+
 #homepage .homepage-cover-pfp {
     width: 320px;
     height: 320px;
-    margin: 1rem 0;
+}
+#homepage .homepage-top-link-list {
+    margin: 0 0 1rem 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#homepage .homepage-top-links {
+    color: #FBB4A5;
 }
 
 #homepage .about-me {
