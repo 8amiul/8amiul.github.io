@@ -2,11 +2,21 @@ const total_image = 62;
 const initial_position = Math.floor(Math.random() * total_image); // Getting a random number as a initial value
 let current_position = 0;    // Setting current_position as the initial_position
 const path = '/images/randomImages/';       // Path where images are stored
+const cache_difference = 10;
 
 let description = document.querySelector(".randomimage-description");   // Getting description object which is above the image
 let image_position = document.querySelector('.img-position');           // This is the image page number
 let image_link = document.querySelector('#image-link');                 // This is the link or anchor tag which allows user to get the actual image by clicking the photo
 let loader = document.querySelector('#loader');
+
+
+window.onload = function () {       // Caching first 'cache_difference = 10' images at once for speeding up image viewing experience.
+    for (let i = 0; i < cache_difference; i++)
+    {
+        const cache_img = new Image();
+        cache_img.src = path + images[i].img;
+    }
+}
 
 // A function to load img tag, set the image source, set class to image so that css works,
 // `img.onload` is responsible for loading everything after the image is properly loaded. (Mainly used here to fix the delay animation that was causing due to low internet speed)
@@ -50,6 +60,14 @@ function nextFunc() {
         loader.style.display = 'block';
         image_link.removeChild(document.querySelector('.randomimage-img'));
         description.style.display = 'none'; 
+        
+        /* below code will load the 'current_position + 10' index image at every next click */
+        if (current_position + cache_difference < total_image)
+        {
+            const cache_img = new Image();
+            cache_img.src = path + images[current_position + cache_difference].img;
+        }
+
         current_position++;
         reload();
     }

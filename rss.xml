@@ -6,7 +6,7 @@
     <description>Recent content on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jan 2025 22:06:00 +0600</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2025 22:43:24 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
@@ -167,6 +167,28 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
 &lt;/ul&gt;
 &lt;h2 id=&#34;how-the-program-works&#34;&gt;How the program works?&lt;/h2&gt;
 &lt;p&gt;At first the main function will sequentially call other functions. Inside the main function it will call &lt;code&gt;menu(args)&lt;/code&gt; where selection between menu or exit will be returned. If returned value is news then &lt;code&gt;get_news_lines(args)&lt;/code&gt;  will be called and from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through &lt;code&gt;get_news(args)&lt;/code&gt; and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally &lt;code&gt;show_news(args)&lt;/code&gt; will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>JavaScript is fun</title>
+      <link>https://8amiul.github.io/posts/javascript-is-fun/</link>
+      <pubDate>Wed, 22 Jan 2025 22:43:24 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/javascript-is-fun/</guid>
+      <description>&lt;p&gt;I wasn&amp;rsquo;t a big fan of JavaScript. But later I realized that JS is so necessary for front-end web development. I recently just implemented an image viewer kind of page in my website, which needed JavaScript.&lt;/p&gt;
+&lt;p&gt;I actually don&amp;rsquo;t know about JavaScript yet. There is a part of JavaScript
+that connects it&amp;rsquo;s functionality with HTML and CSS, that is called Document Object Model aka DOM.&lt;/p&gt;
+&lt;p&gt;The syntax is a bit like C. As I am comfortable with C so JavaScript is also not really giving me much pain. But it is way more bigger than C.&lt;/p&gt;
+&lt;p&gt;The basic concept of programming languages are the same. You&amp;rsquo;ll have variable, loops, arrays, different kind of data types, functions, libraries to make life easier, OOP (maybe) and&amp;hellip; that&amp;rsquo;s all ig. So I am just learning the syntax and as well as some new features that come across while implementing more things in my site.&lt;/p&gt;
+&lt;p&gt;I would like to mention few resources which I found helpful,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://javascript.info/&#34;&gt;javascript.info&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript&#34;&gt;MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/5fb2aPlgoys&#34;&gt;A YouTube video for DOM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Finally, &lt;a href=&#34;https://chatgpt.com&#34;&gt;ChatGPT&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I think learning by making a project does work better than following a tutorial.&lt;/p&gt;
 </description> 
     </item>
     
