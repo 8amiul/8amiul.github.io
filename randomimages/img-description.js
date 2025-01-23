@@ -131,7 +131,7 @@ let images = [
 
 	{ 
 		img: "15.jpg", 
-		description: "A playlist dedicated to her. Who is she? a misty memory?"
+		description: "A playlist dedicated to her. I neither have the playlist nor her XD"
 	}, 
 
 	{ 

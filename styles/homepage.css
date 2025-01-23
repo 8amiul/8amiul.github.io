@@ -35,10 +35,14 @@
 
 #homepage .about-me h2 {
     padding: 1rem 0.5rem;
+    font-family: "VT323";
+    font-size: 2rem;
 }
 
 #homepage .about-me p {
     padding: 0.5rem;
+    font-family: "VT323";
+    font-size: 1.5rem;
 }
 
 .social-links {

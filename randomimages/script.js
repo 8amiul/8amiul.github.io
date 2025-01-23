@@ -5,7 +5,7 @@ const path = '/images/randomImages/';       // Path where images are stored
 const cache_difference = 10;
 
 let description = document.querySelector(".randomimage-description");   // Getting description object which is above the image
-let image_position = document.querySelector('.img-position');           // This is the image page number
+let image_position = document.querySelector('.img-number');           // This is the image page number
 let image_link = document.querySelector('#image-link');                 // This is the link or anchor tag which allows user to get the actual image by clicking the photo
 let loader = document.querySelector('#loader');
 
@@ -84,4 +84,18 @@ document.addEventListener("keydown", function(event) {
         prevFunc();
     else if (event.key == "ArrowRight")
         nextFunc();
+});
+
+
+let jumpto = document.getElementById('jump-to');
+//jumpto.setAttribute('placeholder', ('[' + current_position+1 + "/" + total_image + ']'));
+
+jumpto.addEventListener('change', function () {
+    if (jumpto.value <= total_image && jumpto.value > 0) {
+        loader.style.display = 'block';
+        image_link.removeChild(document.querySelector('.randomimage-img'));
+        description.style.display = 'none'; 
+        current_position = jumpto.value-1;
+        reload();
+    }
 });

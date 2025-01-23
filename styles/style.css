@@ -9,6 +9,12 @@
     src: url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "VT323";
+    src: url("/fonts/VT323.ttf") format("truetype");
+}
+
+
 body {
     background-color: #171010;
     display: flex;
