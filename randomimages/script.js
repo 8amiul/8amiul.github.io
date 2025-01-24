@@ -1,4 +1,4 @@
-const total_image = 62; 
+const total_image = images.length; 
 const initial_position = Math.floor(Math.random() * total_image); // Getting a random number as a initial value
 let current_position = 0;    // Setting current_position as the initial_position
 const path = '/images/randomImages/';       // Path where images are stored

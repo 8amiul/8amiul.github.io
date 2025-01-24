@@ -47,13 +47,15 @@ let images = [
 		img: "5.jpg", 
 		description:
         `
-            Woah! Can you see that kid? His name is Samiul. 
+            Can you see that kid? His name is Samiul. 
             What about that calf? Samiul's maternal uncle gave it to him. My childhood was wonderful! 
             Who clicked that picture? It was my paternal uncle. 
 
-            Whose art is this? 
-            
-            Thanks to her for drawing it. I was surprised when I found that she drew it. A talented girl, indeed!
+            Thanks to her for this. I was surprised when I found that she drew it. A talented girl she was.
+
+			Whenever I see this and some other images then I just wonder how people changes!
+			Maybe they don't feel the same. Maybe they don't need the same.
+			Maybe they want to go with something or someone new.
         `
 	}, 
 
@@ -399,5 +401,15 @@ let images = [
     { 
         img: "61.jpg", 
         description: "Neofetch with uberzug ig."
-    }
+    },
+
+	{
+		img: "62.jpg",
+		description: "I see this flower wherever I go."
+	},
+
+	{
+		img: "63.jpg",
+		description: "My uncle made this. I was maybe 1 year old."
+	}
 ]
