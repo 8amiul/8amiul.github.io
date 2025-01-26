@@ -51,11 +51,7 @@ let images = [
             What about that calf? Samiul's maternal uncle gave it to him. My childhood was wonderful! 
             Who clicked that picture? It was my paternal uncle. 
 
-            Thanks to her for this. I was surprised when I found that she drew it. A talented girl she was.
-
-			Whenever I see this and some other images then I just wonder how people changes!
-			Maybe they don't feel the same. Maybe they don't need the same.
-			Maybe they want to go with something or someone new.
+            Thanks to her for this. I was surprised when I found that she drew it. A talented girl!
         `
 	}, 
 
@@ -133,7 +129,7 @@ let images = [
 
 	{ 
 		img: "15.jpg", 
-		description: "A playlist dedicated to her. I neither have the playlist nor her XD"
+		description: "A playlist dedicated to her."
 	}, 
 
 	{ 

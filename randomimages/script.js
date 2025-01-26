@@ -9,7 +9,6 @@ let image_position = document.querySelector('.img-number');           // This is
 let image_link = document.querySelector('#image-link');                 // This is the link or anchor tag which allows user to get the actual image by clicking the photo
 let loader = document.querySelector('#loader');
 
-
 window.onload = function () {       // Caching first 'cache_difference = 10' images at once for speeding up image viewing experience.
     for (let i = 0; i < cache_difference; i++)
     {
