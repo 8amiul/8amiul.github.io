@@ -9,17 +9,14 @@
     box-sizing: border-box;
 }
 
-:root {
-    --musicplayer-width: 300px;
-    --musicplayer-list-height: 200px;
-}
-
 #content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+/*  This is the css for music player container */
 .music-player {
     background-color: #000000;
     margin: 1rem;
@@ -29,6 +26,10 @@
     padding: 1rem;
 }
 
+/*  
+    This is the container for music infos such as
+    title, artist and album
+*/
 .music-player-description {
     display: flex;
     flex-direction: column;
@@ -36,12 +37,15 @@
     color: #F0BB78;
 }
 
+/*  
+    css for the middle section of the player where
+    volume slider and music time is in the same line
+*/
 .music-player-middle {
     display: flex;
     margin: 1rem 0;
     justify-content: space-between;
     color: #F0BB78;
-
 }
 
 #musicAlbum-cover {
@@ -51,16 +55,18 @@
     border-radius: 10px;
 }
 
+/*  css for buttons */
 .music-player-buttons {
     margin-top: 1rem;
     align-self: center;
 }
 
+/*  button coloring and design here */
 .music-player-buttons button,
 .list-toggle-btn {
     color: #543A14;
     font-weight: bold;
-    border: 0;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
     width: 50px;
     height: 25px;
@@ -68,28 +74,33 @@
     cursor: pointer;
 }
 
+/* Giving button a filer. By default svg was black. */
 .music-player-buttons button img,
 .list-toggle-btn-svg {
     width: 20px;
+    /* "https://codepen.io/sosuke/pen/Pjoqqp" to get a filter for a certain color */
     filter: invert(100%) sepia(32%) saturate(4770%) hue-rotate(307deg) brightness(95%) contrast(98%);
 }
 
+/*  changing color if toggle on */
 #shuffle.off img,
 #repeat.off img
 {
     filter: invert(50%) sepia(32%) saturate(4770%) hue-rotate(307deg) brightness(95%) contrast(98%);
 }
+/*--------------------------------------------------------*/
 
-
+/* limiting the length of title and album */
 .musicTitle, .musicAlbum {
     width: var(--musicplayer-width);
 }
-
+/*  css for the container which holds shuffle and repeat buttons    */
 .music-player-upper-buttons {
     display: flex;
     justify-content: space-between;
 }
 
+/*  css for slider in this site */
 #volume-slider,
 #progress-slider {
     width: 30%;
@@ -105,6 +116,7 @@
     cursor: pointer;
 }
 
+/*  setting progress slider get the full width of it's container    */
 #progress-slider {
     width: inherit;
     margin: 1rem;
@@ -160,10 +172,9 @@
     appearance: none;
     background-color: #F0BB78;
 }
-
 /* ===================== */
 
-
+/*  css for the music list container    */
 .music-list-container {
     margin: 1rem 0;
     overflow: auto;
@@ -171,15 +182,15 @@
     flex-direction: column;
 }
 
+/*  necessary if one wants to change the width */
 .music-list-container ul {
     margin-top: 1rem;
     overflow-y: scroll;
     height: var(--musicplayer-list-height);
 }
 
-
+/*  limiting the text to match with the width   */
 .music-list-container li {
-
     width: var(--musicplayer-width);
     list-style: none;
 }
@@ -188,6 +199,10 @@
     background-color: #f0bc78a2;
 }
 
+/* 
+    those list have buttons in it
+    css for those buttons
+*/
 .music-list-item {
     -webkit-appearance: none;
     appearance: none;
@@ -200,6 +215,7 @@
     width: var(--musicplayer-width);
 }
 
+/*  style to give a different color for odd and even child */
 .music-list-container li:nth-child(odd) {
     background-color: #F0BB78;
 }
@@ -207,13 +223,14 @@
 .music-list-container li:nth-child(even) {
     background-color: #f0bc78bd;
 }
-
 .music-list-container li:nth-child(odd):hover,
 .music-list-container li:nth-child(even):hover
  {
     background-color: #ffd096a2;
 }
+/*------------------------------------------*/
 
+/*  The list toggle button style here */
 .list-toggle-btn {
     align-self: center;
     margin-top: 1rem;
@@ -222,4 +239,3 @@
 .list-toggle-btn:hover {
     display: block;
 }
-

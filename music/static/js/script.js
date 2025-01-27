@@ -101,11 +101,13 @@ let timeMusic = document.querySelector('.musicTime');
 let titleMusic = document.querySelector('.musicTitle');
 let artistMusic = document.querySelector('.musicArtist');
 let AlbumMusic = document.querySelector('.musicAlbum');
+let musicAlbumCover = document.querySelector('#musicAlbum-cover');
 
 function fetchMusicTags () {
     titleMusic.innerText = music_src[currentMusicPlaying].title;
     artistMusic.innerHTML = music_src[currentMusicPlaying].artist;
     AlbumMusic.innerText = music_src[currentMusicPlaying].album;
+    musicAlbumCover.src = music_src[currentMusicPlaying].albumCover;                // Album cover links are added to music_src `fuck cors`
 
 /*
     //  'jsmediatags' was used to fetch tags and album cover.
