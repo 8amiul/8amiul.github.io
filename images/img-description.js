@@ -407,5 +407,22 @@ let images = [
 	{
 		img: "63.jpg",
 		description: "My uncle made this. I was maybe 1 year old."
+	},
+	{
+		img: "64.jpg",
+		description: 
+		`
+			It's true! Whenever you will start looking for the returns, you 
+			will only feel that you don't get what you did for them.
+			I now understand giving and getting the same amount of efforts
+			or help in return isn't always possible. Helping someone, we should
+			not expect something in return. I know there are cases where this 
+			theory doesn't work but those cases shouldn't be called help, those
+			are trade. 
+		`
+	},
+	{
+		img: "65.jpg",
+		description: "This has a deep meaning. Why don't read the caption once again?"
 	}
 ]

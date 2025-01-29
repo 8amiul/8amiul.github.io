@@ -228,6 +228,11 @@
  {
     background-color: #ffd096a2;
 }
+
+.current-music-playing-list {
+    background-color: #543A14;
+    color: white;
+}
 /*------------------------------------------*/
 
 /*  The list toggle button style here */

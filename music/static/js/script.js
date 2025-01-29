@@ -19,6 +19,10 @@ function shuffleArray(arr) {
 }
 shuffleArray(music_src);                                            //  Remove this line if you don't want to get different value at every refresh of page
 
+let musicList = document.querySelector('.music-list');                  //  Getting the music list which is inside the container
+
+
+
 
 /*     'musicVolumeSlider': Volume slider event listener     */
 let musicVolumeSlider = document.querySelector('#volume-slider')    //  query for the volume slider. Mainly needed to change it's value attribute.
@@ -30,12 +34,17 @@ musicVolumeSlider.addEventListener("change", function () {          //  An event
 })
 
 /*     function: musicLoad     */
-function musicLoad(musicPlayingNumber) {
+function musicLoad(prevMusicPlayingNumber) {
+
+    musicList.children[prevMusicPlayingNumber].children[0].classList.remove("current-music-playing-list");      // this line removes this class
+                                                                                                                // this class is responsible of giving the
+                                                                                                                // current playing music a different color
+    musicList.children[currentMusicPlaying].children[0].classList.add("current-music-playing-list");            // this line simply adds that line
+
     audio.pause();                                                  //  Pausing the previous music
     audio.currentTime = 0;                                          //  Setting the progress time to 0 before switching 
     musicProgressSlider.value = 0;                                  //  Setting the progress slider to 0
     audio = null;                                                   //  Removing the previously loaded file
-    currentMusicPlaying = musicPlayingNumber;                       //  Setting the current playing music index number  
     fetchMusicTags();                                               //  Fetching title, artist and album from 'music_src' list
     audio = new Audio(music_src[currentMusicPlaying].link)          //  Loading new Audio object by accessing link from list
     audio.volume = musicVolumeSlider.value / 100;                   //  Setting the volume according to volume slider's position
@@ -57,7 +66,6 @@ pauseMusic.addEventListener("click", function () {                      //  Sett
 });
 
 /*     The music list logic      */
-let musicList = document.querySelector('.music-list');                  //  Getting the music list which is inside the container
 document.addEventListener("DOMContentLoaded", function() {              //  When the page loads it will run a loop and list all the title from music_src
     for (let i = 0; i < totalMusic; i++)
     {
@@ -70,8 +78,9 @@ document.addEventListener("DOMContentLoaded", function() {              //  When
 
         listItemButton.addEventListener("click", function () {          //  Setting a event listener to every button so that if triggers then set the
                                                                         //  currentMusicPlaying variable to it's index number and play it
+            let prevMusicIndex = currentMusicPlaying;
             currentMusicPlaying = i;
-            musicLoad(currentMusicPlaying)
+            musicLoad(prevMusicIndex)
         })
 
         listItem.appendChild(listItemButton)                            //  Finally appending to it's parent tags
@@ -138,11 +147,14 @@ function nextMusicFunc() {
         musicLoad(currentMusicPlaying)
     if (currentMusicPlaying < totalMusic-1)                                         //  logic to allow the button only work within range
         {
+            let prevMusicIndex = currentMusicPlaying;
+
             if (shuffle)                                                            //  if shuffle is on then set a random number in range
                 currentMusicPlaying = Math.floor(Math.random() * totalMusic);
             else                                                                    //  else work like as usual by incrementing it.
                 currentMusicPlaying++;
-            musicLoad(currentMusicPlaying)
+
+            musicLoad(prevMusicIndex)
         }
 }
 nextMusic.addEventListener("click", nextMusicFunc);                                 //  Setting the event listener
@@ -153,11 +165,14 @@ let previousMusic = document.querySelector('#music-previous');
 previousMusic.addEventListener("click", function () {
     if (currentMusicPlaying > 0)
     {
+        let prevMusicIndex = currentMusicPlaying;
+
         if (shuffle)
             currentMusicPlaying = Math.floor(Math.random() * totalMusic);
         else
             currentMusicPlaying--;
-        musicLoad(currentMusicPlaying);
+
+        musicLoad(prevMusicIndex);
     }
 })
 
