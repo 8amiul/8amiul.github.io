@@ -10,9 +10,22 @@
 }
 
 @font-face {
+    font-family: "BlogPostFont1";
+    src: url("/fonts/SortsMillGoudy.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BlogPostFont2";
+    src: url("/fonts/Montserrat.ttf") format("truetype");
+}
+
+@font-face {
     font-family: "VT323";
     src: url("/fonts/VT323.ttf") format("truetype");
 }
+
+
+
 
 
 body {

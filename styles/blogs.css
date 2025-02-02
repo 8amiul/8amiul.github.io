@@ -41,6 +41,8 @@
     justify-content: center;
     align-items: flex-start;
     margin: 0 10vw;
+
+    font-family: "BlogPostFont1";
 }
 
 .blog-post-info {
@@ -55,7 +57,8 @@
 }
 
 .post-content {
-    font-size: 1rem;
+    font-size: 1.2rem; /* for BlogPostFont1 */
+    /* font-size: 1.2rem; JetBrains-Mono */
     margin: 1rem 0;
     line-height: 1.6;
     display: flex;

@@ -423,6 +423,6 @@ let images = [
 	},
 	{
 		img: "65.jpg",
-		description: "This has a deep meaning. Why don't read the caption once again?"
+		description: "This has a deep meaning. Why don't you read the caption once again?"
 	}
 ]

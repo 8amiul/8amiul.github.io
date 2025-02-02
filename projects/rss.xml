@@ -114,6 +114,18 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
     </item>
     
     <item>
+      <title>TermusJS</title>
+      <link>https://8amiul.github.io/projects/termusjs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://8amiul.github.io/projects/termusjs/</guid>
+      <description>&lt;p&gt;GitHub Repo: &lt;a href=&#34;https://github.com/8amiul/termusjs&#34;&gt;https://github.com/8amiul/termusjs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Test the music player here,
+&lt;a href=&#34;https://8amiul.github.io/termusjs/&#34;&gt;TermusJS&lt;/a&gt;&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
       <title>Thedailystar-CLI</title>
       <link>https://8amiul.github.io/projects/thedailystar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

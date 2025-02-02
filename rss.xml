@@ -6,7 +6,7 @@
     <description>Recent content on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jan 2025 22:43:24 +0600</lastBuildDate>
+    <lastBuildDate>Sun, 02 Feb 2025 22:47:21 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
@@ -115,6 +115,18 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
     </item>
     
     <item>
+      <title>TermusJS</title>
+      <link>https://8amiul.github.io/projects/termusjs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://8amiul.github.io/projects/termusjs/</guid>
+      <description>&lt;p&gt;GitHub Repo: &lt;a href=&#34;https://github.com/8amiul/termusjs&#34;&gt;https://github.com/8amiul/termusjs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Test the music player here,
+&lt;a href=&#34;https://8amiul.github.io/termusjs/&#34;&gt;TermusJS&lt;/a&gt;&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
       <title>Thedailystar-CLI</title>
       <link>https://8amiul.github.io/projects/thedailystar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -167,6 +179,27 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
 &lt;/ul&gt;
 &lt;h2 id=&#34;how-the-program-works&#34;&gt;How the program works?&lt;/h2&gt;
 &lt;p&gt;At first the main function will sequentially call other functions. Inside the main function it will call &lt;code&gt;menu(args)&lt;/code&gt; where selection between menu or exit will be returned. If returned value is news then &lt;code&gt;get_news_lines(args)&lt;/code&gt;  will be called and from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through &lt;code&gt;get_news(args)&lt;/code&gt; and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally &lt;code&gt;show_news(args)&lt;/code&gt; will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>Something sweet</title>
+      <link>https://8amiul.github.io/posts/something-sweet/</link>
+      <pubDate>Sun, 02 Feb 2025 22:47:21 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/something-sweet/</guid>
+      <description>&lt;p&gt;Yesterday I ate something different. A different recipe I&amp;rsquo;ve found. Last time I cooked noodles and now I present you this! I actually don&amp;rsquo;t know what to name it.&lt;/p&gt;
+&lt;p&gt;I was starving and I didn&amp;rsquo;t even have the time to go out and bring something. I thought why not try something new with what I have within my reach.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve eaten this kind of food before. That brown juice kind of thing is from date. The ingredients are actually,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bread slices&lt;/li&gt;
+&lt;li&gt;Date Juice&lt;/li&gt;
+&lt;li&gt;Powdered Milk&lt;/li&gt;
+&lt;li&gt;Banana slices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Just mixed these and I could add some more stuff if I had. I found these things near so I didn&amp;rsquo;t bother thinking of adding more.&lt;/p&gt;
+&lt;p&gt;You may try this if you are curious or like to try weird or different foods.
+It tasted good. However I don&amp;rsquo;t really like sweets and foods that has sugar. But it was not bad.&lt;/p&gt;
 </description> 
     </item>
     
