@@ -52,12 +52,12 @@
 
 .post-title {
     font-style: italic;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 1rem 0;
 }
 
 .post-content {
-    font-size: 1.2rem; /* for BlogPostFont1 */
+    font-size: 1.5rem; /* for BlogPostFont1 */
     /* font-size: 1.2rem; JetBrains-Mono */
     margin: 1rem 0;
     line-height: 1.6;
@@ -89,6 +89,10 @@
     max-height: 360px;
     display: block;
     border: 1px solid #D8C4B6;
+}
+
+.post-description {
+    font-size: 1.2rem;
 }
 
 

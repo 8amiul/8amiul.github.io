@@ -102,6 +102,9 @@
         font-size: 100%;
     }
 
+    .post-title {
+        font-size: 2.5rem;
+    }
     .bookmarks-content li{
         margin: 0.5rem 0;
     }
