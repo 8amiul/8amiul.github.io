@@ -1,6 +1,6 @@
 #!/bin/bash
-i=47
-n=61+1 # Number of elements you want in the list
+i=66
+n=77+1 # Number of elements you want in the list
 
 # Start the array
 images="let images = ["

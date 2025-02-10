@@ -424,5 +424,64 @@ let images = [
 	{
 		img: "65.jpg",
 		description: "This has a deep meaning. Why don't you read the caption once again?"
+	},
+	{ 
+		img: "66.jpg", 
+		description: "My Skyrim character :D"
+	}, 
+
+	{ 
+		img: "67.jpg", 
+		description: "GTA VC Nextgen Edition is amazing. Vice city is fully ported in GTA 4's rage engine."
+	}, 
+
+	{ 
+		img: "68.jpg", 
+		description: "Ugh! I just couldn't complete GTA IV. Recently I lost the save file and all my progress has gone."
+	}, 
+
+	{ 
+		img: "69.jpg", 
+		description: "..."
+	}, 
+
+	{ 
+		img: "70.jpg", 
+		description: "I was awake on those nights and it was freaking chaotic XD."
+	}, 
+
+	{ 
+		img: "71.jpg", 
+		description: "I gave her a new hairstyle."
+	}, 
+
+	{ 
+		img: "72.jpg", 
+		description: "I kept this head after beheading her. Now it's a nice showpiece"
+	}, 
+
+	{ 
+		img: "73.jpg", 
+		description: "She is Serena, a vampire. She can turn you vampire in Skyrim"
+	}, 
+
+	{ 
+		img: "74.jpg", 
+		description: "The death of the final boss Alduin."
+	}, 
+
+	{ 
+		img: "75.jpg", 
+		description: "I didn't think Skyrim would be that fun to play."
+	}, 
+
+	{ 
+		img: "76.jpg", 
+		description: "Aurora!"
+	}, 
+
+	{ 
+		img: "77.jpg", 
+		description: "tf Tommy! It's a glitch lol. I think it's hilarious."
 	}
 ]
