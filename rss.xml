@@ -6,7 +6,7 @@
     <description>Recent content on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Feb 2025 22:47:21 +0600</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2025 17:18:32 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
@@ -179,6 +179,42 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
 &lt;/ul&gt;
 &lt;h2 id=&#34;how-the-program-works&#34;&gt;How the program works?&lt;/h2&gt;
 &lt;p&gt;At first the main function will sequentially call other functions. Inside the main function it will call &lt;code&gt;menu(args)&lt;/code&gt; where selection between menu or exit will be returned. If returned value is news then &lt;code&gt;get_news_lines(args)&lt;/code&gt;  will be called and from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through &lt;code&gt;get_news(args)&lt;/code&gt; and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally &lt;code&gt;show_news(args)&lt;/code&gt; will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>Games I Have Played</title>
+      <link>https://8amiul.github.io/posts/games-i-have-played/</link>
+      <pubDate>Sat, 15 Feb 2025 17:18:32 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/games-i-have-played/</guid>
+      <description>&lt;h3 id=&#34;games-i-have-completed&#34;&gt;Games I have completed&lt;/h3&gt;
+&lt;p&gt;Grand Theft Auto V&lt;/p&gt;
+&lt;p&gt;Grand Theft Auto Vice City&lt;/p&gt;
+&lt;p&gt;Grand Theft Auto San Andreas&lt;/p&gt;
+&lt;p&gt;Grand Theft Auto III&lt;/p&gt;
+&lt;p&gt;Freedom Fighters&lt;/p&gt;
+&lt;p&gt;Marvel’s Spider-Man Remastered&lt;/p&gt;
+&lt;p&gt;Call of duty World at War&lt;/p&gt;
+&lt;p&gt;Battlefield: Bad Company 2&lt;/p&gt;
+&lt;p&gt;Limbo&lt;/p&gt;
+&lt;p&gt;The Elder Scrolls V: Skyrim&lt;/p&gt;
+&lt;p&gt;Saints Row IV&lt;/p&gt;
+&lt;p&gt;Saints Row III&lt;/p&gt;
+&lt;p&gt;FarCry 3&lt;/p&gt;
+&lt;p&gt;MadeMan&lt;/p&gt;
+&lt;p&gt;Assassin&amp;rsquo;s Creed I&lt;/p&gt;
+&lt;p&gt;Half Life 1&lt;/p&gt;
+&lt;p&gt;Outlast&lt;/p&gt;
+&lt;p&gt;Project IGI 1&lt;/p&gt;
+&lt;p&gt;Metal Gear Solid V: Ground Zeroes&lt;/p&gt;
+&lt;p&gt;Max Payne 1&lt;/p&gt;
+&lt;p&gt;Max Payne 3&lt;/p&gt;
+&lt;h3 id=&#34;games-i-found-fun&#34;&gt;Games I found fun&lt;/h3&gt;
+&lt;p&gt;Auto Modellista&lt;/p&gt;
+&lt;p&gt;Twisted Metal&lt;/p&gt;
+&lt;p&gt;Hotline Miami 1&lt;/p&gt;
+&lt;p&gt;Hatred&lt;/p&gt;
 </description> 
     </item>
     

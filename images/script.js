@@ -1,3 +1,4 @@
+/*
 const total_image = images.length; 
 const initial_position = Math.floor(Math.random() * total_image); // Getting a random number as a initial value
 let current_position = 0;    // Setting current_position as the initial_position
@@ -42,6 +43,7 @@ function reload() {
 }
 reload();   // Gets reloaded when a DOM is loaded
 
+
 let previous = document.querySelector('.img-previous'); // query for previous button
 let next = document.querySelector('.img-next');         // query for next button
 
@@ -60,7 +62,7 @@ function nextFunc() {
         image_link.removeChild(document.querySelector('.randomimage-img'));
         description.style.display = 'none'; 
         
-        /* below code will load the 'current_position + 10' index image at every next click */
+        // below code will load the 'current_position + 10' index image at every next click
         if (current_position + cache_difference < total_image)
         {
             const cache_img = new Image();
@@ -97,4 +99,127 @@ jumpto.addEventListener('change', function () {
         current_position = jumpto.value-1;
         reload();
     }
+});
+
+
+*/
+// For scrolling list of posts
+
+const total_image = images.length;
+let posts_per_page = 10;
+let current_page = 1;
+let total_page = Math.ceil(total_image / posts_per_page);
+const path = "randomImages/";
+
+const web_content = document.querySelector("#content");
+
+let starting_position = total_image;
+let ending_position = starting_position-10;
+
+
+let container = document.createElement('div');
+
+
+function loadContent () {
+    for (let i = starting_position-1; i >= ending_position; i--)
+    {
+        if (container == null)
+            container = document.createElement('div');
+
+        container.setAttribute('class', "image-post-container");
+        const image_post_info = document.createElement('div');
+        image_post_info.setAttribute('class', "image-post-info");
+        const image_post_author = document.createElement('div');
+        image_post_author.setAttribute('class', "image-post-author");
+        const image_post_date = document.createElement('div');
+        image_post_date.setAttribute('class', "image-post-date");
+        const image_post_caption = document.createElement('div');
+        image_post_caption.setAttribute('class', "image-post-caption");
+        const image_post_img = document.createElement('img');
+
+        if (images[i].date)
+            image_post_date.innerText = "[" + images[i].date + "]";
+        image_post_caption.innerText = images[i].description;
+        image_post_img.setAttribute('src', path + images[i].img);
+
+
+        image_post_info.appendChild(image_post_author);
+        image_post_info.appendChild(image_post_date); 
+        image_post_info.appendChild(image_post_caption);
+
+        container.appendChild(image_post_info);
+        container.appendChild(image_post_img);
+        web_content.appendChild(container);
+    }
+
+    let image_nav_container = document.createElement("div");
+    image_nav_container.classList.add("image-buttons");
+
+    let img_prev = document.createElement("a");
+    img_prev.innerText = "previous";
+    if (current_page == 1)
+        img_prev.setAttribute("href", "javascript:void(0);");
+    else
+        img_prev.setAttribute("href", "#");
+    img_prev.setAttribute("title", "You can use left and right arrow keys to navigate through images");
+    img_prev.classList.add("image-btn", "img-previous");
+
+
+    
+
+    let img_next = document.createElement("a");
+    img_next.innerText = "next";
+    if (current_page == total_page)
+        img_next.setAttribute("href", "javascript:void(0);");
+    else
+        img_next.setAttribute("href", "#");
+    img_next.setAttribute("title", "You can use left and right arrow keys to navigate through images");
+    img_next.classList.add("image-btn", "img-next");
+
+    function img_next_func() {
+        if (ending_position > 0) {
+            if (ending_position-10 > 0) {
+                starting_position -= 10;
+                ending_position -= 10;
+            }
+            else {
+                starting_position -= 10;
+                ending_position = 0;
+            }
+
+            container.remove()
+            container = null;
+            image_nav_container.remove()
+            loadContent();
+            current_page++;
+        }
+    }
+    function img_prev_func() {
+        if (starting_position != total_image) {
+            starting_position += 10;
+            ending_position += 10;
+            container.remove();
+            container = null;
+            image_nav_container.remove();
+            loadContent();
+            current_page--;
+        }
+    }
+
+    img_prev.addEventListener("click", img_prev_func);
+    img_next.addEventListener("click", img_next_func);
+    
+
+
+    image_nav_container.appendChild(img_prev);
+    image_nav_container.appendChild(img_next);
+    web_content.appendChild(image_nav_container);
+}
+loadContent();
+
+document.addEventListener("keydown", function(event) {
+    if (event.key == "ArrowLeft")
+        document.querySelector(".img-previous").click();
+    else if (event.key == "ArrowRight")
+        document.querySelector(".img-next").click();
 });

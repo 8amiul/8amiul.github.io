@@ -482,6 +482,12 @@ let images = [
 
 	{ 
 		img: "77.jpg", 
+		date: "5 Feb 2025",
 		description: "tf Tommy! It's a glitch lol. I think it's hilarious."
+	},
+	{
+		img: "78.jpg",
+		date: "15 Feb 2025",
+		description: `Shhh! "Men in White" will take you to... (From 2012-2013. no source available)`
 	}
 ]
