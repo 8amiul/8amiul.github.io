@@ -119,6 +119,12 @@ let ending_position = starting_position-10;
 
 let container = document.createElement('div');
 
+let start = 1;
+let end;
+if (total_page < 10)
+    end = total_page
+else
+    end = 10
 
 function loadContent () {
     for (let i = starting_position-1; i >= ending_position; i--)
@@ -152,11 +158,14 @@ function loadContent () {
         web_content.appendChild(container);
     }
 
+    /* ---------------------------------------------------------------------------------- */
     let image_nav_container = document.createElement("div");
     image_nav_container.classList.add("image-buttons");
 
     let img_prev = document.createElement("a");
-    img_prev.innerText = "previous";
+    img_prev.innerText = "<";
+    img_prev.style.fontSize = "2rem"
+    img_prev.style.textDecoration = "none"
     if (current_page == 1)
         img_prev.setAttribute("href", "javascript:void(0);");
     else
@@ -164,11 +173,10 @@ function loadContent () {
     img_prev.setAttribute("title", "You can use left and right arrow keys to navigate through images");
     img_prev.classList.add("image-btn", "img-previous");
 
-
-    
-
     let img_next = document.createElement("a");
-    img_next.innerText = "next";
+    img_next.innerText = ">";
+    img_next.style.fontSize = "2rem"
+    img_next.style.textDecoration = "none"
     if (current_page == total_page)
         img_next.setAttribute("href", "javascript:void(0);");
     else
@@ -190,8 +198,8 @@ function loadContent () {
             container.remove()
             container = null;
             image_nav_container.remove()
-            loadContent();
             current_page++;
+            loadContent();
         }
     }
     function img_prev_func() {
@@ -201,8 +209,8 @@ function loadContent () {
             container.remove();
             container = null;
             image_nav_container.remove();
-            loadContent();
             current_page--;
+            loadContent();
         }
     }
 
@@ -212,6 +220,51 @@ function loadContent () {
 
 
     image_nav_container.appendChild(img_prev);
+    /* ---------------------------------------------------------------------------------- */
+
+
+
+    // logic for page numbers
+    /* --------------------------------------------------------------- */
+    function page_numbers (n) {
+        let page = document.createElement("a");
+        page.addEventListener("click", function () {
+            starting_position = total_image - ((n - 1) * posts_per_page);
+            ending_position = (total_image - posts_per_page) - ((n - 1) * posts_per_page)
+            if (ending_position < 0) ending_position = 0;
+
+            container.remove();
+            container = null;
+            image_nav_container.remove();
+            current_page = n;
+            loadContent();
+        });
+        page.innerText = n;
+        if (n == current_page) {
+            page.style.fontSize = "2rem";
+        }
+
+        page.setAttribute("href", "#");
+        page.classList.add("page-num-btn", "image-btn");
+        page.style.textDecoration = "none";
+        image_nav_container.appendChild(page);
+    }
+    if (current_page > 6 && total_page >= 10) {
+        if (current_page + 4 < end) {
+            for (let i = current_page - 5; i <= current_page + 4; i++) {
+                page_numbers(i);
+            }
+        } else {
+            for (let i = end - 4 - 5; i <= end; i++) {
+                page_numbers(i);
+            }
+        }
+    } else {
+        for (let i = start; i <= end; i++) {
+            page_numbers(i);
+        }
+    }
+    /* -------------------------------------------------------------- */
     image_nav_container.appendChild(img_next);
     web_content.appendChild(image_nav_container);
 }
