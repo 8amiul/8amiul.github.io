@@ -20,8 +20,7 @@ let images = [
 		img: "2.jpg", 
 		description:
         `
-            This playlist gave a LSD vibe, even though I don't know how LSD feels.
-            But what I mean is that it gave me a psychedelic feeling.
+            Collection of psychedelic songs.
         `
 	}, 
 
@@ -47,17 +46,13 @@ let images = [
 		img: "5.jpg", 
 		description:
         `
-            Can you see that kid? His name is Samiul. 
-            What about that calf? Samiul's maternal uncle gave it to him. My childhood was wonderful! 
-            Who clicked that picture? It was my paternal uncle. 
-
-            Thanks to her for this. I was surprised when I found that she drew it. A talented girl!
+            Thanks to her for this. I was surprised when I found that she drew it. She was a talented girl!
         `
 	}, 
 
 	{ 
 		img: "6.jpg", 
-		description: "I don't know tf it is! I clicked it when I was at my village."
+		description: "I don't know what it is! I clicked it when I was at my village."
 	}, 
 
 	{ 
@@ -108,7 +103,7 @@ let images = [
 		img: "12.jpg", 
 		description:
         `
-            tf is that? They teach us that you can treat the derivative operator as a fraction but well then they say it isn't actually a fraction
+            They teach us that you can treat the derivative operator as a fraction but well then they say it isn't actually a fraction
             Why just treat it like that? Let's learn the core.
         `
 	}, 
@@ -129,7 +124,7 @@ let images = [
 
 	{ 
 		img: "15.jpg", 
-		description: "A playlist dedicated to her."
+		description: "Just a playlist cover that I made for ..."
 	}, 
 
 	{ 
@@ -139,12 +134,12 @@ let images = [
 
 	{ 
 		img: "17.jpg", 
-		description: "I didn't know that there was dirt!"
+		description: "I didn't know that there was dirt on those!"
 	}, 
 
 	{ 
 		img: "18.jpg", 
-		description: "A sleepy car. Yeah, car."
+		description: "A sleepy car."
 	}, 
 
 	{ 
@@ -185,12 +180,12 @@ let images = [
 
 	{ 
 		img: "25.jpg", 
-		description: `Kutta, why "Kutta" is a bad word and "Kukur" isn't?`
+		description: `Dog.`
 	}, 
 
 	{ 
 		img: "26.jpg", 
-		description: "It's just aesthetic shit. Who got the time to romanticize reading it?"
+		description: "Who got the time to romanticize reading it?"
 	}, 
 
 	{ 
@@ -207,8 +202,7 @@ let images = [
 		img: "29.jpg", 
 		description:
         `
-            My cousin got a nice tablet. I wish I had one!
-            It's my younger brother using it.
+		      Right now tablets are so useful and it will be more if Snapdragon processor gets more powerful day by day.
         `
 	}, 
 
@@ -222,7 +216,7 @@ let images = [
 
 	{ 
 		img: "31.jpg", 
-		description: "FUCK BIOLOGY! I also like to art gibberish." 
+		description: "FUCK BIOLOGY! I art gibberish." 
 	}, 
 
 	{ 
@@ -267,12 +261,12 @@ let images = [
 
 	{ 
 		img: "39.jpg", 
-		description: "It was thrilling and amazing!"
+		description: "First time got on these rides."
 	}, 
 
 	{ 
 		img: "40.jpg", 
-		description: "Please Don't Touch"
+		description: "What is that?"
 	}, 
 
 	{ 
@@ -310,7 +304,7 @@ let images = [
 
 	{ 
 		img: "46.jpg", 
-		description: "I was at Bangabandhu Military Museum"
+		description: "I visited Bangabandhu Military Museum"
 	},
 
     { 
@@ -330,7 +324,7 @@ let images = [
 
     { 
         img: "50.jpg", 
-        description: `I haven't enjoyed my college life like everyone have.`
+        description: `I haven't enjoyed my college life like everyone has.`
     }, 
 
     { 
@@ -380,7 +374,7 @@ let images = [
         img: "59.jpg", 
         description:
         `
-            A retro vibe. By the way that music player was written by me and I am happy with it. Not but best but as a first project I thing it's fine.
+            A retro vibe. By the way that music player was written by me and I am happy with it. Not but best but as a first project I think it's fine.
         `
     }, 
 
@@ -388,9 +382,8 @@ let images = [
         img: "60.jpg", 
         description:
         `
-            I sometimes wonder how we underestimate people!
             If authority had allowed them to operate this operation then perhaps the kid could have survived.
-            Also we have to make a lot of improvements in these type of forces otherwise we will pay for it sooner or later.
+            Also we have to make a lot of improvements in these type of forces otherwise we will pay for it.
         `
     }, 
 
@@ -427,7 +420,7 @@ let images = [
 	},
 	{ 
 		img: "66.jpg", 
-		description: "My Skyrim character :D"
+		description: "TermusJS, written in pure HTML, CSS and JS."
 	}, 
 
 	{ 
@@ -488,6 +481,6 @@ let images = [
 	{
 		img: "78.jpg",
 		date: "15 Feb 2025",
-		description: `Shhh! "Men in White" will take you to... (From 2012-2013. no source available)`
+		description: `Shhh! "Men in White" will take you to... (From 2012-2013. no source available but matches with recently published images)`
 	}
 ]
