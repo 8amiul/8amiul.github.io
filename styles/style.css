@@ -37,3 +37,37 @@ body {
     font-family: "JetBrains Mono", sans-serif;
     color: #EEEEEE;
 }
+
+.scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.scrolling-text span {
+    display: inline-block;
+    padding-left: 50%;
+    animation: scroll-left 15s linear infinite;
+    margin: 0.5rem 0 0 0;
+}
+
+@media (max-width: 450px) {
+    .scrolling-text span {
+        display: inline-block;
+        padding-left: 0%;
+        animation: scroll-left 15s linear infinite;
+        margin: 0.5rem 0 0 0;
+        font-size: 0.8rem;
+    }
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
