@@ -482,5 +482,25 @@ let images = [
 		img: "78.jpg",
 		date: "15 Feb 2025",
 		description: `Shhh! "Men in White" will take you to... (From 2012-2013. no source available but matches with recently published images)`
+	},
+	{
+		img: "79.jpg",
+		date: "23 Feb 2025",
+		description: "Wedding wedding!!"
+	},
+	{
+		img: "80.jpg",
+		date: "23 Feb 2025",
+		description: "Every family union is so special. This time I met with so many people. Hope we can be always this much happy."
+	},
+	{
+		img: "81.jpg",
+		date: "23 Feb 2025",
+		description: "Artificial Flowers"
+	},
+	{
+		img: "82.jpg",
+		date: "23 Feb 2025",
+		description: "That ceremony deserved it."
 	}
 ]

@@ -38,23 +38,35 @@ body {
     color: #EEEEEE;
 }
 
-.scrolling-text {
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    position: relative;
+.scroll-container {
     width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1rem;
+    display: flex;
+    margin-top: 0.5rem;
 }
 
-.scrolling-text span {
+.scroll-text {
     display: inline-block;
-    padding-left: 50%;
-    animation: scroll-left 15s linear infinite;
-    margin: 0.5rem 0 0 0;
+    animation: scroll 30s linear infinite;
+}
+
+.scroll-text a {
+    color: #FBB4A5;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 @media (max-width: 450px) {
-    .scrolling-text span {
+    .scroll-container {
         display: inline-block;
         padding-left: 0%;
         animation: scroll-left 15s linear infinite;
@@ -63,11 +75,3 @@ body {
     }
 }
 
-@keyframes scroll-left {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}

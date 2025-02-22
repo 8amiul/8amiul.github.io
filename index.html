@@ -58,12 +58,18 @@
 </div>
 
 	<div id="content">
-	<div class="scrolling-text">
+	<script src="/images/img-description.js"></script>
+<div class="scroll-container">
     
-        <span>
-                New blog post -> [February 19, 2025] <a href="/posts/oh-my-flower/">Oh My Flower!</a>
+        <span class="scroll-text">
+                New blog post -> [19 Feb 2025] <a href="/posts/oh-my-flower/">What is love? Baby don&#39;t hurt me... - Haddaway</a>
         </span> 
     
+    <script>
+        image_updates = document.querySelector(".scroll-text");
+        latest_image = images.slice(-1)[0]
+        image_updates.innerHTML += "&nbsp;".repeat(50) + "New image post -> " + "[" + latest_image["date"] + "]" + " " + '<a href="/images">' +  latest_image["description"] + "</a>"
+    </script>
 </div>
 <div id="homepage">
     <div class="homepage-top">
