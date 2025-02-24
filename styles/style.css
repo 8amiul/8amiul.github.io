@@ -24,6 +24,10 @@
     src: url("/fonts/VT323.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "SourceSans3-Bold";
+    src: url("/fonts/SourceSans3-Bold.ttf") format("truetype");
+}
 
 
 

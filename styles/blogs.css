@@ -4,6 +4,14 @@
     color: #D8C4B6;
 }
 
+.blogs-list-date {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: #D8C4B6;
+    text-decoration: underline;
+    font-family: SourceSans3-Bold;
+}
+
 .list-item {
     margin: 2rem 0 2rem 1rem;
 }
@@ -15,7 +23,7 @@
 
 .blog-title {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: #E3F0AF;
 }
 
