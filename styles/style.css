@@ -49,6 +49,7 @@ body {
     font-size: 1rem;
     display: flex;
     margin-top: 0.5rem;
+    background-color: rgb(80, 50, 21);
 }
 
 .scroll-text {
