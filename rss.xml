@@ -6,7 +6,7 @@
     <description>Recent content on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Feb 2025 16:33:44 +0600</lastBuildDate>
+    <lastBuildDate>Wed, 05 Mar 2025 23:09:07 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
@@ -179,6 +179,34 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
 &lt;/ul&gt;
 &lt;h2 id=&#34;how-the-program-works&#34;&gt;How the program works?&lt;/h2&gt;
 &lt;p&gt;At first the main function will sequentially call other functions. Inside the main function it will call &lt;code&gt;menu(args)&lt;/code&gt; where selection between menu or exit will be returned. If returned value is news then &lt;code&gt;get_news_lines(args)&lt;/code&gt;  will be called and from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through &lt;code&gt;get_news(args)&lt;/code&gt; and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally &lt;code&gt;show_news(args)&lt;/code&gt; will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>Graphics Tablet on Linux</title>
+      <link>https://8amiul.github.io/posts/gfx-tablet-on-linux/</link>
+      <pubDate>Wed, 05 Mar 2025 23:09:07 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/gfx-tablet-on-linux/</guid>
+      <description>&lt;p&gt;So how easy it was to make the graphics tablet working on linux? I using Debian found it pretty straightforward! Oh, this tutorial is only for those who are using Xorg NOT WAYLAND!&lt;/p&gt;
+&lt;p&gt;I believe it&amp;rsquo;s the same for all the distributions. As I am using Debian I will follow the &lt;a href=&#34;https://wiki.debian.org/&#34;&gt;Debian wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;According to &lt;a href=&#34;https://wiki.debian.org/WacomTablets&#34;&gt;WacomTablets page of the wiki&lt;/a&gt;, we get to see that a package is necessary to install for wacom tablets to work on xorg.&lt;/p&gt;
+&lt;p&gt;Now you might not have a tablet from Wacom, you might have something else. I am using the VEIKK S640. But this method should work for every tablet.&lt;/p&gt;
+&lt;p&gt;In the &lt;code&gt;/etc/X11/xorg.conf.d&lt;/code&gt; folder paste these few lines.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Identifier &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tablet&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Driver &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wacom&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MatchDevicePath &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/dev/input/event*&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MatchUSBID &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;VID:PID&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;EndSection
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But we are not done yet. We have to replace &lt;code&gt;VID:PID&lt;/code&gt; the with the actual id of the tablet. Let&amp;rsquo;s use the tool &lt;code&gt;lsusb&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;~ % lsusb
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bus &lt;span style=&#34;color:#ae81ff&#34;&gt;006&lt;/span&gt; Device 001: ID 1d6b:0003 Linux Found...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bus &lt;span style=&#34;color:#ae81ff&#34;&gt;005&lt;/span&gt; Device 002: ID 0a12:0001 Cambridge...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bus &lt;span style=&#34;color:#ae81ff&#34;&gt;003&lt;/span&gt; Device 002: ID 046d:c077 Logitech, Inc. Mouse
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bus &lt;span style=&#34;color:#ae81ff&#34;&gt;001&lt;/span&gt; Device 006: ID 2feb:0001 Beijing Veikk..
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So at the bottom of the output I have the &lt;code&gt;VID:PID&lt;/code&gt; which is &lt;code&gt;2feb:0001&lt;/code&gt;. Just replace it in the &lt;code&gt;/etc/X11/xorg.conf.d&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;After that restarting the xserver might make the tablet working.&lt;/p&gt;
 </description> 
     </item>
     
