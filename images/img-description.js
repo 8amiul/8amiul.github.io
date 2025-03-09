@@ -507,5 +507,15 @@ let images = [
 		img: "83.jpg",
 		date: "04 Mar 2025",
 		description: "Debian with Chicago95"
+	},
+	{
+		img: "84.jpg",
+		date: "09 Mar 2025",
+		description: "Smooth!"
+	},
+	{
+		img: "85.jpg",
+		date: "09 Mar 2025",
+		description: "That's me I guess"
 	}
 ]
