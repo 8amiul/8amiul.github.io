@@ -6,10 +6,125 @@
     <description>Recent content in Posts on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Mar 2025 23:09:07 +0600</lastBuildDate>
+    <lastBuildDate>Wed, 12 Mar 2025 13:46:54 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Life without Spotify</title>
+      <link>https://8amiul.github.io/posts/life-without-spotify/</link>
+      <pubDate>Wed, 12 Mar 2025 13:46:54 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/life-without-spotify/</guid>
+      <description>&lt;p&gt;Yes, I know spotify is DEAD. Actually it is only dead for pirates. Typical users can use it with ads and limited skips. I know it&amp;rsquo;s hard time for people like us. Man, I ain&amp;rsquo;t gonna pay just to listen music.&lt;/p&gt;
+&lt;p&gt;Even though &lt;a href=&#34;https://github.com/Team-xManager/&#34;&gt;Team-xManager&lt;/a&gt; is working so hard to get the spotify patch working again. Hopefully they will be able to make it.&lt;/p&gt;
+&lt;p&gt;Recently they have published an experimental version of their patch which is based on Spotify version 9.0.24.601.&lt;/p&gt;
+&lt;p&gt;You can find it on their discord server &lt;em&gt;&amp;ldquo;link can be found in their xManager app&amp;rdquo;&lt;/em&gt; download the xManager app from their &lt;a href=&#34;https://github.com/Team-xManager/xManager&#34;&gt;github repo&lt;/a&gt; or their &lt;a href=&#34;https://xmanagerapp.com/&#34;&gt;website&lt;/a&gt;. Join their subreddit &lt;a href=&#34;https://www.reddit.com/r/xManagerApp/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+    &lt;a href=&#34;https://8amiul.github.io/images/life-without-spotify/discord-screenshot.png&#34; style=&#34;text-align: center;&#34;&gt;
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://8amiul.github.io/images/life-without-spotify/discord-screenshot.png&#34; alt=&#34;[Fire writing]&#34; title=&#34;Fire writing&#34;&gt;
+    &lt;/a&gt;
+
+&lt;p&gt;Installing one of these should work. But however it&amp;rsquo;s unstable. There are some problems you will face while using it. So it&amp;rsquo;s better to wait until they release a stable one.&lt;/p&gt;
+&lt;p&gt;Till then I am using a different music streaming app. I&amp;rsquo;ll list several ways of listening music.&lt;/p&gt;
+&lt;h1 id=&#34;on-desktop&#34;&gt;On Desktop&lt;/h1&gt;
+&lt;h3 id=&#34;web-browser--ublock-origin&#34;&gt;Web Browser + uBlock Origin&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s pretty straight forward and I am using this method for listening music on my desktop a year now.&lt;/p&gt;
+&lt;p&gt;Just download this ad blocker extension &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/&#34;&gt;firefox one here&lt;/a&gt;. Enable it and login spotify on your web browser. Here is the spotify &lt;a href=&#34;https://open.spotify.com/&#34;&gt;web app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now you can play music without any ads and yes unlimited skipping songs.&lt;/p&gt;
+
+    &lt;a href=&#34;https://8amiul.github.io/images/life-without-spotify/browser_and_adblocker.png&#34; style=&#34;text-align: center;&#34;&gt;
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://8amiul.github.io/images/life-without-spotify/browser_and_adblocker.png&#34; alt=&#34;[Fire writing]&#34; title=&#34;Fire writing&#34;&gt;
+    &lt;/a&gt;
+
+&lt;h3 id=&#34;for-windows-only&#34;&gt;For Windows Only&lt;/h3&gt;
+&lt;p&gt;Use &lt;a href=&#34;https://github.com/SpotX-Official/SpotX&#34;&gt;SpotX&lt;/a&gt;. It patches the original Spotify windows app and makes it working with premium features. Installation is pretty straightforward. Just run the &lt;code&gt;install.bat&lt;/code&gt; or input that command in your powershell.&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://camo.githubusercontent.com/42d94a270485c8c1c1879593b51ea18900ccc5c455d29f53a312ec493b023384/68747470733a2f2f73706f74782d6f6666696369616c2e6769746875622e696f2f696d616765732f6c6f676f732f6c6f676f2e706e67&#34; alt=&#34;[Fire writing]&#34; title=&#34;Fire writing&#34;&gt;
+
+&lt;h1 id=&#34;audio-ripping&#34;&gt;Audio Ripping&lt;/h1&gt;
+&lt;h3 id=&#34;soulseek&#34;&gt;Soulseek&lt;/h3&gt;
+&lt;p&gt;Well it&amp;rsquo;s not a streaming app. Instead it&amp;rsquo;s a P2P client to download music high quality songs. I will highly suggest you to use this application if you like to store music files on your media player. I still use it whenever I want to download a full album of music. It&amp;rsquo;s an awesome application. &lt;a href=&#34;http://www.slsknet.org/&#34;&gt;Get Soulseek&lt;/a&gt;&lt;/p&gt;
+
+    &lt;a href=&#34;https://8amiul.github.io/images/life-without-spotify/soulseek.png&#34; style=&#34;text-align: center;&#34;&gt;
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://8amiul.github.io/images/life-without-spotify/soulseek.png&#34; alt=&#34;[Soulseek]&#34; title=&#34;Soulseek&#34;&gt;
+    &lt;/a&gt;
+
+&lt;h3 id=&#34;yt-dlp&#34;&gt;yt-dlp&lt;/h3&gt;
+&lt;p&gt;A tool every linux users have. It can download videos from youtube and many other websites in various formats. If you know basic shell scripting then you can just make an cli app using it. I once made when I was a newbie linux user. &lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;GitHub Repo&lt;/a&gt;&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://raw.githubusercontent.com/yt-dlp/yt-dlp/master/.github/banner.svg&#34; alt=&#34;[yt-dlp]&#34; title=&#34;yt-dlp&#34;&gt;
+
+&lt;h3 id=&#34;audio-ripping-sites&#34;&gt;Audio ripping sites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SpotDownloader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I personally use &lt;a href=&#34;https://spotdownloader.com/&#34;&gt;SpotDownloader&lt;/a&gt;. I don&amp;rsquo;t like to bear so much pain installing all those fancy python and pip based tools for downloading music. In order to live a simple life just use what works smoothly. So I use this site whenever I need to go somewhere. I paste my spotify playlist on that site, hit submit and it return a zip file full of songs. Though there is a catch, this downloader can only download first 100 songs from a playlist. So you just have to make multiple playlists with 100 songs if you have more than 100 songs then. Quality? hmm just don&amp;rsquo;t expect that much.&lt;/p&gt;
+
+    &lt;a href=&#34;https://8amiul.github.io/images/life-without-spotify/spot-downloader.png&#34; style=&#34;text-align: center;&#34;&gt;
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://8amiul.github.io/images/life-without-spotify/spot-downloader.png&#34; alt=&#34;[spot-downloader]&#34; title=&#34;spotdownloader&#34;&gt;
+    &lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;cobalt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It&amp;rsquo;s another site to download songs. However I haven&amp;rsquo;t used it that much. Just visit &lt;a href=&#34;https://cobalt.tools/&#34;&gt;https://cobalt.tools/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;newalbumreleases.net&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A site where you can download music albums with cover arts. It should be an alternative of Soulseek. Here you don&amp;rsquo;t have to worry about sharing files or keeping contribution like Soulseek. Sometimes the server doesn&amp;rsquo;t work so which is a problem.
+&lt;a href=&#34;https://newalbumreleases.net/&#34;&gt;It can be found here&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;on-android&#34;&gt;On Android&lt;/h1&gt;
+&lt;h3 id=&#34;vitunevimusic&#34;&gt;ViTune/ViMusic&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s the music player I am using currently. From my perspective it&amp;rsquo;s the best free music streaming app for android. It doesn&amp;rsquo;t need any login hassels. It has a very nice algorithm management. No ads. The UI is perfect, better than any other music players listed here. Background playback supported. It can also play local music from device. Badly underrated. Has so many features which I haven&amp;rsquo;t discovered yet. Highly customizable. Can cache songs for offline playback. Also, just around 6MB! &lt;a href=&#34;https://github.com/25huizengek1/ViTune/releases&#34;&gt;MUST GET ViTune!&lt;/a&gt;&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://raw.githubusercontent.com/25huizengek1/ViTune/master/app/src/main/ic_launcher-playstore.png&#34; width=&#34;200px&#34;&gt;
+
+&lt;h3 id=&#34;spotube&#34;&gt;Spotube&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s an amazing app where you can stream music by connecting your spotify account. It can scrape all your playlists and spotify information. Sadly it has some issues such as slow streaming and sometimes it fails to load the account and thus make the app unusable. Unfortunately this didn&amp;rsquo;t work for me but for most people it works flawlessly. I found a better alternative so I didn&amp;rsquo;t bother fixing it. &lt;a href=&#34;https://spotube.krtirtho.dev/&#34;&gt;Download Spotube&lt;/a&gt; | &lt;a href=&#34;https://github.com/KRTirtho/spotube&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://raw.githubusercontent.com/KRTirtho/spotube/master/assets/spotube_banner.png&#34; width=&#34;200px&#34;&gt;
+
+&lt;h3 id=&#34;metrolist&#34;&gt;Metrolist&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s an app that can sync your youtube music profile. It&amp;rsquo;s open source and has a nice UI. I will suggest you to use it if you have playlists on YouTube Music. It also allows you to download songs for offline playback, background playback, lyrics support and many other features. It&amp;rsquo;s freaking underrated I&amp;rsquo;ll say. &lt;a href=&#34;https://github.com/mostafaalagamy/Metrolist/releases&#34;&gt;Download Metrolist&lt;/a&gt;&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://raw.githubusercontent.com/mostafaalagamy/Metrolist/main/fastlane/metadata/android/en-US/images/icon.png&#34; width=&#34;200px&#34;&gt;
+
+&lt;h3 id=&#34;musify&#34;&gt;Musify&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s also an alternative of spotify. The UI was fine. It can play songs from many sources such as it can even play music like videos from YouTube. Does have downloading option though I didn&amp;rsquo;t try. It has lyrics support, sponsorblock support, backup/restore options and etc. &lt;a href=&#34;https://github.com/gokadzev/Musify/releases&#34;&gt;Download Musify&lt;/a&gt;&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://raw.githubusercontent.com/gokadzev/Musify/master/repository_files/Musify-banner.png&#34; width=&#34;500px&#34;&gt;
+
+&lt;h3 id=&#34;pipepipenewpipe&#34;&gt;PipePipe/NewPipe&lt;/h3&gt;
+&lt;p&gt;PipePipe is a newer version of NewPipe. NewPipe was extraordinary but sadly with many bugs and glitches. PipePipe is however better than NewPipe. It&amp;rsquo;s exactly not a music streaming tool instead it&amp;rsquo;s a YouTube video streaming app. But it&amp;rsquo;s obvious that you can play music with that also it has a music player mode (I don&amp;rsquo;t know how I missed it). Background music playback is supported, Youtube dislike is back, No freaking ads and many more things. Just use it. But it can&amp;rsquo;t sync with your youtube accounts sadly. It is possilbe but in order to load your profile on this app you have to struggle a bit. Visit the github repo for more information. &lt;a href=&#34;https://github.com/InfinityLoop1308/PipePipe/releases&#34;&gt;Download PipePipe&lt;/a&gt;&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://raw.githubusercontent.com/InfinityLoop1308/PipePipe/main/assets/logo.png&#34; width=&#34;200px&#34;&gt;
+
+&lt;h3 id=&#34;youtube-music-revanced&#34;&gt;YouTube Music Revanced&lt;/h3&gt;
+&lt;p&gt;With &lt;a href=&#34;https://revanced.app/&#34;&gt;Revanced&lt;/a&gt; you can patch many applications, it&amp;rsquo;s not only limited to YouTube. Download this app and download the suggested YouTube Music app version by the app. Then simply patch the YouTube Music using Revanced. It&amp;rsquo;s a must use tool if you hate ads.&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://revanced.app/logo.svg&#34; width=&#34;200px&#34;&gt;
+
+&lt;h1 id=&#34;music-streaming-sites&#34;&gt;Music Streaming Sites&lt;/h1&gt;
+&lt;h3 id=&#34;spotfyone&#34;&gt;spotfy.one&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s an alternative to spotify but it&amp;rsquo;s a web app. You can create an account on it to save your playlists and data. It doesn&amp;rsquo;t need an account to play songs and it&amp;rsquo;s add free. &lt;a href=&#34;https://spotfy.one/&#34;&gt;Visit spotfy.one&lt;/a&gt;&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://spotfy.one/storage/branding_media/WoUyZzhnyIzXPkRhKqUW5vKEVxoV1RqvjdQ6k6G7.png&#34; width=&#34;200px&#34;&gt;
+
+&lt;h3 id=&#34;beatbumpio&#34;&gt;beatbump.io&lt;/h3&gt;
+&lt;p&gt;It&amp;rsquo;s a privacy focused music streaming site. Basic features are no ads, Background playback, does have a nice algorithm for suggesting new songs. &lt;a href=&#34;https://beatbump.io&#34;&gt;Visit beatbump.io&lt;/a&gt;&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://beatbump.io/logo.svg&#34; width=&#34;200px&#34;&gt;
+
+&lt;h1 id=&#34;on-ios&#34;&gt;On iOS&lt;/h1&gt;
+&lt;h3 id=&#34;demus&#34;&gt;Demus&lt;/h3&gt;
+&lt;p&gt;I got no iOS device so couldn&amp;rsquo;t try it. Try Demus it should be on AppStore.&lt;/p&gt;
+
+    &lt;img class=&#34;post-center-image&#34; src=&#34;https://demus.app/images/icon.png&#34; width=&#34;200px&#34;&gt;
+
+</description> 
+    </item>
     
     <item>
       <title>Graphics Tablet on Linux</title>
