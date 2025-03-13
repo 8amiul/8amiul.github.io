@@ -38,7 +38,18 @@ It tasted good. However I don&amp;rsquo;t really like sweets and foods that has 
       <pubDate>Wed, 01 Jan 2025 19:49:38 +0600</pubDate>
       
       <guid>https://8amiul.github.io/posts/first_meal_2025/</guid>
-      <description>&lt;p&gt;I just cooked my first meal of this year. So it&amp;rsquo;s a new year and Today I woke up early.&lt;/p&gt;
+      <description>
+    &lt;style&gt;
+    .post-content img, .post-content a img {
+        align-self: center;
+        max-width: 100%; 
+        width: 1000px; 
+        height: auto; 
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    &lt;/style&gt;
+
+&lt;p&gt;I just cooked my first meal of this year. So it&amp;rsquo;s a new year and Today I woke up early.&lt;/p&gt;
 &lt;p&gt;I just thought it&amp;rsquo;s better I try something new today. So why don&amp;rsquo;t I make my own breakfast?&lt;/p&gt;
 &lt;p&gt;Noodles was the only food I knew how to cook. So I started cooking. I took  noodles, then egg and some veggies (actually left over salad from yesterday&amp;rsquo;s party).&lt;/p&gt;
 &lt;p&gt;However it wasn&amp;rsquo;t cooked properly. But still it looked so good. But as I didn&amp;rsquo;t put salt or any other spices, it tasted&amp;hellip; okay. Not the best but one who starving will obviously eat.&lt;/p&gt;

@@ -48,7 +48,7 @@ body {
     white-space: nowrap;
     font-size: 1rem;
     display: flex;
-    margin-top: 0.5rem;
+    padding: 0.2rem 0;
     background-color: rgb(80, 50, 21);
 }
 

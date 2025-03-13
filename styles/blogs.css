@@ -81,9 +81,12 @@
     color: #FF9494;
 }
 
-.post-content img {
-    max-width: 50%;
-    align-self: center;
+.post-content img, .post-content a img {
+    max-width: 100%; 
+    width: 1000px; 
+    display: block; 
+    height: auto; 
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .project-cover {
