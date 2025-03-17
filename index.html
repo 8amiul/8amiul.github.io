@@ -69,7 +69,11 @@
     <script>
         image_updates = document.querySelector(".scroll-text");
         latest_image = images.slice(-1)[0]
-        image_updates.innerHTML += "&nbsp;".repeat(50) + "New image post -> " + "[" + latest_image["date"] + "]" + " " + '<a href="/images">' +  latest_image["description"] + "</a>"
+       
+        if (latest_image["description"].slice(" ").length > 10)
+            image_updates.innerHTML += "&nbsp;".repeat(50) + "New image post -> " + "[" + latest_image["date"] + "]" + " " + '<a href="/images">' +  latest_image["description"].split(' ').slice(1, 10).join(" ") + "&nbsp;..." + "</a>"
+        else
+            image_updates.innerHTML += "&nbsp;".repeat(50) + "New image post -> " + "[" + latest_image["date"] + "]" + " " + '<a href="/images">' +  latest_image["description"] + "</a>"
     </script>
 </div>
 <div id="homepage">
