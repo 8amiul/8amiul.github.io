@@ -527,5 +527,18 @@ let images = [
 		img: "87.jpg",
 		date: "17 Mar 2025",
 		description: "I told ChatGPT to roast me and he cooked!"
+	},
+	{
+		img: "88.jpg",
+		date: "17 Mar 2025",
+		description: 
+		`
+			So you walk around like you don't know me
+			You got a new friend, well, I got homies
+			But in the end it's still so lonely
+			- Heartless | Kanye West
+
+			Yeah yeah sad posting.
+		`
 	}
 ]
