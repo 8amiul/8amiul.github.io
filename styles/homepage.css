@@ -46,6 +46,12 @@
     font-size: 1.5rem;
 }
 
+#homepage .about-me .about-me-list ul{
+    padding: 0 3rem;
+    font-family: "VT323";
+    font-size: 1.5rem;
+}
+
 .social-links {
     padding: 1rem;
 }

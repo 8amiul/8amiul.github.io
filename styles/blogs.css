@@ -102,10 +102,16 @@
     border: 1px solid #D8C4B6;
 }
 
+.post-content pre code span {
+    font-size: 1rem;
+}
+.post-content pre {
+    margin: 0.8rem;
+}
+
 .post-description {
     font-size: 1.2rem;
 }
-
 
 .post-content h1,
 .post-content h2,
@@ -115,6 +121,11 @@
 .post-content h6
 {
     margin: 1rem 0;
+}
+
+.post-content li code {
+    color: #bccca3;
+    font-family: "VT323";
 }
 
 /*      Weird Shit Below    */
@@ -127,4 +138,5 @@
 .post-content ol{
     margin: 0 2rem;
 }
+
 

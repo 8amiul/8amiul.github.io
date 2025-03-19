@@ -34,6 +34,11 @@
         font-size: 1.2rem;
     }
 
+    #homepage .about-me .about-me-list ul {
+        padding: 0 2rem;
+        font-size: 1.2rem;
+    }
+
     .post-content *{
         font-size: 80%;
     }
