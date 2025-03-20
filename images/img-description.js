@@ -527,5 +527,10 @@ let images = [
 		img: "87.jpg",
 		date: "17 Mar 2025",
 		description: "I told ChatGPT to roast me and he cooked!"
+	},
+	{
+		img: "88.jpg",
+		date: "20 Mar 2025",
+		description: "Addicted to smol cat videos"
 	}
 ]
