@@ -531,6 +531,11 @@ let images = [
 	{
 		img: "88.jpg",
 		date: "20 Mar 2025",
-		description: "Addicted to smol cat videos"
+		description: "Addicted to smol car videos"
+	},
+	{
+		img: "89.jpg",
+		date: "22 Mar 2025 | 12:45 AM",
+		description: "indeed!"
 	}
 ]
