@@ -537,5 +537,10 @@ let images = [
 		img: "89.jpg",
 		date: "22 Mar 2025 | 12:45 AM",
 		description: "indeed!"
+	},
+	{
+		img: "90.jpg",
+		date: "22 Mar 2025 | 08:28 PM",
+		description: "Every lie we tell incurs a debt to the truth \n- Valery Legasov"
 	}
 ]
