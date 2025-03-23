@@ -542,5 +542,10 @@ let images = [
 		img: "90.jpg",
 		date: "22 Mar 2025 | 08:28 PM",
 		description: "Every lie we tell incurs a debt to the truth \n- Valery Legasov"
+	},
+	{
+		img: "91.jpg",
+		date: "24 Mar 2025 | 01:30 AM",
+		description: "ক্ষুধার রাজ্যে পৃথিবী গদ্যময়, পূর্ণিমা চাঁদ যেন ঝলসানো রুটি \n- সুকান্ত ভট্টাচার্য"
 	}
 ]
