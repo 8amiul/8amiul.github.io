@@ -547,5 +547,10 @@ let images = [
 		img: "91.jpg",
 		date: "24 Mar 2025 | 01:30 AM",
 		description: "ক্ষুধার রাজ্যে পৃথিবী গদ্যময়, পূর্ণিমা চাঁদ যেন ঝলসানো রুটি \n- সুকান্ত ভট্টাচার্য"
+	},
+	{
+		img: "92.jpg",
+		date: "25 Mar 2025 | 09:55 PM",
+		description: "I wasn't a weeb but these 90s anime are something that none can deny"
 	}
 ]
