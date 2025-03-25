@@ -139,8 +139,8 @@
     margin: 0 2rem;
 }
 
-.post-content img,
-.post-content a img {
+/* centering image for blog post */
+.post-content img, .post-content a img{
     align-self: center;
     max-width: 100%; 
     width: 1000px; 
