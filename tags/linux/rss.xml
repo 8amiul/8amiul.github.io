@@ -13,10 +13,10 @@
     
     <item>
       <title>Graphics Tablet on Linux</title>
-      <link>https://8amiul.github.io/posts/gfx-tablet-on-linux/</link>
+      <link>https://8amiul.github.io/posts/march-25/gfx-tablet-on-linux/</link>
       <pubDate>Wed, 05 Mar 2025 23:09:07 +0600</pubDate>
       
-      <guid>https://8amiul.github.io/posts/gfx-tablet-on-linux/</guid>
+      <guid>https://8amiul.github.io/posts/march-25/gfx-tablet-on-linux/</guid>
       <description>&lt;p&gt;So how easy it was to make the graphics tablet working on linux? I using Debian found it pretty straightforward! Oh, this tutorial is only for those who are using Xorg NOT WAYLAND!&lt;/p&gt;
 &lt;p&gt;I believe it&amp;rsquo;s the same for all the distributions. As I am using Debian I will follow the &lt;a href=&#34;https://wiki.debian.org/&#34;&gt;Debian wiki&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;According to &lt;a href=&#34;https://wiki.debian.org/WacomTablets&#34;&gt;WacomTablets page of the wiki&lt;/a&gt;, we get to see that a package is necessary to install for wacom tablets to work on xorg.&lt;/p&gt;

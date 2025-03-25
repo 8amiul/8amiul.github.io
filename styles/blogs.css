@@ -139,4 +139,11 @@
     margin: 0 2rem;
 }
 
-
+.post-content img,
+.post-content a img {
+    align-self: center;
+    max-width: 100%; 
+    width: 1000px; 
+    height: auto; 
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
