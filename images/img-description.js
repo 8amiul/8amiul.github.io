@@ -50,15 +50,15 @@ let images = [
         `
 	}, 
 
-	{ 
+	/*{ 
 		img: "6.jpg", 
 		description: "I don't know what it is! I clicked it when I was at my village."
-	}, 
+	}*/ 
 
-	{ 
+	/*{ 
 		img: "7.jpg", 
 		description: "It's the same thing as before."
-	}, 
+	},*/ 
 
 	{ 
 		img: "8.jpg", 
@@ -117,10 +117,10 @@ let images = [
         `
 	}, 
 
-	{ 
+	/*{ 
 		img: "14.jpg", 
 		description: "The same Termux chroot ArchLinux thing. I used to use arch, btw"
-	}, 
+	},*/ 
 
 	{ 
 		img: "15.jpg", 
@@ -178,10 +178,10 @@ let images = [
 		description: "I was compiling Box64 for arm64 or arch64, idk. if you need it, you can find it in my github repo."
 	}, 
 
-	{ 
+	/*{ 
 		img: "25.jpg", 
 		description: `Dog.`
-	}, 
+	},*/ 
 
 	{ 
 		img: "26.jpg", 
@@ -229,10 +229,10 @@ let images = [
 		description: "A 7 year old cousin of mine drew this. Isn't it creepy? at the same time it's cool."
 	}, 
 
-	{ 
+	/*{ 
 		img: "34.jpg", 
 		description: "Sagol! oh, sagol."
-	}, 
+	},*/ 
 
 	{ 
 		img: "35.jpg", 
@@ -259,20 +259,20 @@ let images = [
 		description: "বিলাই"
 	}, 
 
-	{ 
+	/*{ 
 		img: "39.jpg", 
 		description: "First time got on these rides."
-	}, 
+	},*/ 
 
 	{ 
 		img: "40.jpg", 
 		description: "What is that?"
 	}, 
 
-	{ 
+	/*{ 
 		img: "41.jpg", 
 		description: "I once for no reason was obsessed with CAS."
-	}, 
+	},*/ 
 
 	{ 
 		img: "42.jpg", 
@@ -312,7 +312,7 @@ let images = [
         description: "My cousins draw these anime things so nicely!"
     }, 
 
-    { 
+    /*{ 
         img: "48.jpg", 
         description: "Not the best picture but I should keep some memories."
     }, 
@@ -325,7 +325,7 @@ let images = [
     { 
         img: "50.jpg", 
         description: `I haven't enjoyed my college life like everyone has.`
-    }, 
+    },*/
 
     { 
         img: "51.jpg", 
@@ -334,7 +334,7 @@ let images = [
 
     { 
         img: "52.jpg", 
-        description: "A white cock?... cock?"
+        description: "White"
     }, 
 
     { 
@@ -345,10 +345,10 @@ let images = [
         `
     }, 
 
-    { 
+    /*{ 
         img: "54.jpg", 
         description: "BRACU. They got a nice campus."
-    }, 
+    },*/ 
 
     { 
         img: "55.jpg", 
@@ -401,7 +401,7 @@ let images = [
 		img: "63.jpg",
 		description: "My uncle made this. I was maybe 1 year old."
 	},
-	{
+	/*{
 		img: "64.jpg",
 		description: 
 		`
@@ -413,11 +413,11 @@ let images = [
 			theory doesn't work but those cases shouldn't be called help, those
 			are trade. 
 		`
-	},
-	{
+	},*/
+	/*{
 		img: "65.jpg",
 		description: "This has a deep meaning. Why don't you read the caption once again?"
-	},
+	},*/
 	{ 
 		img: "66.jpg", 
 		description: "TermusJS, written in pure HTML, CSS and JS."
@@ -433,10 +433,10 @@ let images = [
 		description: "Ugh! I just couldn't complete GTA IV. Recently I lost the save file and all my progress has gone."
 	}, 
 
-	{ 
+	/*{ 
 		img: "69.jpg", 
 		description: "..."
-	}, 
+	},*/ 
 
 	{ 
 		img: "70.jpg", 
@@ -448,20 +448,20 @@ let images = [
 		description: "I gave her a new hairstyle."
 	}, 
 
-	{ 
+	/*{ 
 		img: "72.jpg", 
 		description: "I kept this head after beheading her. Now it's a nice showpiece"
-	}, 
+	},*/ 
 
-	{ 
+	/*{ 
 		img: "73.jpg", 
 		description: "She is Serena, a vampire. She can turn you vampire in Skyrim"
-	}, 
+	},*/ 
 
-	{ 
+	/*{ 
 		img: "74.jpg", 
 		description: "The death of the final boss Alduin."
-	}, 
+	},*/ 
 
 	{ 
 		img: "75.jpg", 
@@ -473,11 +473,11 @@ let images = [
 		description: "Aurora!"
 	}, 
 
-	{ 
+	/*{ 
 		img: "77.jpg", 
 		date: "5 Feb 2025",
 		description: "tf Tommy! It's a glitch lol. I think it's hilarious."
-	},
+	},*/
 	{
 		img: "78.jpg",
 		date: "15 Feb 2025",
@@ -508,26 +508,26 @@ let images = [
 		date: "04 Mar 2025",
 		description: "Debian with Chicago95"
 	},
-	{
+	/*{
 		img: "84.jpg",
 		date: "09 Mar 2025",
 		description: "Smooth!"
-	},
-	{
+	},*/
+	/*{
 		img: "85.jpg",
 		date: "09 Mar 2025",
 		description: "That's me I guess"
-	},
-	{
+	},*/
+	/*{
 		img: "86.jpg",
 		date: "17 Mar 2025",
 		description: "F all kryptonites!"
-	},
-	{
+	},*/
+	/*{
 		img: "87.jpg",
 		date: "17 Mar 2025",
 		description: "I told ChatGPT to roast me and he cooked!"
-	},
+	},*/
 	{
 		img: "88.jpg",
 		date: "20 Mar 2025",
