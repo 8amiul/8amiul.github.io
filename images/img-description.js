@@ -557,5 +557,10 @@ let images = [
 		img: "93.jpg",
 		date: "02 Apr 2025 | 08:22 PM",
 		description: "আমার খুশির অন্তরায় আমি \n- কমপ্লেক্স ক্রিচার"
+	},
+	{
+		img: "palestine_annotated2.png",
+		date: "07 Apr 2025 | 12:09 AM",
+		description: "..."
 	}
 ]
