@@ -304,7 +304,7 @@ let images = [
 
 	{ 
 		img: "46.jpg", 
-		description: "I visited Bangabandhu Military Museum"
+		description: "I visited Bangladesh Military Museum"
 	},
 
     { 
