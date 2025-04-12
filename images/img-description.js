@@ -561,6 +561,6 @@ let images = [
 	{
 		img: "palestine_annotated2.png",
 		date: "07 Apr 2025 | 12:09 AM",
-		description: "..."
+		description: "From the river to sea, Palestine will be free!"
 	}
 ]

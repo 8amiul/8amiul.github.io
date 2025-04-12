@@ -17,8 +17,12 @@
 }
 
 #homepage .homepage-cover-pfp {
+   /*
     width: 320px;
     height: 320px;
+    */
+    width: 320px;
+    height: 160px;
 }
 #homepage .homepage-top-link-list {
     margin: 0 0 1rem 1rem;
