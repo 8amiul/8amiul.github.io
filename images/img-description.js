@@ -549,11 +549,6 @@ let images = [
 		description: "ক্ষুধার রাজ্যে পৃথিবী গদ্যময়, পূর্ণিমা চাঁদ যেন ঝলসানো রুটি \n- সুকান্ত ভট্টাচার্য"
 	},
 	{
-		img: "92.jpg",
-		date: "25 Mar 2025 | 09:55 PM",
-		description: "I wasn't a weeb but these 90s anime are something that none can deny"
-	},
-	{
 		img: "93.jpg",
 		date: "02 Apr 2025 | 08:22 PM",
 		description: "আমার খুশির অন্তরায় আমি \n- কমপ্লেক্স ক্রিচার"
@@ -562,5 +557,10 @@ let images = [
 		img: "palestine_annotated2.png",
 		date: "07 Apr 2025 | 12:09 AM",
 		description: "From the river to sea, Palestine will be free!"
+	},
+	{
+		img: "italo_disco_by_last_dinosaurs_3d2.png",
+		date: "13 Apr 2025",
+		description: "Now we're written in history\nWe close the book we’ve opened up\nThere will always be a place in my heart\nBut baby can't you see we were meant to fall apart\n- Italo Disco | Last Dinosaurs"
 	}
 ]
