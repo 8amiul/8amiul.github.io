@@ -6,10 +6,42 @@
     <description>Recent content in Posts on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Mar 2025 12:46:13 +0600</lastBuildDate>
+    <lastBuildDate>Tue, 22 Apr 2025 18:42:48 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gaming on Linux</title>
+      <link>https://8amiul.github.io/posts/apr-25/gaming-on-linux/</link>
+      <pubDate>Tue, 22 Apr 2025 18:42:48 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/apr-25/gaming-on-linux/</guid>
+      <description>&lt;p&gt;If you want to play games on linux then you have chosen the most hardest path. It&amp;rsquo;s obviously possible to play games on linux but it needs a lot of time, patience and efforts. However most of the online games don&amp;rsquo;t work on Linux. So can&amp;rsquo;t really play any popular online games. There might be workarounds for them but it would be wise to have a windows installed alongside linux.&lt;/p&gt;
+&lt;p&gt;This would be a quick tutorial that will make your Linux system play Windows games.&lt;/p&gt;
+&lt;h1 id=&#34;install-wine--winetricks&#34;&gt;Install Wine &amp;amp; Winetricks&lt;/h1&gt;
+&lt;p&gt;You can download Wine from &lt;a href=&#34;https://www.winehq.org/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Or you can just relay on your system&amp;rsquo;s package manager. I suggest you to use your package manager.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo apt install wine
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I used apt as I am on debian 12.&lt;/p&gt;
+&lt;p&gt;For winetricks. You have to execute the following commands.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ chmod +x winetricks 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo mv winetricks /usr/local/bin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;install-necessary-libraries-using-winetricks&#34;&gt;Install necessary libraries using Winetricks&lt;/h1&gt;
+&lt;p&gt;I might have seen some libraries called DirectX, .Net, VCredist etc. These make games working. So in order to install things like that we use winetricks.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ winetricks d3dx10 d3dx9 dotnet35 dotnet40 dotnet45 dotnet48 dxvk vcrun2008 vcrun2010 vcrun2012 vcrun2019 vcrun6sp6
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Execute this command and install all the mentioned tools.&lt;/p&gt;
+&lt;h1 id=&#34;install-lutris&#34;&gt;Install Lutris&lt;/h1&gt;
+&lt;p&gt;Install lutris using your package manager. But if you don&amp;rsquo;t have lutris there then manually install it by following their &lt;a href=&#34;https://lutris.net/downloads&#34;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For debian,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb [signed-by=/etc/apt/keyrings/lutris.gpg] https://download.opensuse.org/repositories/home:/strycore/Debian_12/ ./&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/lutris.list &amp;gt; /dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ wget -q -O- https://download.opensuse.org/repositories/home:/strycore/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/keyrings/lutris.gpg &amp;gt; /dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt install lutris
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finally we are done installing all the tools that are necessary. Now we have to work on lutris in order to play games.&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description> 
+    </item>
     
     <item>
       <title>End of Ramadan</title>

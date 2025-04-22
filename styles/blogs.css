@@ -65,6 +65,7 @@
 }
 
 .post-content {
+    width: 100%;
     font-size: 1.5rem; /* for BlogPostFont1 */
     /* font-size: 1.2rem; JetBrains-Mono */
     margin: 1rem 0;
@@ -104,10 +105,10 @@
 
 .post-content pre code span {
     font-size: 1rem;
+    overflow: auto;
+    /*padding: 0.3rem 0.1rem;*/
 }
-.post-content pre {
-    margin: 0.8rem;
-}
+
 
 .post-description {
     font-size: 1.2rem;
