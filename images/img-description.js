@@ -42,13 +42,6 @@ let images = [
         `
 	}, 
 
-	{ 
-		img: "5.jpg", 
-		description:
-        `
-            Thanks to her for this. I was surprised when I found that she drew it. She was a talented girl!
-        `
-	}, 
 
 	/*{ 
 		img: "6.jpg", 
@@ -71,25 +64,6 @@ let images = [
         `
 	}, 
 
-	{ 
-		img: "9.jpg", 
-		description:
-        `
-            A flower that blossomed in our balcony.
-        `
-	}, 
-
-	{ 
-		img: "10.jpg", 
-		description: 
-        `
-            আলো, আলো আমি কখনো খুঁজে পাবো না
-            চাঁদের আলো, তুমি কখনো আমার হবে না।
-
-            I don't listen to Tahsan that much. I guess
-            that's the only song of him I've heard.
-        `
-	}, 
 
 	{ 
 		img: "11.jpg", 
@@ -124,14 +98,8 @@ let images = [
 
 	{ 
 		img: "15.jpg", 
-		description: "Just a playlist cover that I made for ..."
+		description: "Collection of indie music from 2023"
 	}, 
-
-	{ 
-		img: "16.jpg", 
-		description: "Bicycle! Veloce Slayer 1.0, I believe."
-	}, 
-
 	{ 
 		img: "17.jpg", 
 		description: "I didn't know that there was dirt on those!"
@@ -162,12 +130,6 @@ let images = [
             There is no "তাল গাছ" anymore. There are just buildings and buildings
         `
 	}, 
-
-	{ 
-		img: "22.jpg", 
-		description: "A random click at my cousins wedding. I was at Narsingdi, what a nice place!"
-	}, 
-
 	{ 
 		img: "23.jpg", 
 		description: "I don't remember why I kept it."
@@ -192,12 +154,6 @@ let images = [
 		img: "27.jpg", 
 		description: "Buildings"
 	}, 
-
-	{ 
-		img: "28.jpg", 
-		description: "Polythene."
-	}, 
-
 	{ 
 		img: "29.jpg", 
 		description:
@@ -207,22 +163,10 @@ let images = [
 	}, 
 
 	{ 
-		img: "30.jpg", 
-		description:
-        `
-            Pixel 5 isn't good at night. 
-        `
-	}, 
-
-	{ 
 		img: "31.jpg", 
 		description: "FUCK BIOLOGY! I art gibberish." 
 	}, 
 
-	{ 
-		img: "32.jpg", 
-		description: "psychedelics."
-	}, 
 
 	{ 
 		img: "33.jpg", 
@@ -266,7 +210,7 @@ let images = [
 
 	{ 
 		img: "40.jpg", 
-		description: "What is that?"
+		description: "Nice"
 	}, 
 
 	/*{ 
@@ -289,12 +233,6 @@ let images = [
 	}, 
 
 	{ 
-		img: "44.jpg", 
-		description: "Here I had a lot to say. Even I've written it but something resisted myself and I remained silent."
-        
-	}, 
-
-	{ 
 		img: "45.jpg", 
 		description:
         `
@@ -307,10 +245,7 @@ let images = [
 		description: "I visited Bangladesh Military Museum"
 	},
 
-    { 
-        img: "47.jpg", 
-        description: "My cousins draw these anime things so nicely!"
-    }, 
+
 
     /*{ 
         img: "48.jpg", 
@@ -350,10 +285,6 @@ let images = [
         description: "BRACU. They got a nice campus."
     },*/ 
 
-    { 
-        img: "55.jpg", 
-        description: "Reddit."
-    }, 
 
     { 
         img: "56.jpg", 
@@ -479,19 +410,9 @@ let images = [
 		description: "tf Tommy! It's a glitch lol. I think it's hilarious."
 	},*/
 	{
-		img: "78.jpg",
-		date: "15 Feb 2025",
-		description: `Shhh! "Men in White" will take you to... (From 2012-2013. no source available but matches with recently published images)`
-	},
-	{
-		img: "79.jpg",
-		date: "23 Feb 2025",
-		description: "Wedding wedding!!"
-	},
-	{
 		img: "80.jpg",
 		date: "23 Feb 2025",
-		description: "Every family union is so special. This time I met with so many people. Hope we can be always this much happy."
+		description: "Every family reunion is so special. This time I met with so many people. Hope we can be always this much happy."
 	},
 	{
 		img: "81.jpg",
@@ -559,8 +480,8 @@ let images = [
 		description: "From the river to sea, Palestine will be free!"
 	},
 	{
-		img: "italo_disco_by_last_dinosaurs_3d2.png",
-		date: "13 Apr 2025",
-		description: "Now we're written in history\nWe close the book we’ve opened up\nThere will always be a place in my heart\nBut baby can't you see we were meant to fall apart\n- Italo Disco | Last Dinosaurs"
+		img: "ranaplazap.jpg",
+		date: "24 Apr 2025",
+		description: "We see crack still we neglect then it collapse and we die."
 	}
 ]
