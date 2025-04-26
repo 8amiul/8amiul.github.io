@@ -482,6 +482,6 @@ let images = [
 	{
 		img: "ranaplazap.jpg",
 		date: "24 Apr 2025",
-		description: "We see crack still we neglect then it collapse and we die."
+		description: "12 years now"
 	}
 ]
