@@ -10,6 +10,17 @@
       <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
       <link rel="stylesheet" type="text/css" href="/styles/blogs.css">
       <link rel="stylesheet" type="text/css" href="/styles/small-disp.css">
+
+      <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+      <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function(OneSignal) {
+          await OneSignal.init({
+            appId: "20b6f12e-9b80-4507-8b62-6f986d8fb39c",
+          });
+        });
+      </script>
+
       
         <title>Linux | 8amiul&#39;s Webpage</title>
       
