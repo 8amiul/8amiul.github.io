@@ -73,6 +73,7 @@
     color: black;
     list-style: none;
     padding-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .social-links-list li {
@@ -100,7 +101,7 @@
 }
 
 .div-3 {
-    margin: 10vh 1rem 0 1rem;
+    margin: 3rem 1rem 0 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -118,6 +119,20 @@
 }
 
 .div-3 .music-album, .chatbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*--- For onesignal notification push button ---*/
+.onesignal-customlink-explanation.onesignal-reset {
+    color: white !important;
+    font-family: "VT323" !important;
+    font-size: 1.5rem !important;
+}
+
+.onesignal-customlink-container {
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;

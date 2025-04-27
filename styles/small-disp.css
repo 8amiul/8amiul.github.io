@@ -127,4 +127,7 @@
         list-style: lower-greek;
     }
 
+    .onesignal-customlink-explanation.onesignal-reset {
+        font-size: 1rem !important;
+    }
 }
