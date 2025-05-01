@@ -1,13 +1,13 @@
 .blogs-list {
     list-style: none;
     margin: 0 20vw;
-    color: #D8C4B6;
+    color: var(--blog-post-list-text);
 }
 
 .blogs-list-date {
     margin-top: 1rem;
     font-size: 2.5rem;
-    color: #D8C4B6;
+    color: var(--blog-post-list-large-date);
     text-decoration: underline;
     font-family: SourceSans3-Bold;
 }
@@ -24,21 +24,21 @@
 .blog-title {
     text-decoration: none;
     font-size: 1.2rem;
-    color: #E3F0AF;
+    color: var(--blog-post-list-title);
 }
 
 .blog-date {
-    color: #D8C4B6;
+    color: var(--blog-post-list-date);
 }
 
 .blog-tag {
-    color: #FF9494;
+    color: var(--blog-post-list-tags);
 
 }
 
 .blog-summary {
     margin: 1rem 0 1rem 0.5rem;
-    color: #FFF8E6;
+    color: var(--blog-post-list-summary);
 }
 
 
@@ -79,7 +79,7 @@
 }
 
 .post-content a {
-    color: #FF9494;
+    color: var(--blog-post-link);
 }
 
 .post-content img, .post-content a img {
@@ -100,7 +100,7 @@
     max-width: 100%;
     max-height: 360px;
     display: block;
-    border: 1px solid #D8C4B6;
+    border: 1px solid var(--project-post-img-hover);
 }
 
 .post-content pre code span {
@@ -125,7 +125,7 @@
 }
 
 .post-content li code {
-    color: #bccca3;
+    color: var(--project-post-content-li-code-color);
     font-family: "VT323";
 }
 

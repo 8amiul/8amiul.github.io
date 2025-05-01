@@ -5,11 +5,11 @@
 
 .header-title {
     font-style: oblique;
-    color: #222831;
+    color: var(--header-title);
 }
 
 .navbar {
-    background-color: #ECB176;
+    background-color: var(--header-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,8 +29,8 @@
 }
 
 .link-list a:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--header-link-hover);
+    color: var(--header-link-fg);
 }
 
 .navbar-phone {

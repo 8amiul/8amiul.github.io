@@ -10,6 +10,7 @@
       <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
       <link rel="stylesheet" type="text/css" href="/styles/blogs.css">
       <link rel="stylesheet" type="text/css" href="/styles/small-disp.css">
+      <link rel="stylesheet" type="text/css" href="/styles/colors.css">
 
       <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
       <script>
@@ -82,16 +83,16 @@
         width: 60vw;
         display: flex;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.123);
+        background-color: var(--image-post-bg);
     }
 
     .image-post-info {
         padding: 0rem 1rem;
-        color: #EFB036;
+        color: var(--image-post-info);
     }
     .image-post-caption {
         margin: 1rem 0rem;
-        color: aliceblue;
+        color: var(--image-post-caption);
     }
 
     .image-post-container img {

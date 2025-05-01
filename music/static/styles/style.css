@@ -18,7 +18,7 @@
 
 /*  This is the css for music player container */
 .music-player {
-    background-color: #000000;
+    background-color: var(--player-bg);
     margin: 1rem;
     border-radius: 15px;
     display: inline-flex;
@@ -34,7 +34,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    color: #F0BB78;
+    color: var(--player-description);
 }
 
 /*  
@@ -45,7 +45,7 @@
     display: flex;
     margin: 1rem 0;
     justify-content: space-between;
-    color: #F0BB78;
+    color: var(--player-vol);
 }
 
 #musicAlbum-cover {

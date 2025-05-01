@@ -1,6 +1,6 @@
 /*      Footer      */
 #footer {
-    background-color: #ECB176;
+    background-color: var(--footer-bg);
     padding: 1rem;
 }
 
@@ -11,7 +11,7 @@
 }
 
 #footer footer a {
-    color: #000000;
+    color: var(--footer-link);
     padding: 0 1rem;
 }
 

@@ -8,12 +8,12 @@
         font-size: 0.5rem;
     }
     #homepage .homepage-cover-pfp {
-        /*
         width: 200px;
         height: 200px;
-        */
+        /*
         width: 160px;
         height: 80px;
+        */
     }
     .blog-summary {
         font-size: 0.6rem;
@@ -82,7 +82,7 @@
 	}
 
 	.navbar-list a {
-		color: #FBB4A5;
+		color: var(--mobile-header-link);
 		text-decoration: none;
 
 	}
@@ -92,7 +92,7 @@
     }
 
     #footer footer a {
-        color: #FBB4A5;
+        color: var(--mobile-footer-link);
         text-decoration: none;
     }
 

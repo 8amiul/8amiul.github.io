@@ -33,13 +33,13 @@
 
 
 body {
-    background-color: #171010;
+    background-color: var(--hompage-background);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 
     font-family: "JetBrains Mono", sans-serif;
-    color: #EEEEEE;
+    color: var(--default-site-text-color);
 }
 
 .scroll-container {
@@ -49,7 +49,7 @@ body {
     font-size: 1rem;
     display: flex;
     padding: 0.2rem 0;
-    background-color: rgb(80, 50, 21);
+    background-color: var(--hompage-scrolling-text-bg);
 }
 
 .scroll-text {
@@ -58,7 +58,7 @@ body {
 }
 
 .scroll-text a {
-    color: #FBB4A5;
+    color: var(--hompage-scrolling-text-fg);
 }
 
 @keyframes scroll {

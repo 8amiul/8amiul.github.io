@@ -17,12 +17,12 @@
 }
 
 #homepage .homepage-cover-pfp {
-   /*
     width: 320px;
     height: 320px;
-    */
+    /*
     width: 320px;
     height: 160px;
+    */
 }
 #homepage .homepage-top-link-list {
     margin: 0 0 1rem 1rem;
@@ -32,7 +32,7 @@
     gap: 1rem;
 }
 #homepage .homepage-top-links {
-    color: #FBB4A5;
+    color: var(--homepage-top-link);
 }
 
 #homepage .about-me {
@@ -83,21 +83,21 @@
 
 .social-links-list a {
     font-size: large;
-    color: #FBB4A5;
+    color: var(--homepage-social-link);
 }
 .social-links-list a:visited {
     font-size: large;
-    color: #8b4b8b;
+    color: var(--homepage-social-link-visited);
 }
 .social-links-list a:hover {
     font-size: large;
-    color: #d6bbb5;
+    color: var(--homepage-social-link-hover);
 }
 
 
 #content {
     flex: 1;
-    background-color: #171010;
+    background-color: var(--page-bg);
 }
 
 .div-3 {
@@ -111,11 +111,11 @@
 .div-3 img {
     width: 300px;
     height: 300px;
-    border: 3px solid #8b4b8b;
+    border: 3px solid var(--homepage-bottom-box-border);
 }
 
 .div-3 iframe {
-    border: 3px solid #8b4b8b;
+    border: 3px solid var(--homepage-bottom-box-border);
 }
 
 .div-3 .music-album, .chatbox{
@@ -126,7 +126,7 @@
 
 /*--- For onesignal notification push button ---*/
 .onesignal-customlink-explanation.onesignal-reset {
-    color: white !important;
+    color: var(----homepage-pnotify-btn-above-text) !important;
     font-family: "VT323" !important;
     font-size: 1.5rem !important;
 }
