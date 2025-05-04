@@ -330,7 +330,7 @@ let images = [
 
 	{
 		img: "63.jpg",
-		description: "My uncle made this. I was maybe 1 year old."
+		description: "Kiddo"
 	},
 	/*{
 		img: "64.jpg",
@@ -457,7 +457,7 @@ let images = [
 	{
 		img: "89.jpg",
 		date: "22 Mar 2025 | 12:45 AM",
-		description: "indeed!"
+		description: "Lain"
 	},
 	{
 		img: "90.jpg",
@@ -472,7 +472,7 @@ let images = [
 	{
 		img: "93.jpg",
 		date: "02 Apr 2025 | 08:22 PM",
-		description: "আমার খুশির অন্তরায় আমি \n- কমপ্লেক্স ক্রিচার"
+		description: "Forever Young"
 	},
 	{
 		img: "palestine_annotated2.png",
