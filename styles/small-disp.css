@@ -46,6 +46,9 @@
     .post-content *{
         font-size: 80%;
     }
+    .post-content ul *{
+        font-size: 100%;
+    }
 
     .blog-post, .blogs-list {
         margin: 0 1rem !important;
