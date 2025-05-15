@@ -17,8 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://8amiul.github.io/projects/termus/</guid>
-      <description>&lt;h1 id=&#34;httpsgithubcom8amiultermus&#34;&gt;&lt;a href=&#34;https://github.com/8amiul/termus&#34;&gt;https://github.com/8amiul/termus&lt;/a&gt;&lt;/h1&gt;
-&lt;h4 id=&#34;video-demo-httpsyoutubegzhtsferqzu&#34;&gt;Video Demo: &lt;a href=&#34;https://youtu.be/GzHTSfeRQZU&#34;&gt;https://youtu.be/GzHTSfeRQZU&lt;/a&gt;&lt;/h4&gt;
+      <description>&lt;h1&gt;&lt;a href=&#34;https://github.com/8amiul/termus&#34;&gt;https://github.com/8amiul/termus&lt;/a&gt;&lt;/h1&gt;
+&lt;h4 id=&#34;video-demo&#34;&gt;Video Demo: &lt;a href=&#34;https://youtu.be/GzHTSfeRQZU&#34;&gt;https://youtu.be/GzHTSfeRQZU&lt;/a&gt;&lt;/h4&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description:&lt;/h2&gt;
 &lt;p&gt;Termus is a terminal based music player written in C using SDL_mixer and ncurses library.&lt;/p&gt;
 &lt;h2 id=&#34;files&#34;&gt;Files:&lt;/h2&gt;
@@ -132,8 +132,8 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://8amiul.github.io/projects/thedailystar/</guid>
-      <description>&lt;h1 id=&#34;httpsgithubcom8amiulthedailystar-cli&#34;&gt;&lt;a href=&#34;https://github.com/8amiul/Thedailystar-CLI&#34;&gt;https://github.com/8amiul/Thedailystar-CLI&lt;/a&gt;&lt;/h1&gt;
-&lt;h4 id=&#34;video-demo-httpsyoutube5tp4xeqnlec&#34;&gt;Video Demo: &lt;a href=&#34;https://youtu.be/5Tp4xeqNLEc&#34;&gt;https://youtu.be/5Tp4xeqNLEc&lt;/a&gt;&lt;/h4&gt;
+      <description>&lt;h1&gt;&lt;a href=&#34;https://github.com/8amiul/Thedailystar-CLI&#34;&gt;https://github.com/8amiul/Thedailystar-CLI&lt;/a&gt;&lt;/h1&gt;
+&lt;h4 id=&#34;video-demo&#34;&gt;Video Demo: &lt;a href=&#34;https://youtu.be/5Tp4xeqNLEc&#34;&gt;https://youtu.be/5Tp4xeqNLEc&lt;/a&gt;&lt;/h4&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 &lt;p&gt;Thedailystar-CLI is a terminal based program written in python for CS50&amp;rsquo;s Introduction to Programming with Python. This program does scrape news from &lt;a href=&#34;https://www.thedailystar.net/&#34;&gt;The Daily Star&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;files&#34;&gt;Files&lt;/h2&gt;
@@ -305,20 +305,15 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
 &lt;p&gt;It has plenty of tragic scenes which I liked. Kind of same as the previous anime as both of them have a common theme. Here you can find the hardship of people. Lack of food, fighting for food, frequent air raid and bombing, shelters, effects of an atomic bomb etc etc. There are also some creative dialogues and scenes.&lt;/p&gt;
 &lt;p&gt;I just mention one here,&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Gen: Shinji, what did you say to make Mother cry like that?&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Gen: Shinji, what did you say to make Mother cry like that?&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Shinji: Gee, all I did was ask if I could suck on the fish bones when she was done with them.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Shinji: Gee, all I did was ask if I could suck on the fish bones when she was done with them.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Gen: You&amp;rsquo;re kidding, you asked her that?&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Gen: You&amp;rsquo;re kidding, you asked her that?&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Shinji: Yeah, that was it.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Shinji: Yeah, that was it.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Gen: [hits Shinji on the head] Idiot!&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Gen: [hits Shinji on the head] Idiot!&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;I am obsessed with this kind of anime. I would like to watch more of these and I am searching for underrated 90s anime. If you have something for me then let me know I would be grateful to you. Yes, so this was me enjoying anime.&lt;/p&gt;
 </description> 
     </item>
