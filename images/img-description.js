@@ -497,6 +497,6 @@ let images = [
     {
         img: "idkman.png",
         date: "25 May 2025 | 6:06 PM",
-        dsecription: "Another run."
+        description: "Another run."
     }
 ]
