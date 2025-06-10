@@ -498,10 +498,5 @@ let images = [
         img: "idkman.png",
         date: "25 May 2025 | 6:06 PM",
         description: "Another run."
-    },
-	{
-		img: "qurbani25.png",
-		date: "8 June 2025 | 2:11 PM",
-		description: "This was kind of an unintentional click which my brain could relate to some popular memes. It is fun to contribute in these until your back hurts. Stil I enjoyed everything of it."
-	}
-]
+    }
+	]
