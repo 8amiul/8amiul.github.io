@@ -498,5 +498,10 @@ let images = [
         img: "idkman.png",
         date: "25 May 2025 | 6:06 PM",
         description: "Another run."
-    }
+    },
+	{
+		img: "meme.png",
+		date: "14 June 2025 | 6:34 PM",
+		description: "I must mention one of my friends, some of my cousins, 3:00 AM dark room, celing fan, insomnia, my phone and the ancient desktop"
+	}
 	]
