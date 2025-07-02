@@ -1,11 +1,11 @@
 :root {
     --hompage-background: #171010;
 
-    --default-site-text-color: #D9CEAD;
+    --default-site-text-color: #EEEEEE;
 
     /* Homepage Scrolling Text */
-    --hompage-scrolling-text-bg: #595334;
-    --hompage-scrolling-text-fg: #BFB4B4;
+    --hompage-scrolling-text-bg: rgb(80, 50, 21);
+    --hompage-scrolling-text-fg: #FBB4A5;
 
     /* Blog post list */
     --blog-post-list-text: #D8C4B6;
@@ -23,27 +23,27 @@
     --project-post-content-li-code-color: #bccca3;
 
     /* Footer */
-    --footer-bg: #D9CA82;
+    --footer-bg: #ECB176;
     --footer-link: #000000;
 
     /* Header */
     --header-title: #222831;
-    --header-bg: #D9CA82;
+    --header-bg: #ECB176;
     --header-link-hover: white;
     --header-link-fg: black;
-    --header-link-text: #222831;
 
     /* Homepage */
     --homepage-top-link: #FBB4A5;
 
-    --homepage-social-link: var(--header-bg);
+    --homepage-social-link: #FBB4A5;
     --homepage-social-link-hover: #d6bbb5;
     --homepage-social-link-visited: #8b4b8b;
 
-    --homepage-bottom-box-border: var(--header-bg);
+    --homepage-bottom-box-border: #8b4b8b;
 
+    --homepage-pnotify-btn-above-text: white;
     /* Page */
-    --page-bg: #0D0D0D;
+    --page-bg: #171010;
 
     /* Small Disp */
     --mobile-footer-link: #FBB4A5;

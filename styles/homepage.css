@@ -38,6 +38,7 @@
 #homepage .about-me {
     padding: 0 1rem;
     line-height: 1.5;
+    max-width: 800px;
 }
 
 #homepage .about-me h2 {

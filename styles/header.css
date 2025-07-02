@@ -23,7 +23,7 @@
 }
 
 .link-list a {
-    color: black;
+    color: var(--header-link-text);
     text-decoration: none;
     padding: 1rem;
 }
