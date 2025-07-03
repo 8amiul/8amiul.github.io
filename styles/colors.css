@@ -9,14 +9,15 @@
 
     /* Blog post list */
     --blog-post-list-text: #D8C4B6;
-    --blog-post-list-large-date: #D8C4B6;
-    --blog-post-list-title: #E3F0AF;
-    --blog-post-list-date: #D8C4B6;
-    --blog-post-list-tags: #FF9494;
-    --blog-post-list-summary: #FFF8E6;
+    --blog-post-list-large-date: #BFB4B4;
+    --blog-post-list-title: #D9CA82;
+    --blog-post-list-date: #BFB4B4;
+    --blog-post-list-tags: #D9CA82;
+    --blog-post-list-summary: #D9CEAD;
+
 
     /* Blog post */
-    --blog-post-link: #FF9494;
+    --blog-post-link: #D9CA82;
 
     /* Projects page */
     --project-post-img-hover: #D8C4B6;
@@ -46,17 +47,17 @@
     --page-bg: #0D0D0D;
 
     /* Small Disp */
-    --mobile-footer-link: #FBB4A5;
-    --mobile-header-link: #FBB4A5;
+    --mobile-footer-link: #D9CA82;
+    --mobile-header-link: #D9CA82;
 
     /* Image page */
-    --image-post-info: #EFB036;
-    --image-post-caption: aliceblue;
-    --image-post-bg: rgba(0, 0, 0, 0.123);
+    --image-post-info: #D9CA82;
+    --image-post-caption: #D9CEAD;
+    --image-post-bg: #0D0D0D;
 
     /* Music Player Page */
     --player-bg: #000000;
-    --player-description: #F0BB78;
-    --player-vol: #F0BB78;
+    --player-description: #D9CA82;
+    --player-vol: #D9CA82;
 
 }
