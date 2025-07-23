@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on 8amiul&#39;s Webpage</title>
-    <link>https://8amiul.github.io/tags/linux/</link>
-    <description>Recent content in Linux on 8amiul&#39;s Webpage</description>
+    <title>privacy on 8amiul&#39;s Webpage</title>
+    <link>https://8amiul.github.io/tags/privacy/</link>
+    <description>Recent content in privacy on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Jul 2025 00:21:33 +0600</lastBuildDate>
     
-	<atom:link href="https://8amiul.github.io/tags/linux/rss.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://8amiul.github.io/tags/privacy/rss.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -100,66 +100,6 @@ GMhnUdYD81pi8gD/Q4W13ngqGfMkgZ7USbsfazX2aAwsB/1On88ayfSj3gI=
 -----END PGP PUBLIC KEY BLOCK-----
 &lt;/pre&gt;
 &lt;/p&gt;
-</description> 
-    </item>
-    
-    <item>
-      <title>Gaming on Linux</title>
-      <link>https://8amiul.github.io/posts/apr-25/gaming-on-linux/</link>
-      <pubDate>Tue, 22 Apr 2025 18:42:48 +0600</pubDate>
-      
-      <guid>https://8amiul.github.io/posts/apr-25/gaming-on-linux/</guid>
-      <description>&lt;p&gt;If you want to play games on linux then you have chosen the most hardest path. It&amp;rsquo;s obviously possible to play games on linux but it needs a lot of time, patience and efforts. However most of the online games don&amp;rsquo;t work on Linux. So can&amp;rsquo;t really play any popular online games. There might be workarounds for them but it would be wise to have a windows installed alongside linux.&lt;/p&gt;
-&lt;p&gt;This would be a quick tutorial that will make your Linux system play Windows games.&lt;/p&gt;
-&lt;h1 id=&#34;install-wine--winetricks&#34;&gt;Install Wine &amp;amp; Winetricks&lt;/h1&gt;
-&lt;p&gt;You can download Wine from &lt;a href=&#34;https://www.winehq.org/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Or you can just relay on your system&amp;rsquo;s package manager. I suggest you to use your package manager.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo apt install wine
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I used apt as I am on debian 12.&lt;/p&gt;
-&lt;p&gt;For winetricks. You have to execute the following commands.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ chmod +x winetricks 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo mv winetricks /usr/local/bin
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;install-necessary-libraries-using-winetricks&#34;&gt;Install necessary libraries using Winetricks&lt;/h1&gt;
-&lt;p&gt;I might have seen some libraries called DirectX, .Net, VCredist etc. These make games working. So in order to install things like that we use winetricks.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ winetricks d3dx10 d3dx9 dotnet35 dotnet40 dotnet45 dotnet48 dxvk vcrun2008 vcrun2010 vcrun2012 vcrun2019 vcrun6sp6
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Execute this command and install all the mentioned tools.&lt;/p&gt;
-&lt;h1 id=&#34;install-lutris&#34;&gt;Install Lutris&lt;/h1&gt;
-&lt;p&gt;Install lutris using your package manager. But if you don&amp;rsquo;t have lutris there then manually install it by following their &lt;a href=&#34;https://lutris.net/downloads&#34;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;For debian,&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb [signed-by=/etc/apt/keyrings/lutris.gpg] https://download.opensuse.org/repositories/home:/strycore/Debian_12/ ./&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/lutris.list &amp;gt; /dev/null
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ wget -q -O- https://download.opensuse.org/repositories/home:/strycore/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/keyrings/lutris.gpg &amp;gt; /dev/null
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt install lutris
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finally we are done installing all the tools that are necessary. Now we have to work on lutris in order to play games.&lt;/p&gt;
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description> 
-    </item>
-    
-    <item>
-      <title>Graphics Tablet on Linux</title>
-      <link>https://8amiul.github.io/posts/march-25/gfx-tablet-on-linux/</link>
-      <pubDate>Wed, 05 Mar 2025 23:09:07 +0600</pubDate>
-      
-      <guid>https://8amiul.github.io/posts/march-25/gfx-tablet-on-linux/</guid>
-      <description>&lt;p&gt;So how easy it was to make the graphics tablet working on linux? I using Debian found it pretty straightforward! Oh, this tutorial is only for those who are using Xorg NOT WAYLAND!&lt;/p&gt;
-&lt;p&gt;I believe it&amp;rsquo;s the same for all the distributions. As I am using Debian I will follow the &lt;a href=&#34;https://wiki.debian.org/&#34;&gt;Debian wiki&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;According to &lt;a href=&#34;https://wiki.debian.org/WacomTablets&#34;&gt;WacomTablets page of the wiki&lt;/a&gt;, we get to see that a package is necessary to install for wacom tablets to work on xorg.&lt;/p&gt;
-&lt;p&gt;Now you might not have a tablet from Wacom, you might have something else. I am using the VEIKK S640. But this method should work for every tablet.&lt;/p&gt;
-&lt;p&gt;In the &lt;code&gt;/etc/X11/xorg.conf.d&lt;/code&gt; folder paste these few lines.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Section &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;InputClass&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Identifier &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tablet&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Driver &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wacom&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MatchDevicePath &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/dev/input/event*&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MatchUSBID &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;VID:PID&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;EndSection
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But we are not done yet. We have to replace &lt;code&gt;VID:PID&lt;/code&gt; the with the actual id of the tablet. Let&amp;rsquo;s use the tool &lt;code&gt;lsusb&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;~ % lsusb
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bus &lt;span style=&#34;color:#ae81ff&#34;&gt;006&lt;/span&gt; Device 001: ID 1d6b:0003 Linux Found...
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bus &lt;span style=&#34;color:#ae81ff&#34;&gt;005&lt;/span&gt; Device 002: ID 0a12:0001 Cambridge...
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bus &lt;span style=&#34;color:#ae81ff&#34;&gt;003&lt;/span&gt; Device 002: ID 046d:c077 Logitech, Inc. Mouse
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bus &lt;span style=&#34;color:#ae81ff&#34;&gt;001&lt;/span&gt; Device 006: ID 2feb:0001 Beijing Veikk..
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So at the bottom of the output I have the &lt;code&gt;VID:PID&lt;/code&gt; which is &lt;code&gt;2feb:0001&lt;/code&gt;. Just replace it in the &lt;code&gt;/etc/X11/xorg.conf.d&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;After that restarting the xserver might make the tablet working.&lt;/p&gt;
 </description> 
     </item>
     

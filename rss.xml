@@ -6,7 +6,7 @@
     <description>Recent content on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jul 2025 04:05:53 +0600</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jul 2025 00:21:33 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
@@ -179,6 +179,98 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
 &lt;/ul&gt;
 &lt;h2 id=&#34;how-the-program-works&#34;&gt;How the program works?&lt;/h2&gt;
 &lt;p&gt;At first the main function will sequentially call other functions. Inside the main function it will call &lt;code&gt;menu(args)&lt;/code&gt; where selection between menu or exit will be returned. If returned value is news then &lt;code&gt;get_news_lines(args)&lt;/code&gt;  will be called and from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through &lt;code&gt;get_news(args)&lt;/code&gt; and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally &lt;code&gt;show_news(args)&lt;/code&gt; will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>Learn PGP</title>
+      <link>https://8amiul.github.io/posts/july-25/learn-pgp/</link>
+      <pubDate>Thu, 24 Jul 2025 00:21:33 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/july-25/learn-pgp/</guid>
+      <description>&lt;p&gt;Learning PGP is complicated at first attempt. PGP might be a terrifying thing for non-geeks. PGP, or Pretty Good Privacy, just looking at name we can say that it is something about maintaining privacy. PGP is mainly used for encrypting information and making communication secure and also make it authentic.&lt;/p&gt;
+&lt;p&gt;Consider a situation where you have to make sure that the information only reaches to a certain person. So you have to encrypt it with some algorithm. Here PGP might be helpful.&lt;/p&gt;
+&lt;p&gt;GnuPG is a tool basing on PGP which will help you to encrypt, decrypt, sign and verify files. Encryption just means that you are converting the file or information into a secret code aka ciphertext. It is way more complex in theory but we should not be bothering much yet. Now encryption can be two types: Symmetric and Asymmetric.&lt;/p&gt;
+&lt;p&gt;Symmetric encryption means the tool will give one key. With that key you can lock(encrypt) the file or unlock(decrypt). Here lock and unlock isn&amp;rsquo;t the best word but for the sake of simplicity lets just think in that way.&lt;/p&gt;
+&lt;p&gt;For Asymmetric encryption you will have two keys. A Private key and a Public key. Here people actually struggle to understand at first. So Private key literally says that it has to be private. Public key has to be shared with the whole world. If you want someone to share a hidden information with you then give him the public key. That someone will encrypt the file with your give public key. Thus he makes a file that only you can access in this world. Once a file is encrypted with a public key then it cannot be viewed, used by anyone other than the person having the private key for the corresponding public key. That means your someone has encrypted the file with your public key, now you are the only one who can access the file. So let him send the file somehow. Doesn&amp;rsquo;t matter how. It can be an email, maybe on usb drive, torrent or whatever. When you get the file you use your private key to unlock the file and view its contents. Thus you and your someone can communicate without facing interference. Hope you have understood that concept of public key and private key. Public key is used to lock a file and private key is used to unlock that locked file. Yeah, once again I used lock and unlock, hahaha.&lt;/p&gt;
+&lt;p&gt;Now you grab your friends public key and encrypt your text with that and give the file to him. He can use his private key to see its contents. Easy to understand I guess.&lt;/p&gt;
+&lt;p&gt;Lets make it actualize!&lt;/p&gt;
+&lt;p&gt;Install &lt;a href=&#34;https://www.gnupg.org/&#34;&gt;GnuPG&lt;/a&gt; on linux, For windows install &lt;a href=&#34;https://www.gpg4win.org/&#34;&gt;GPG4win&lt;/a&gt;. On Android you can use &lt;a href=&#34;https://f-droid.org/packages/org.sufficientlysecure.keychain/&#34;&gt;OpenKeychain&lt;/a&gt; app or use &lt;a href=&#34;https://f-droid.org/en/packages/com.termux/&#34;&gt;Termux&lt;/a&gt; and follow the linux based approach.&lt;/p&gt;
+&lt;h4 id=&#34;dont-forget-to-see-the-help-section&#34;&gt;Don&amp;rsquo;t forget to see the help section&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;generate-a-key&#34;&gt;Generate a key&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --full-gen-key
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can go with the default key type. Keep hitting enter till you reach where it asks the time-span of the key. The expiry that is up to you. Then add your name, email and a comment of your liking. Thus you make a key of your choice. Also you can add a password if you want. If you add a password then it will ask for a password before decrypting a file.&lt;/p&gt;
+&lt;h4 id=&#34;to-list-all-the-public-keys-on-your-system&#34;&gt;To list all the public keys on your system&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --list-keys
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;to-list-all-the-private-key-of-yours&#34;&gt;To list all the private key of yours&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --list-secret-keys
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;exporting-keys&#34;&gt;Exporting keys&lt;/h4&gt;
+&lt;p&gt;If you want to export you public key and share it to friends so that they can use it to encrypt data and send you then follow this.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --armor --export &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-key-id-here&amp;#39;&lt;/span&gt; &amp;gt; public.asc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For exporting private key.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --export-secret-keys --armor &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-key-id-here&amp;#39;&lt;/span&gt; &amp;gt; private-key.asc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can even yous the nickname or email assigned to they key instead of the ID. ID can be found listing keys. Consider you want to take your key to a new system then you can export they private key this way.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--armor&lt;/code&gt; means representing the key in a human readable code. Maybe you should check how it looks without providing the argument?&lt;/p&gt;
+&lt;h4 id=&#34;importing-a-key&#34;&gt;Importing a key&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --import private-key.asc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Thus you can import your private or anyone elses public key in your system.&lt;/p&gt;
+&lt;h3 id=&#34;encryption&#34;&gt;Encryption&lt;/h3&gt;
+&lt;h4 id=&#34;symmetric-encryption&#34;&gt;Symmetric encryption&lt;/h4&gt;
+&lt;p&gt;Now you know that you can only encrypt a file with someone elses public key. But what if that person doesn&amp;rsquo;t have any public key? What if you have to encrypt a file but you want a group of people it access it? Symmetric encryption just means locking a file with a password in easy words.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --symmetric data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It will ask for a password and giving it will encrypt it the file with your password.&lt;/p&gt;
+&lt;p&gt;If you don&amp;rsquo;t want to see gibberish then add &lt;code&gt;--armor&lt;/code&gt; to it&lt;/p&gt;
+&lt;p&gt;If you want to encrypt with a certain algorithm then add&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --symmetric --cipher-algo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-desired-algorithm-name&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Algorithm names can be find using the command &lt;code&gt;gpg --version&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;asymmetric-encryption&#34;&gt;Asymmetric encryption&lt;/h4&gt;
+&lt;p&gt;That is the best part of PGP! Don&amp;rsquo;t forget to import the recipient&amp;rsquo;s public key before doing this.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --recipient &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;recipient-key-id-name-or-email&amp;#39;&lt;/span&gt; --encrypt data.txt 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;decryption&#34;&gt;Decryption&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --decrypt encrypted-file.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If it was symmetric encryption then it will ask for a password. If it was asymmetric then it might not ask for a password unless your private key had a password.&lt;/p&gt;
+&lt;h3 id=&#34;let-us-talk-about-signatures&#34;&gt;Let us talk about signatures&lt;/h3&gt;
+&lt;p&gt;Consider your site has been hacked and some intruders spread false information on your site. This will highly impact your followers and yourself. But how to ensure the trust and authenticity of an information in such situation? You can do it by signing your info with your private key. When you sign a data with your key then one can verify the authenticity of that info using your public key.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --clearsign data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will create a new file where you can see the actual content of the file and a pgp signature at the bottom. Once you publish the data on the internet then people can copy the whole text and validate its authenticity using your public key.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --output data.txt.sig --detach-sign data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will create two files. One will contain the data(data.txt) and another will contain the signature(data.txt.sig). So in order to verify you must have both of the files. Without the content you can&amp;rsquo;t verify alone with the signature.&lt;/p&gt;
+&lt;p&gt;What if you want to encrypt a message and also sign it?&lt;/p&gt;
+&lt;h5 id=&#34;for-symmetric&#34;&gt;For symmetric&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --sign --symmetric data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;for-asymmetric&#34;&gt;For asymmetric&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --sign --encrypt --recipient &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;recipient-key-id-name-or-email&amp;#39;&lt;/span&gt; data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;time-to-verify-the-signatures&#34;&gt;Time to verify the signatures&lt;/h3&gt;
+&lt;p&gt;As I said you must have the content and signature to verify the content with the signature. That&amp;rsquo;s how it should work right? By default, if file is signed and signature is included in the file then while decrypting the file gpg does verify it automatically.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --decrypt data.txt.asc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But if you like to do things manually then here you go.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# If signature is included in the file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --verify data.txt.asc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Verify and extract the content to another file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --output data.txt data.txt.asc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# If signature is in different file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; $ gpg --verify data.txt.sig data.txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So that was it! It wasn&amp;rsquo;t really all the knowledge about PGP. I didn&amp;rsquo;t include pgp connectivity with servers, various algorithms, practical usage etc. But you can do basic tasks using this provided knowledge. Using PGP is necessary in this modern era where our data relies on many third-party. To keep its integrity and our privacy we must use encryptions.&lt;/p&gt;
+&lt;p&gt;The practice of using PGP is a must. Try learning it if you feel like being a bit safer. You can learn PGP and grasp its usage by sharing encrypted messages. Leaving my public key here, you can sent me messages encrypting with my public key and send it through my social media profiles or email.&lt;/p&gt;
+&lt;p&gt;Here is my public key!!
+
+&lt;pre style=&#34;font-size: 1rem; align-self: center; background-color: #422c2c;padding: 1rem; max-width: 90%; white-space: pre-wrap; word-wrap: break-word;&#34;&gt;
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEaIEgxxYJKwYBBAHaRw8BAQdA5cL0EOyUG1ES8liSraN/YtoHGhEsmh7gBt2G
+HWqMmU60LDhhbWl1bCAoOGFtaXVsLmdpdGh1Yi5pbykgPDhhbWl1bEBnbWFpbC5j
+b20+iJMEExYKADsWIQQEzraxy/u0gcwAM4uuqZmDAkQBiQUCaIEgxwIbAwULCQgH
+AgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRCuqZmDAkQBiQ/2AP0RjH+fMttZU4gd
+Tm2xcLC3ZC/IeZysZvJx/D9aVBytCgEAwW/BZFrjqBbJpewj7+ZKEGM/ld63oUOX
+bQ5qD0OK5gO4OARogSDHEgorBgEEAZdVAQUBAQdApLwhS3M9qOqtTqzkO2JvanLk
+5U8vltB2pyqC5u2FlwADAQgHiHgEGBYKACAWIQQEzraxy/u0gcwAM4uuqZmDAkQB
+iQUCaIEgxwIbDAAKCRCuqZmDAkQBiTCJAP4o6qbuoFxnkeRvpHjhO6+yrSAqgydh
+GMhnUdYD81pi8gD/Q4W13ngqGfMkgZ7USbsfazX2aAwsB/1On88ayfSj3gI=
+=1QOO
+-----END PGP PUBLIC KEY BLOCK-----
+&lt;/pre&gt;
+&lt;/p&gt;
 </description> 
     </item>
     
