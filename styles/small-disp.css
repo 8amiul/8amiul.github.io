@@ -10,6 +10,7 @@
     #homepage .homepage-cover-pfp {
 	max-width: 100%;
 	height: auto;
+    padding: 0 1rem;
         /*
         width: 200px;
         height: 200px;
