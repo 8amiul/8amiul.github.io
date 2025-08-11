@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on 8amiul&#39;s Webpage</title>
+    <link>https://8amiul.github.io/projects/</link>
+    <description>Recent content in Projects on 8amiul&#39;s Webpage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://8amiul.github.io/projects/rss.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Termus</title>
+      <link>https://8amiul.github.io/projects/termus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://8amiul.github.io/projects/termus/</guid>
+      <description>&lt;h1 id=&#34;httpsgithubcom8amiultermus&#34;&gt;&lt;a href=&#34;https://github.com/8amiul/termus&#34;&gt;https://github.com/8amiul/termus&lt;/a&gt;&lt;/h1&gt;
+&lt;h4 id=&#34;video-demo-httpsyoutubegzhtsferqzu&#34;&gt;Video Demo: &lt;a href=&#34;https://youtu.be/GzHTSfeRQZU&#34;&gt;https://youtu.be/GzHTSfeRQZU&lt;/a&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;description&#34;&gt;Description:&lt;/h2&gt;
+&lt;p&gt;Termus is a terminal based music player written in C using SDL_mixer and ncurses library.&lt;/p&gt;
+&lt;h2 id=&#34;files&#34;&gt;Files:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;main.c&lt;/code&gt;  : initialize libraries and functions are called&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;termus.c&lt;/code&gt;: Manage keystrokes, free up memory and helping functions&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;file.c&lt;/code&gt;  : Manages directories, scan music and prepares music files for playing&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;video.c&lt;/code&gt; : Functions regarding displaying windows and playing music&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;termes.h&lt;/code&gt;: A header file containing functon declaration and structs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;used-libraries&#34;&gt;Used Libraries&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SDL2 &amp;amp; SDL2_mixer&lt;/code&gt;: SDL2_mixer is used for audio and music management&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ncurses&lt;/code&gt;: For displaying windows and text&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;functions&#34;&gt;Functions&lt;/h2&gt;
+&lt;h3 id=&#34;termusc&#34;&gt;&lt;code&gt;termus.c&lt;/code&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;controls&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; c, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;highlight, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j, getMusic_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; getMusicP, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;WIN_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; window, Mix_Music&lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt; musicSDL, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; volume, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; curPlaying_music)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt;: takes user key press. every key input is saved in &amp;lsquo;c&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;highlight&lt;/code&gt; is the variable which is limited. it keeps the index number of highligted song on the screen&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;getMusicP&lt;/code&gt; here is used to get the total number of music and getting the music file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;window&lt;/code&gt; is used to get the current height of &lt;code&gt;window[1]&lt;/code&gt;. &lt;code&gt;window[0]&lt;/code&gt; is the upper and &lt;code&gt;window[1]&lt;/code&gt; is the lower window&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;musicSDL&lt;/code&gt; holds the loaded music. So most of the SDL_mixer function is used using it&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;volume&lt;/code&gt; gets the current volume&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;curPlaying_music&lt;/code&gt; holds the index number of music playing of &lt;code&gt;MUSIC_STRUCT&lt;/code&gt; elements &lt;code&gt;(getMusicP-&amp;gt;mus[*curPlaying_music].path)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;freeTermus&lt;/span&gt;(getMusic_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; getMusicP)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;freeTerumus function frees all the allocated memory using malloc. Most of the work is connected with &lt;code&gt;getMusic_STRUCT&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;compfn&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; m1, &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; m2)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;compfn&lt;/code&gt; function is used in &lt;code&gt;sortList()&lt;/code&gt; function. it is a function not used in anywhere else than &lt;code&gt;compfn&lt;/code&gt;. it compares two string and help &lt;code&gt;qsort&lt;/code&gt; to sort the &lt;code&gt;getMusicP&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sortList&lt;/span&gt;(getMusic_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; getMusicP)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sortList&lt;/code&gt; a function is used to sort &lt;code&gt;getMusicP&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;videoc&#34;&gt;&lt;code&gt;video.c&lt;/code&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;printMusicList&lt;/span&gt;(WIN_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; window, getMusic_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; getMusicP, 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; c, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; j, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; highlight, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; old_h1)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;printMusicList&lt;/code&gt; function prints the list and display it in &lt;code&gt;window[1]&lt;/code&gt;. It could simply print strings. But it converts it to &lt;code&gt;wchar_t&lt;/code&gt; just to print wide characters. It wrap text so changing display size would wrap those lines which are larger then screen size.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;playbackDuration&lt;/span&gt;(WIN_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; window, Mix_Music&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; musicSDL)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;It prints the progress time and duration in &lt;code&gt;window[0]&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;printProgressbar&lt;/span&gt;(WIN_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; window, Mix_Music&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; musicSDL)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;printProgressbar&lt;/code&gt; prints the progress bar in &lt;code&gt;window[0]&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;display&lt;/span&gt;(WIN_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; window, getMusic_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; getMusicP, Mix_Music&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; musicSDL)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;main loop for display and run operate video and music task&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;WIN_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;initScreen&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;initialize curses and return &lt;code&gt;WIN_STRUCT*&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;filec&#34;&gt;&lt;code&gt;file.c&lt;/code&gt;&lt;/h3&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;getMusic_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getMusic&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;getMusic function gets all the information needed for loading music&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;getDIR&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt; listDIR)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;this function read config file for directories or check the program arguments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;concat&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dir, &lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; musicFile, &lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; path)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Merging music file with the path so that it can be used while loading music&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;scanMusic&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt; DIRs, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; totalDIR, MUSIC_STRUCT&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; music)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;scan for music files on directories&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-to-use-this-program&#34;&gt;How to use this program?&lt;/h2&gt;
+&lt;p&gt;First it has to compile for the system. using &lt;code&gt;make&lt;/code&gt; this program can be compiled on linux.
+For windows SDL2 library and ncurses is necessary for compiling. One can provide directories to scan by giving it to the program argument or putting it in
+&lt;code&gt;termus.conf&lt;/code&gt; file. After that running that program will start the program and a menu should be visible.&lt;/p&gt;
+&lt;h2 id=&#34;known-bugstodo&#34;&gt;Known bugs/Todo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Resizing terminal the selection bar goes out of the screen.&lt;/li&gt;
+&lt;li&gt;On windows resizing terminal breaks the screen.&lt;/li&gt;
+&lt;li&gt;Volume isn&amp;rsquo;t capped at 100&lt;/li&gt;
+&lt;/ul&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>TermusJS</title>
+      <link>https://8amiul.github.io/projects/termusjs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://8amiul.github.io/projects/termusjs/</guid>
+      <description>&lt;p&gt;GitHub Repo: &lt;a href=&#34;https://github.com/8amiul/termusjs&#34;&gt;https://github.com/8amiul/termusjs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Test the music player here,
+&lt;a href=&#34;https://8amiul.github.io/termusjs/&#34;&gt;TermusJS&lt;/a&gt;&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>Thedailystar-CLI</title>
+      <link>https://8amiul.github.io/projects/thedailystar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://8amiul.github.io/projects/thedailystar/</guid>
+      <description>&lt;h1 id=&#34;httpsgithubcom8amiulthedailystar-cli&#34;&gt;&lt;a href=&#34;https://github.com/8amiul/Thedailystar-CLI&#34;&gt;https://github.com/8amiul/Thedailystar-CLI&lt;/a&gt;&lt;/h1&gt;
+&lt;h4 id=&#34;video-demo-httpsyoutube5tp4xeqnlec&#34;&gt;Video Demo: &lt;a href=&#34;https://youtu.be/5Tp4xeqNLEc&#34;&gt;https://youtu.be/5Tp4xeqNLEc&lt;/a&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+&lt;p&gt;Thedailystar-CLI is a terminal based program written in python for CS50&amp;rsquo;s Introduction to Programming with Python. This program does scrape news from &lt;a href=&#34;https://www.thedailystar.net/&#34;&gt;The Daily Star&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;files&#34;&gt;Files&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;project.py&lt;/code&gt;: The main program.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;test_project.py&lt;/code&gt;: To test &lt;code&gt;project.py&lt;/code&gt; using pytest.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;used-libraries&#34;&gt;Used Libraries&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;BeautifulSoup4&lt;/code&gt;: For scraping data from &lt;a href=&#34;https://www.thedailystar.net/&#34;&gt;The Daily Star&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;curses&lt;/code&gt;: For handling keyboard input and user interface.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt; requests&lt;/code&gt;: For sending HTTP requests.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pytest&lt;/code&gt;:  For testing functions built in program&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;about-functions&#34;&gt;About Functions&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;(stdscr, test_&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function shows the start menu. It does have 2 options, News and Exit.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stdscr&lt;/code&gt;: Is the curses window. Which is initialized in the main function.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;test_&lt;/code&gt;: Is used for unit testing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;get_news_lines&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function scrapes latest news from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; and return the headlines including links in a dictionary.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;select_news&lt;/span&gt;(scr,news_data: dict, test_&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function allows a user to choose a news.  It returns the selected news and total displayed lines.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;scr&lt;/code&gt;: Is the screen window.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt; news_data&lt;/code&gt;:  Is the returned list from &lt;code&gt;get_news_lines(args)&lt;/code&gt; function.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;test_&lt;/code&gt;: For unit testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;get_news&lt;/span&gt;(news_dict: dict, news_lines_list: list, selected_news: int):
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function get the link and scrape the news paragraph from the website. and separate the headline and put all the news paragraph lines into a list. It returns headline as string and news paragraph as list.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;news_dict: It grabs the titles and links as news_dict which is a returned value of &lt;code&gt;get_news_lines(args)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;news_lines_list: The total displayed lines.&lt;/li&gt;
+&lt;li&gt;selected_news: It returns the position of selected line. Which needs to used in news_lines_list to get the expected news.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;show_news&lt;/span&gt;(scr, hl: str, n_p: list, test_&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function is responsible for showing the whole news paragraph including title on top. It doesn&amp;rsquo;t return anything.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hl&lt;/code&gt;: Is the headline which is from &lt;code&gt;get_news(args)&lt;/code&gt; function.&lt;/li&gt;
+&lt;li&gt;n_p : Is the news paragraph as a list from &lt;code&gt;get_news(args)&lt;/code&gt; function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-the-program-works&#34;&gt;How the program works?&lt;/h2&gt;
+&lt;p&gt;At first the main function will sequentially call other functions. Inside the main function it will call &lt;code&gt;menu(args)&lt;/code&gt; where selection between menu or exit will be returned. If returned value is news then &lt;code&gt;get_news_lines(args)&lt;/code&gt;  will be called and from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through &lt;code&gt;get_news(args)&lt;/code&gt; and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally &lt;code&gt;show_news(args)&lt;/code&gt; will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().&lt;/p&gt;
+</description> 
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html><head>
+      <meta name="google-site-verification" content="RdYDKREj2QfSVMxq1OLSfPFC2sOpiblG7pD4X2IhMUk" />
+      <meta charset="utf-8">
+      <meta name="description" content=" I am Samiul Islam. A 19 year old college student from Bangladesh. I like computers, technology, programming, cybersecurity and listening to music. I also find crime analysis, history and conspiracy theories interesting. Open world video games are something that I enjoy. Finally I am just a guy who likes to tinker with operating systems, programs and devices."> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/styles/style.css">
+      <link rel="stylesheet" type="text/css" href="/styles/header.css">
+      <link rel="stylesheet" type="text/css" href="/styles/footer.css">
+      <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
+      <link rel="stylesheet" type="text/css" href="/styles/blogs.css">
+      <link rel="stylesheet" type="text/css" href="/styles/small-disp.css">
+      <link rel="stylesheet" type="text/css" href="/styles/colors.css">
+
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+      
+        <title>Termus | 8amiul&#39;s Webpage</title>
+      
+</head>
+<body>
+	<div id="header"><nav class="navbar">
+	<span class="header-title">8amiul&#39;s Webpage</span>
+	<ul class="link-list">
+		
+		<li class="link"><a href="/">Home</a></li>
+		
+		<li class="link"><a href="/posts/">Posts</a></li>
+		
+		<li class="link"><a href="/tags/">Tags</a></li>
+		
+		<li class="link"><a href="/projects/">Projects</a></li>
+		
+		<li class="link"><a href="/images/">Images</a></li>
+		
+		<li class="link"><a href="/music/">Music</a></li>
+		
+		<li class="link"><a href="/bookmarks/">Bookmarks</a></li>
+		
+	</ul>
+</nav>
+
+<nav class="navbar-phone">
+	<ul class="navbar-list">
+	
+	<li class="navbar-list-links"><a href="/">Home</a></li>
+	
+	<li class="navbar-list-links"><a href="/posts/">Posts</a></li>
+	
+	<li class="navbar-list-links"><a href="/tags/">Tags</a></li>
+	
+	<li class="navbar-list-links"><a href="/projects/">Projects</a></li>
+	
+	<li class="navbar-list-links"><a href="/images/">Images</a></li>
+	
+	<li class="navbar-list-links"><a href="/music/">Music</a></li>
+	
+	<li class="navbar-list-links"><a href="/bookmarks/">Bookmarks</a></li>
+	
+	</ul>
+</nav>
+</div>
+
+	<div id="content">
+	
+<div class="blog-post">
+	<div class="blog-post-info">
+		<h2	class="post-title">Termus</h2>
+	</div>
+	<div class="post-content projects-content"><h1 id="httpsgithubcom8amiultermus"><a href="https://github.com/8amiul/termus">https://github.com/8amiul/termus</a></h1>
+<h4 id="video-demo-httpsyoutubegzhtsferqzu">Video Demo: <a href="https://youtu.be/GzHTSfeRQZU">https://youtu.be/GzHTSfeRQZU</a></h4>
+<h2 id="description">Description:</h2>
+<p>Termus is a terminal based music player written in C using SDL_mixer and ncurses library.</p>
+<h2 id="files">Files:</h2>
+<ul>
+<li><code>main.c</code>  : initialize libraries and functions are called</li>
+<li><code>termus.c</code>: Manage keystrokes, free up memory and helping functions</li>
+<li><code>file.c</code>  : Manages directories, scan music and prepares music files for playing</li>
+<li><code>video.c</code> : Functions regarding displaying windows and playing music</li>
+<li><code>termes.h</code>: A header file containing functon declaration and structs</li>
+</ul>
+<h2 id="used-libraries">Used Libraries</h2>
+<ul>
+<li><code>SDL2 &amp; SDL2_mixer</code>: SDL2_mixer is used for audio and music management</li>
+<li><code>ncurses</code>: For displaying windows and text</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<h3 id="termusc"><code>termus.c</code></h3>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">controls</span>(<span style="color:#66d9ef">int</span> c, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>highlight, <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> j, getMusic_STRUCT<span style="color:#f92672">*</span> getMusicP, 
+</span></span><span style="display:flex;"><span>WIN_STRUCT<span style="color:#f92672">*</span> window, Mix_Music<span style="color:#f92672">**</span> musicSDL, <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> volume, <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> curPlaying_music)
+</span></span></code></pre></div><ul>
+<li><code>c</code>: takes user key press. every key input is saved in &lsquo;c&rsquo;</li>
+<li><code>highlight</code> is the variable which is limited. it keeps the index number of highligted song on the screen</li>
+<li><code>getMusicP</code> here is used to get the total number of music and getting the music file</li>
+<li><code>window</code> is used to get the current height of <code>window[1]</code>. <code>window[0]</code> is the upper and <code>window[1]</code> is the lower window</li>
+<li><code>musicSDL</code> holds the loaded music. So most of the SDL_mixer function is used using it</li>
+<li><code>volume</code> gets the current volume</li>
+<li><code>curPlaying_music</code> holds the index number of music playing of <code>MUSIC_STRUCT</code> elements <code>(getMusicP-&gt;mus[*curPlaying_music].path)</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">freeTermus</span>(getMusic_STRUCT<span style="color:#f92672">*</span> getMusicP)
+</span></span></code></pre></div><ul>
+<li>freeTerumus function frees all the allocated memory using malloc. Most of the work is connected with <code>getMusic_STRUCT</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compfn</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> m1, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> m2)
+</span></span></code></pre></div><ul>
+<li><code>compfn</code> function is used in <code>sortList()</code> function. it is a function not used in anywhere else than <code>compfn</code>. it compares two string and help <code>qsort</code> to sort the <code>getMusicP</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sortList</span>(getMusic_STRUCT<span style="color:#f92672">*</span> getMusicP)
+</span></span></code></pre></div><ul>
+<li><code>sortList</code> a function is used to sort <code>getMusicP</code></li>
+</ul>
+<h3 id="videoc"><code>video.c</code></h3>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printMusicList</span>(WIN_STRUCT<span style="color:#f92672">*</span> window, getMusic_STRUCT<span style="color:#f92672">*</span> getMusicP, 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> c, <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> j, <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> highlight, <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> old_h1)
+</span></span></code></pre></div><ul>
+<li><code>printMusicList</code> function prints the list and display it in <code>window[1]</code>. It could simply print strings. But it converts it to <code>wchar_t</code> just to print wide characters. It wrap text so changing display size would wrap those lines which are larger then screen size.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">playbackDuration</span>(WIN_STRUCT<span style="color:#f92672">*</span> window, Mix_Music<span style="color:#f92672">*</span> musicSDL)
+</span></span></code></pre></div><ul>
+<li>It prints the progress time and duration in <code>window[0]</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printProgressbar</span>(WIN_STRUCT<span style="color:#f92672">*</span> window, Mix_Music<span style="color:#f92672">*</span> musicSDL)
+</span></span></code></pre></div><ul>
+<li><code>printProgressbar</code> prints the progress bar in <code>window[0]</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">display</span>(WIN_STRUCT<span style="color:#f92672">*</span> window, getMusic_STRUCT<span style="color:#f92672">*</span> getMusicP, Mix_Music<span style="color:#f92672">*</span> musicSDL)
+</span></span></code></pre></div><ul>
+<li>main loop for display and run operate video and music task</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>WIN_STRUCT<span style="color:#f92672">*</span> <span style="color:#a6e22e">initScreen</span>()
+</span></span></code></pre></div><ul>
+<li>initialize curses and return <code>WIN_STRUCT*</code></li>
+</ul>
+<h3 id="filec"><code>file.c</code></h3>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>getMusic_STRUCT<span style="color:#f92672">*</span> <span style="color:#a6e22e">getMusic</span>(<span style="color:#66d9ef">void</span>)
+</span></span></code></pre></div><ul>
+<li>getMusic function gets all the information needed for loading music</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getDIR</span>(<span style="color:#66d9ef">char</span><span style="color:#f92672">**</span> listDIR)
+</span></span></code></pre></div><ul>
+<li>this function read config file for directories or check the program arguments</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">concat</span>(<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> dir, <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> musicFile, <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> path)
+</span></span></code></pre></div><ul>
+<li>Merging music file with the path so that it can be used while loading music</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">scanMusic</span>(<span style="color:#66d9ef">char</span><span style="color:#f92672">**</span> DIRs, <span style="color:#66d9ef">int</span> totalDIR, MUSIC_STRUCT<span style="color:#f92672">*</span> music)
+</span></span></code></pre></div><ul>
+<li>scan for music files on directories</li>
+</ul>
+<h2 id="how-to-use-this-program">How to use this program?</h2>
+<p>First it has to compile for the system. using <code>make</code> this program can be compiled on linux.
+For windows SDL2 library and ncurses is necessary for compiling. One can provide directories to scan by giving it to the program argument or putting it in
+<code>termus.conf</code> file. After that running that program will start the program and a menu should be visible.</p>
+<h2 id="known-bugstodo">Known bugs/Todo</h2>
+<ul>
+<li>Resizing terminal the selection bar goes out of the screen.</li>
+<li>On windows resizing terminal breaks the screen.</li>
+<li>Volume isn&rsquo;t capped at 100</li>
+</ul>
+</div>
+</div>
+
+	</div>
+
+	<div id="footer"><footer>
+    <a href="mailto:8amiul@gmail.com">8amiul@gmail.com</a>
+    <a href="/rss.xml">rss</a>
+    <a href="https://t.me/iam84wivel">@iam84wivel</a>
+</footer>
+</div>
+  </body>
+</html>

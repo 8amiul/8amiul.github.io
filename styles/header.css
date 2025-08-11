@@ -1,0 +1,38 @@
+/*      header section      */
+#header {
+    font-size: 1rem;
+}
+
+.header-title {
+    font-style: oblique;
+    color: var(--header-title);
+}
+
+.navbar {
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-right: 0;
+}
+
+.link-list {
+    list-style: none;
+    display: flex;
+}
+
+.link-list a {
+    color: var(--header-link-text);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.link-list a:hover {
+    background-color: var(--header-link-hover);
+    color: var(--header-link-fg);
+}
+
+.navbar-phone {
+    display: none;
+}

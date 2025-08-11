@@ -1,0 +1,150 @@
+.blogs-list {
+    list-style: none;
+    margin: 0 20vw;
+    color: var(--blog-post-list-text);
+}
+
+.blogs-list-date {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: var(--blog-post-list-large-date);
+    text-decoration: underline;
+    font-family: SourceSans3-Bold;
+}
+
+.list-item {
+    margin: 2rem 0 2rem 1rem;
+}
+
+
+.blog-description {
+    margin: 1rem 0;
+}
+
+.blog-title {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--blog-post-list-title);
+}
+
+.blog-date {
+    color: var(--blog-post-list-date);
+}
+
+.blog-tag {
+    color: var(--blog-post-list-tags);
+
+}
+
+.blog-summary {
+    margin: 1rem 0 1rem 0.5rem;
+    color: var(--blog-post-list-summary);
+}
+
+
+/*      blog-post       */
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 10vw;
+
+    font-family: "BlogPostFont1";
+}
+
+.blog-post-info {
+    align-self: flex-start;
+    margin: 0 1rem;
+}
+
+.post-title {
+    font-style: italic;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.post-content {
+    width: 100%;
+    font-size: 1.5rem; /* for BlogPostFont1 */
+    /* font-size: 1.2rem; JetBrains-Mono */
+    margin: 1rem 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-content p {
+    margin: 0.5rem 1rem 1rem 1rem;
+}
+
+.post-content a {
+    color: var(--blog-post-link);
+}
+
+.post-content img, .post-content a img {
+    max-width: 100%; 
+    width: 1000px; 
+    display: block; 
+    height: auto; 
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.project-cover {
+    max-width: 100%;
+    max-height: 360px;
+    display: block;
+}
+
+.project-cover:hover {
+    max-width: 100%;
+    max-height: 360px;
+    display: block;
+    border: 1px solid var(--project-post-img-hover);
+}
+
+.post-content pre code span {
+    font-size: 1rem;
+    overflow: auto;
+    /*padding: 0.3rem 0.1rem;*/
+}
+
+
+.post-description {
+    font-size: 1.2rem;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6
+{
+    margin: 1rem 0;
+}
+
+.post-content li code {
+    color: var(--project-post-content-li-code-color);
+    font-family: "VT323";
+}
+
+/*      Weird Shit Below    */
+/* for some reason ul and ol doesn't have the same padding and margin*/
+.post-content li,
+.post-content ul{
+    margin: 0 1rem;
+}
+
+.post-content ol{
+    margin: 0 2rem;
+}
+
+/* centering image for blog post */
+.post-content img, .post-content a img{
+    align-self: center;
+    max-width: 100%; 
+    width: 1000px; 
+    height: auto; 
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
