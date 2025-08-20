@@ -78,10 +78,6 @@ let images = [
 		img: "63.jpg",
 		description: "Found it on my uncle's desktop."
 	},
-	{ 
-		img: "71.jpg", 
-		description: "New hairstyle."
-	}, 
 	{
 		img: "83.jpg",
 		date: "04 Mar 2025",
@@ -117,7 +113,7 @@ let images = [
 		date: "08 Aug 2025 | 5:09 PM",
 		description: 
 		`
-			Ayoo! It has been 2 months not posting here! Prolly, subdued that phase of life which everyone faces once in a while. Blah blah... So, I've started working with electronics :D.
+			It has been 2 months not posting here! Prolly, subdued a phase of life. I've started working with electronics.
 			Tinkering with this thing is so satisfying (sometimes annoying). I guess, that's my first... idk what exactly it does. But, look at that saturn spinning! Used ESP32, 128x64 OLED DISP. ICD2IMG for bitmap and some basic loops.
 		`
 	}
