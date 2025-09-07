@@ -6,10 +6,121 @@
     <description>Recent content in Posts on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Aug 2025 00:13:55 +0600</lastBuildDate>
+    <lastBuildDate>Sun, 07 Sep 2025 23:15:59 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ATmega8a bootloader burning and programming</title>
+      <link>https://8amiul.github.io/posts/sept-25/atmega8a-burn-bootloader/</link>
+      <pubDate>Sun, 07 Sep 2025 23:15:59 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/sept-25/atmega8a-burn-bootloader/</guid>
+      <description>&lt;p&gt;I recently bought an ATmega8a microcontroller for making a simple project. Modern microcontrollers by default come with a bootloader burned. Thus, we don&amp;rsquo;t have to hassle with those such as ESP32 or Arduino Nano. To burn a bootloader we could use something call an AVR Programmer, but these are so expensive!&lt;/p&gt;
+&lt;p&gt;Better we get an arduino nano and use that as an isp programmer.&lt;/p&gt;
+&lt;h3 id=&#34;necessary-components&#34;&gt;Necessary components&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ATmega8a&lt;/li&gt;
+&lt;li&gt;Arduino Nano&lt;/li&gt;
+&lt;li&gt;Breadboard&lt;/li&gt;
+&lt;li&gt;Jumper wires&lt;/li&gt;
+&lt;li&gt;16 Mhz Crystal Oscillator&lt;/li&gt;
+&lt;li&gt;22pF Capacitor (2x)&lt;/li&gt;
+&lt;li&gt;LED and 220 ohm resistor (Optional)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;wiring&#34;&gt;Wiring&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Arduino Nano Pin&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;ATmega8A Pin&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Function&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;D10&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Pin 1 (RESET)&lt;/td&gt;
+&lt;td&gt;RESET&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;D11&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Pin 17 (MOSI)&lt;/td&gt;
+&lt;td&gt;MOSI&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;D12&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Pin 18 (MISO)&lt;/td&gt;
+&lt;td&gt;MISO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;D13&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Pin 19 (SCK)&lt;/td&gt;
+&lt;td&gt;SCK&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;5V&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Pin 7 (VCC) &amp;amp; Pin 20 (AVCC)&lt;/td&gt;
+&lt;td&gt;Power&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GND&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Pin 8 (GND) &amp;amp; Pin 22 (GND)&lt;/td&gt;
+&lt;td&gt;Ground&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href=&#34;https://8amiul.github.io/images/posts/sept-25/atmega8a-burn-bootloader/wiring_diagram.jpeg&#34;&gt;Wiring Image&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step---1&#34;&gt;Step - 1&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Import &lt;a href=&#34;https://github.com/MCUdude/MiniCore&#34;&gt;MiniCore&lt;/a&gt; to Arduino IDE.&lt;/li&gt;
+&lt;li&gt;Install MiniCore from board manager in Arduino&lt;/li&gt;
+&lt;li&gt;Setup Arduino according to the wiring diagram&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;step---2&#34;&gt;Step - 2&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open ArduinoISP file from &amp;lsquo;Files &amp;gt; examples &amp;gt; ArduinoISP&amp;rsquo; in IDE&lt;/li&gt;
+&lt;li&gt;Upload that program to Arduino Nano&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;step---3&#34;&gt;Step - 3&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Set Board: MiniCore&amp;gt;ATmega8&lt;/li&gt;
+&lt;li&gt;Set the Arduino port&lt;/li&gt;
+&lt;li&gt;Set Programmer: Arduino as ISP&lt;/li&gt;
+&lt;li&gt;Hit Burn Bootloader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;step---4&#34;&gt;Step - 4&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Write your desire code for uploading to the ATmega8a&lt;/li&gt;
+&lt;li&gt;Select Sketch &amp;gt; Upload using programmer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;common-errors&#34;&gt;Common Errors&lt;/h2&gt;
+&lt;h3 id=&#34;error-1&#34;&gt;Error 1&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Warning: attempt &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; of 10: not in sync: resp&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0x15
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Warning: attempt &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; of 10: not in sync: resp&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0x15
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: protocol expects OK byte 0x10 but got 0x14
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: cannot obtain SW version
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: initialization failed  &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;rc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; -3&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; - double check the connections and try again
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; - use -B to set lower the bit clock frequency, e.g. -B 125kHz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; - use -F to override this check
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: protocol expects sync byte 0x14 but got 0x01
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Failed chip erase: uploading error: exit status &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Check whether the wiring is correct and connections fine or not using a multimeter.&lt;/li&gt;
+&lt;li&gt;Check correct board and port is selected or not.&lt;/li&gt;
+&lt;li&gt;Hold Arduino Nano Reset button manually for a second, after hitting burn bootloader/Upload Using programmer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;error-2&#34;&gt;Error 2&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: expected signature &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; ATmega8 is 1E &lt;span style=&#34;color:#ae81ff&#34;&gt;93&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;07&lt;/span&gt; - double check chip or use -F to carry on regardless Failed programming: uploading error: exit status &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Put pressure on ATmega8a with your fingers so that the pins are set perfectly on the breadboard.&lt;/li&gt;
+&lt;li&gt;If still it fails then keep holding ATmega8a and try uploading.&lt;/li&gt;
+&lt;/ul&gt;
+</description> 
+    </item>
     
     <item>
       <title>Thoughts on Recent Exams</title>

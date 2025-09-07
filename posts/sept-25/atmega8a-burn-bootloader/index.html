@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html><head>
+      <meta name="google-site-verification" content="RdYDKREj2QfSVMxq1OLSfPFC2sOpiblG7pD4X2IhMUk" />
+      <meta charset="utf-8">
+      <meta name="description" content=" I am Samiul Islam. A 19 year old college student from Bangladesh. I like computers, technology, programming, cybersecurity and listening to music. I also find crime analysis, history and conspiracy theories interesting. Open world video games are something that I enjoy. Finally I am just a guy who likes to tinker with operating systems, programs and devices."> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/styles/style.css">
+      <link rel="stylesheet" type="text/css" href="/styles/header.css">
+      <link rel="stylesheet" type="text/css" href="/styles/footer.css">
+      <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
+      <link rel="stylesheet" type="text/css" href="/styles/blogs.css">
+      <link rel="stylesheet" type="text/css" href="/styles/small-disp.css">
+      <link rel="stylesheet" type="text/css" href="/styles/colors.css">
+
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+
+      
+        <title>ATmega8a bootloader burning and programming | 8amiul&#39;s Webpage</title>
+      
+</head>
+<body>
+	<div id="header"><nav class="navbar">
+	<span class="header-title">8amiul&#39;s Webpage</span>
+	<ul class="link-list">
+		
+		<li class="link"><a href="/">Home</a></li>
+		
+		<li class="link"><a href="/posts/">Posts</a></li>
+		
+		<li class="link"><a href="/tags/">Tags</a></li>
+		
+		<li class="link"><a href="/projects/">Projects</a></li>
+		
+		<li class="link"><a href="/images/">Images</a></li>
+		
+		<li class="link"><a href="/music/">Music</a></li>
+		
+		<li class="link"><a href="/bookmarks/">Bookmarks</a></li>
+		
+	</ul>
+</nav>
+
+<nav class="navbar-phone">
+	<ul class="navbar-list">
+	
+	<li class="navbar-list-links"><a href="/">Home</a></li>
+	
+	<li class="navbar-list-links"><a href="/posts/">Posts</a></li>
+	
+	<li class="navbar-list-links"><a href="/tags/">Tags</a></li>
+	
+	<li class="navbar-list-links"><a href="/projects/">Projects</a></li>
+	
+	<li class="navbar-list-links"><a href="/images/">Images</a></li>
+	
+	<li class="navbar-list-links"><a href="/music/">Music</a></li>
+	
+	<li class="navbar-list-links"><a href="/bookmarks/">Bookmarks</a></li>
+	
+	</ul>
+</nav>
+</div>
+
+	<div id="content">
+	
+<div class="blog-post">
+	
+	<div class="blog-post-info">
+		<h2	class="post-title">ATmega8a bootloader burning and programming</h2>
+		
+		<p class="post-description">September 7, 2025</p>
+		
+
+		
+			Tags:
+  <a class="blog-tag" href="https://8amiul.github.io/tags/electronics">electronics</a>
+
+
+	</div>
+
+	<div class="post-content"><p>I recently bought an ATmega8a microcontroller for making a simple project. Modern microcontrollers by default come with a bootloader burned. Thus, we don&rsquo;t have to hassle with those such as ESP32 or Arduino Nano. To burn a bootloader we could use something call an AVR Programmer, but these are so expensive!</p>
+<p>Better we get an arduino nano and use that as an isp programmer.</p>
+<h3 id="necessary-components">Necessary components</h3>
+<ul>
+<li>ATmega8a</li>
+<li>Arduino Nano</li>
+<li>Breadboard</li>
+<li>Jumper wires</li>
+<li>16 Mhz Crystal Oscillator</li>
+<li>22pF Capacitor (2x)</li>
+<li>LED and 220 ohm resistor (Optional)</li>
+</ul>
+<h3 id="wiring">Wiring</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Arduino Nano Pin</strong></th>
+<th><strong>ATmega8A Pin</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D10</strong></td>
+<td>Pin 1 (RESET)</td>
+<td>RESET</td>
+</tr>
+<tr>
+<td><strong>D11</strong></td>
+<td>Pin 17 (MOSI)</td>
+<td>MOSI</td>
+</tr>
+<tr>
+<td><strong>D12</strong></td>
+<td>Pin 18 (MISO)</td>
+<td>MISO</td>
+</tr>
+<tr>
+<td><strong>D13</strong></td>
+<td>Pin 19 (SCK)</td>
+<td>SCK</td>
+</tr>
+<tr>
+<td><strong>5V</strong></td>
+<td>Pin 7 (VCC) &amp; Pin 20 (AVCC)</td>
+<td>Power</td>
+</tr>
+<tr>
+<td><strong>GND</strong></td>
+<td>Pin 8 (GND) &amp; Pin 22 (GND)</td>
+<td>Ground</td>
+</tr>
+</tbody>
+</table>
+<p><a href="/images/posts/sept-25/atmega8a-burn-bootloader/wiring_diagram.jpeg">Wiring Image</a></p>
+<h3 id="step---1">Step - 1</h3>
+<ul>
+<li>Import <a href="https://github.com/MCUdude/MiniCore">MiniCore</a> to Arduino IDE.</li>
+<li>Install MiniCore from board manager in Arduino</li>
+<li>Setup Arduino according to the wiring diagram</li>
+</ul>
+<h3 id="step---2">Step - 2</h3>
+<ul>
+<li>Open ArduinoISP file from &lsquo;Files &gt; examples &gt; ArduinoISP&rsquo; in IDE</li>
+<li>Upload that program to Arduino Nano</li>
+</ul>
+<h3 id="step---3">Step - 3</h3>
+<ul>
+<li>Set Board: MiniCore&gt;ATmega8</li>
+<li>Set the Arduino port</li>
+<li>Set Programmer: Arduino as ISP</li>
+<li>Hit Burn Bootloader</li>
+</ul>
+<h3 id="step---4">Step - 4</h3>
+<ul>
+<li>Write your desire code for uploading to the ATmega8a</li>
+<li>Select Sketch &gt; Upload using programmer</li>
+</ul>
+<h2 id="common-errors">Common Errors</h2>
+<h3 id="error-1">Error 1</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Warning: attempt <span style="color:#ae81ff">1</span> of 10: not in sync: resp<span style="color:#f92672">=</span>0x15
+</span></span><span style="display:flex;"><span>Warning: attempt <span style="color:#ae81ff">2</span> of 10: not in sync: resp<span style="color:#f92672">=</span>0x15
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Error: protocol expects OK byte 0x10 but got 0x14
+</span></span><span style="display:flex;"><span>Error: cannot obtain SW version
+</span></span><span style="display:flex;"><span>Error: initialization failed  <span style="color:#f92672">(</span>rc <span style="color:#f92672">=</span> -3<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> - double check the connections and try again
+</span></span><span style="display:flex;"><span> - use -B to set lower the bit clock frequency, e.g. -B 125kHz
+</span></span><span style="display:flex;"><span> - use -F to override this check
+</span></span><span style="display:flex;"><span>Error: protocol expects sync byte 0x14 but got 0x01
+</span></span><span style="display:flex;"><span>Failed chip erase: uploading error: exit status <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ul>
+<li>Check whether the wiring is correct and connections fine or not using a multimeter.</li>
+<li>Check correct board and port is selected or not.</li>
+<li>Hold Arduino Nano Reset button manually for a second, after hitting burn bootloader/Upload Using programmer.</li>
+</ul>
+<h3 id="error-2">Error 2</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Error: expected signature <span style="color:#66d9ef">for</span> ATmega8 is 1E <span style="color:#ae81ff">93</span> <span style="color:#ae81ff">07</span> - double check chip or use -F to carry on regardless Failed programming: uploading error: exit status <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ul>
+<li>Put pressure on ATmega8a with your fingers so that the pins are set perfectly on the breadboard.</li>
+<li>If still it fails then keep holding ATmega8a and try uploading.</li>
+</ul>
+</div>
+</div>
+
+	</div>
+
+	<div id="footer"><footer>
+    <a href="mailto:8amiul@gmail.com">8amiul@gmail.com</a>
+    <a href="/rss.xml">rss</a>
+    <a href="https://t.me/iam84wivel">@iam84wivel</a>
+</footer>
+</div>
+  </body>
+</html>
