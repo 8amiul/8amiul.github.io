@@ -97,25 +97,33 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;common-errors&#34;&gt;Common Errors&lt;/h2&gt;
 &lt;h3 id=&#34;error-1&#34;&gt;Error 1&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Warning: attempt &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; of 10: not in sync: resp&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0x15
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Warning: attempt &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; of 10: not in sync: resp&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0x15
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: protocol expects OK byte 0x10 but got 0x14
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: cannot obtain SW version
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: initialization failed  &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;rc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; -3&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; - double check the connections and try again
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; - use -B to set lower the bit clock frequency, e.g. -B 125kHz
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; - use -F to override this check
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: protocol expects sync byte 0x14 but got 0x01
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Failed chip erase: uploading error: exit status &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+
+&lt;pre style=&#34;font-size: 1rem; align-self: center; background-color: #422c2c;padding: 1rem; max-width: 90%; white-space: pre-wrap; word-wrap: break-word; margin-bottom: 1rem;&#34;&gt;
+Warning: attempt 1 of 10: not in sync: resp=0x15
+Warning: attempt 2 of 10: not in sync: resp=0x15
+
+Error: protocol expects OK byte 0x10 but got 0x14
+Error: cannot obtain SW version
+Error: initialization failed  (rc = -3)
+ - double check the connections and try again
+ - use -B to set lower the bit clock frequency, e.g. -B 125kHz
+ - use -F to override this check
+Error: protocol expects sync byte 0x14 but got 0x01
+Failed chip erase: uploading error: exit status 1
+&lt;/pre&gt;
+
+&lt;ul&gt;
 &lt;li&gt;Check whether the wiring is correct and connections fine or not using a multimeter.&lt;/li&gt;
 &lt;li&gt;Check correct board and port is selected or not.&lt;/li&gt;
 &lt;li&gt;Hold Arduino Nano Reset button manually for a second, after hitting burn bootloader/Upload Using programmer.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;error-2&#34;&gt;Error 2&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error: expected signature &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; ATmega8 is 1E &lt;span style=&#34;color:#ae81ff&#34;&gt;93&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;07&lt;/span&gt; - double check chip or use -F to carry on regardless Failed programming: uploading error: exit status &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+
+&lt;pre style=&#34;font-size: 1rem; align-self: center; background-color: #422c2c;padding: 1rem; max-width: 90%; white-space: pre-wrap; word-wrap: break-word; margin-bottom: 1rem;&#34;&gt;
+Error: expected signature for ATmega8 is 1E 93 07 - double check chip or use -F to carry on regardless Failed programming: uploading error: exit status 1
+&lt;/pre&gt;
+
+&lt;ul&gt;
 &lt;li&gt;Put pressure on ATmega8a with your fingers so that the pins are set perfectly on the breadboard.&lt;/li&gt;
 &lt;li&gt;If still it fails then keep holding ATmega8a and try uploading.&lt;/li&gt;
 &lt;/ul&gt;
@@ -243,17 +251,7 @@
 
 &lt;pre style=&#34;font-size: 1rem; align-self: center; background-color: #422c2c;padding: 1rem; max-width: 90%; white-space: pre-wrap; word-wrap: break-word;&#34;&gt;
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-
-mDMEaIEgxxYJKwYBBAHaRw8BAQdA5cL0EOyUG1ES8liSraN/YtoHGhEsmh7gBt2G
-HWqMmU60LDhhbWl1bCAoOGFtaXVsLmdpdGh1Yi5pbykgPDhhbWl1bEBnbWFpbC5j
-b20+iJMEExYKADsWIQQEzraxy/u0gcwAM4uuqZmDAkQBiQUCaIEgxwIbAwULCQgH
-AgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRCuqZmDAkQBiQ/2AP0RjH+fMttZU4gd
-Tm2xcLC3ZC/IeZysZvJx/D9aVBytCgEAwW/BZFrjqBbJpewj7+ZKEGM/ld63oUOX
-bQ5qD0OK5gO4OARogSDHEgorBgEEAZdVAQUBAQdApLwhS3M9qOqtTqzkO2JvanLk
-5U8vltB2pyqC5u2FlwADAQgHiHgEGBYKACAWIQQEzraxy/u0gcwAM4uuqZmDAkQB
-iQUCaIEgxwIbDAAKCRCuqZmDAkQBiTCJAP4o6qbuoFxnkeRvpHjhO6+yrSAqgydh
-GMhnUdYD81pi8gD/Q4W13ngqGfMkgZ7USbsfazX2aAwsB/1On88ayfSj3gI=
-=1QOO
+[REMOVED]
 -----END PGP PUBLIC KEY BLOCK-----
 &lt;/pre&gt;
 &lt;/p&gt;
