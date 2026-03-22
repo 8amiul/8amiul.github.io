@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html><head>
+      <meta name="google-site-verification" content="RdYDKREj2QfSVMxq1OLSfPFC2sOpiblG7pD4X2IhMUk" />
+      <meta charset="utf-8">
+      <meta name="description" content=" I am Samiul Islam. A 19 year old college student from Bangladesh. I like computers, technology, programming, cybersecurity and listening to music. I also find crime analysis, history and conspiracy theories interesting. Open world video games are something that I enjoy. Finally I am just a guy who likes to tinker with operating systems, programs and devices."> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/styles/style.css">
+      <link rel="stylesheet" type="text/css" href="/styles/header.css">
+      <link rel="stylesheet" type="text/css" href="/styles/footer.css">
+      <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
+      <link rel="stylesheet" type="text/css" href="/styles/blogs.css">
+      <link rel="stylesheet" type="text/css" href="/styles/small-disp.css">
+      <link rel="stylesheet" type="text/css" href="/styles/colors.css">
+
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+
+
+      
+        <title>How to Make a Visualizer Using DF Player Mini | 8amiul&#39;s Webpage</title>
+      
+</head>
+<body>
+	<div id="header"><nav class="navbar">
+	<span class="header-title">8amiul&#39;s Webpage</span>
+	<ul class="link-list">
+		
+		<li class="link"><a href="/">Home</a></li>
+		
+		<li class="link"><a href="/posts/">Posts</a></li>
+		
+		<li class="link"><a href="/tags/">Tags</a></li>
+		
+		<li class="link"><a href="/projects/">Projects</a></li>
+		
+		<li class="link"><a href="/images/">Images</a></li>
+		
+		<li class="link"><a href="/music/">Music</a></li>
+		
+		<li class="link"><a href="/bookmarks/">Bookmarks</a></li>
+		
+	</ul>
+</nav>
+
+<nav class="navbar-phone">
+	<ul class="navbar-list">
+	
+	<li class="navbar-list-links"><a href="/">Home</a></li>
+	
+	<li class="navbar-list-links"><a href="/posts/">Posts</a></li>
+	
+	<li class="navbar-list-links"><a href="/tags/">Tags</a></li>
+	
+	<li class="navbar-list-links"><a href="/projects/">Projects</a></li>
+	
+	<li class="navbar-list-links"><a href="/images/">Images</a></li>
+	
+	<li class="navbar-list-links"><a href="/music/">Music</a></li>
+	
+	<li class="navbar-list-links"><a href="/bookmarks/">Bookmarks</a></li>
+	
+	</ul>
+</nav>
+</div>
+
+	<div id="content">
+	
+<div class="blog-post">
+	
+	<div class="blog-post-info">
+		<h2	class="post-title">How to Make a Visualizer Using DF Player Mini</h2>
+		
+		<p class="post-description">February 12, 2026</p>
+		
+
+		
+			Tags:
+  <a class="blog-tag" href="https://8amiul.github.io/tags/electronics">electronics</a>
+
+  <a class="blog-tag" href="https://8amiul.github.io/tags/programming">programming</a>
+
+
+	</div>
+
+	<div class="post-content"><p>Today I will note down all the steps I implemented in order to make a visualizer for the handheld device I am making. It was simple yet intriguing. You don&rsquo;t have to do a lot of things for that. I am going to list all the components which will be needed to make this. That is just a raw audio waveform visualization. That&rsquo;s why it doesn&rsquo;t need any use of complicated math like fourier transform.</p>
+<h2 id="things-we-need">Things we need</h2>
+<ul>
+<li>ESP32/Arduino</li>
+<li>DF Player Mini</li>
+<li>An OLED Display</li>
+<li>1-10uF Capacitor</li>
+<li>0.1uF Capacitor</li>
+<li>10K Resistor (2x)</li>
+<li>1k Resistor</li>
+<li>Breadboard, Jumper cables</li>
+</ul>
+<h2 id="pins-to-focus">Pins to focus</h2>
+<ul>
+<li>ESP32 ADC1 Pins (32, 33, 34, 35, 36, 39)</li>
+<li>DF Player Mini DAC_L or DAC_R</li>
+</ul>
+<p>First of all, we need to make a bias circuit. Which works like a transistor. We are going to use this bias circuit to eliminate the DC signal coming from the DAC of DF Player mini. Hopefully, you can see the schematic. However, I am trying to explain the schematic in my words.</p>
+<p>First things is to do, put two 10K resistor in series within esp32 VIN and GND. The middle point of these two resistors is called the biasing point. in this point we are going to connect our DAC of DF Player mini and ADC1 of ESP32. Don&rsquo;t forget to check the voltage in the biasing point. It should be somewhere around 1.6V. Now connect the DAC_L or DAC_R to the biasing point and through a capacitor. The capacitance can be somewhere between 1uF to 10uF. I have used a 2.2uF. Positive side of capacitor to the biasing point and the negative to the DAC. Then let&rsquo;s connect the ESP32 ADC (32 for my case) to biasing point. But through a 1K resistor. I am going to explain all these &lsquo;Why&rsquo; questions later. Finally, time to use the 0.1uF capacitor. Use this capacitor to connect the ADC pin to GND. Thus we are done with our wiring.</p>
+<p>Let us talk about some technical stuff. Why did I used those random components? There is obviously a reason, right? The 2.2uF capacitor now works as a decoupling capacitor. It doesn&rsquo;t let the DC signals coming to ESP32, it only lets the AC to come. Audio signals are AC because it does up down from positive volts to negative volts to express its characteristic. Whereas DC signals do not jump. Here DC is only used to provide power not to do anything with the actual sound components. So use that capacitor.</p>
+<p>Now what about those two 10K resistor? Those are to create 1.6 volts. ESP32 can only measure 0 to 3.3V. In analog reading it stands 0 to 4095. You can see it can&rsquo;t work with negative values. So we have to somehow make those negative values. Thus we provide external volts to make the scale a bit higher. We provide the half of actual voltage, which is 1.65 volts. This voltage values may differ just a bit, so nothing to worry about. Sometimes we call it the center. Because it actually creates a center axis of a graph, if we are to plot.</p>
+<p>I used the 0.1uF capacitor and 1K resistor to remove noises from the pins and surrounding. I don&rsquo;t know how well they work. But I guess it should it.</p>
+<h1 id="coding">Coding</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">//========== Wave visualizer ==========
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#define SAMPLES 128
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define SAMPLE_DELAY  80
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define ADC_PIN 32
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define CENTER 1950
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define GAIN 6
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define DEADZONE 20
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> lastSampleTime <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> sampleIndex <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> samples[SAMPLES];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">captureWaveform</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> SAMPLES; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> raw_adc <span style="color:#f92672">=</span> <span style="color:#a6e22e">analogRead</span>(ADC_PIN);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// center around 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> centered <span style="color:#f92672">=</span> raw_adc <span style="color:#f92672">-</span> CENTER;          <span style="color:#75715e">// CENTER = ADC_BIAS VOLT 1.67 in analogValue.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                                              <span style="color:#75715e">// We use this center to make AC signals. ESP32 ADC
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                                              <span style="color:#75715e">// can&#39;t read negative volt. We create a bias so that
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                                              <span style="color:#75715e">// the negative volts get positve by substracting the bias
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                                              <span style="color:#75715e">// thus we can constrain the AC signal in 0 to 4095
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                                              <span style="color:#75715e">// typically the positve value goes above (4095/2) and negative
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                                              <span style="color:#75715e">// stays below that value. thus we get a center (4095/2) ~ 2048
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                                              <span style="color:#75715e">// It can also be called the idle volts reading from ADC. 1950 is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                                              <span style="color:#75715e">// in my case.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">abs</span>(centered) <span style="color:#f92672">&lt;</span> DEADZONE) {
+</span></span><span style="display:flex;"><span>      centered <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// software gain
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    centered <span style="color:#f92672">*=</span> GAIN;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// shift back
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> amplified <span style="color:#f92672">=</span> centered <span style="color:#f92672">+</span> CENTER;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// clamp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    samples[i] <span style="color:#f92672">=</span> <span style="color:#a6e22e">constrain</span>(amplified, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4095</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">delayMicroseconds</span>(SAMPLE_DELAY);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">drawMusicVisualizer</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">captureWaveform</span>();
+</span></span><span style="display:flex;"><span>  u8g2.<span style="color:#a6e22e">clearBuffer</span>();
+</span></span><span style="display:flex;"><span>  u8g2.<span style="color:#a6e22e">setDrawColor</span>(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; x <span style="color:#f92672">&lt;</span> SAMPLES; x<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> y1 <span style="color:#f92672">=</span>  <span style="color:#a6e22e">map</span>(samples[x <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>], <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4095</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> y2 <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>(samples[x], <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4095</span>, <span style="color:#ae81ff">63</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    u8g2.<span style="color:#a6e22e">drawLine</span>(x<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, y1, x, y2);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  u8g2.<span style="color:#a6e22e">sendBuffer</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ===================================
+</span></span></span></code></pre></div><p>Explaining the functions,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">captureWaveform</span>()
+</span></span></code></pre></div><p>This function collects (SAMPLES = 128) amount of values from ADC pins using analogRead function. Now what is centered? I already added a comment in the code. Hopefully reading it will clarify. Then there is an if statement which does work like a deadzone filter. That means when we centered value is less than the (DEADZONE = 20) then we don&rsquo;t count it and set it to 0. This approach was taken to reduce unwanted noises. Finally adding a software gain to make the value amplified a bit from the software side. The next line, I just added the value to another variable after adding gain. Clamping the value within a certain range and ending with a slight delay. So we are done with data scraping. It is time to visualize those data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">drawMusicVisualizer</span>()
+</span></span></code></pre></div><p>We here only need the basics of u8g2 library. Used the drawLine function to connect the dots. Also used map function to do some simple math to convert big values to equivalent small values so that those value could be printed in my small display. Why 63? Because the display I used is 128x64, so width is 64. Now 64 is represented from 0 to 63 in the buffer and that is why 63.</p>
+<h1 id="so-that-was-it">So that was it!</h1>
+
+<iframe width="315" height="560" src="https://youtube.com/embed/2eIA-SE-zJw?si=gbyZwh-N6XPosBYD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="align-self: center;"></iframe>
+
+</div>
+</div>
+
+	</div>
+
+	<div id="footer"><footer>
+    <a href="mailto:8amiul@gmail.com">8amiul@gmail.com</a>
+    <a href="/rss.xml">rss</a>
+    <a href="https://t.me/iam84wivel">@iam84wivel</a>
+</footer>
+</div>
+  </body>
+</html>

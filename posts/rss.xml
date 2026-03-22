@@ -6,10 +6,123 @@
     <description>Recent content in Posts on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Sep 2025 23:15:59 +0600</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2026 09:00:59 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/posts/rss.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Eid Al-Fitr Mubarak 2026</title>
+      <link>https://8amiul.github.io/posts/march-26/eidal-fitr26/</link>
+      <pubDate>Sun, 22 Mar 2026 09:00:59 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/march-26/eidal-fitr26/</guid>
+      <description>&lt;p&gt;This eid was not really something to celebrate. Nobody really knows what&amp;rsquo;s coming next. Even if we sit and try to find every possible combination of events that might occur, we eventually will get outsmarted by the will of the almighty. Eid was yesterday and if someone asks me what did I do to celebrate then I won&amp;rsquo;t be able to answer. I had plans and even we thought we would be staying a bit longer and celebrate with the whole family but what a luck we&amp;rsquo;ve got! We didn&amp;rsquo;t even stay there for more than a single day. Not mentioning what happened but something that I or we never wanted.&lt;/p&gt;
+&lt;p&gt;However, despite everything, I must be grateful for one thing which is that I just got a very good sleep after a month. A proper sleep feels like heaven. Quite energetic and quite fresh. Making a habit of proper sleep is something we all should do. I ruined my sleep schedule back then and I wasn&amp;rsquo;t really taking any steps to fix it. But I think I should be fixing it soon. The sooner one understands the worth of a proper sleep, the healthier he can live this life.&lt;/p&gt;
+&lt;p&gt;What special happened this Eid? I just saw how everyone loves and respects us, Alhamdulillah. May Allah love them the way they loved us.&lt;/p&gt;
+&lt;p&gt;Got salami this year. Getting salami is fun but I never liked to get salami that exceeds a certain amount. Bigger note means bigger guilt to me. If the salami is too large in amount then I feel like I just submitted the fact that how low I laid to grab someone&amp;rsquo;s money for no specific reason and by holding the event of eid as a basis.
+Moreover, asking for salami seems like a traditional, event specific way of begging to me because I do not have the habit of asking money from any other person than my parents. However, that&amp;rsquo;s my personal opinion and no offense towards anyone. I&amp;rsquo;ve seen kids cursing elders silently or backbiting, if they do not provide salami or the amount that might not meet their expectations. Expectation is fine, people keep expectations from those who are capable of giving it. But we are no one to control their wishes and whether they are to give it or not.&lt;/p&gt;
+&lt;p&gt;That was it I hope. Everyday is a new lesson and every lesson is a new way of living the life. Eid Mubarak!&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>How to Make a Visualizer Using DF Player Mini</title>
+      <link>https://8amiul.github.io/posts/feb-26/how-to-make-a-visualizer-using-df-player-mini/</link>
+      <pubDate>Thu, 12 Feb 2026 23:50:14 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/feb-26/how-to-make-a-visualizer-using-df-player-mini/</guid>
+      <description>&lt;p&gt;Today I will note down all the steps I implemented in order to make a visualizer for the handheld device I am making. It was simple yet intriguing. You don&amp;rsquo;t have to do a lot of things for that. I am going to list all the components which will be needed to make this. That is just a raw audio waveform visualization. That&amp;rsquo;s why it doesn&amp;rsquo;t need any use of complicated math like fourier transform.&lt;/p&gt;
+&lt;h2 id=&#34;things-we-need&#34;&gt;Things we need&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ESP32/Arduino&lt;/li&gt;
+&lt;li&gt;DF Player Mini&lt;/li&gt;
+&lt;li&gt;An OLED Display&lt;/li&gt;
+&lt;li&gt;1-10uF Capacitor&lt;/li&gt;
+&lt;li&gt;0.1uF Capacitor&lt;/li&gt;
+&lt;li&gt;10K Resistor (2x)&lt;/li&gt;
+&lt;li&gt;1k Resistor&lt;/li&gt;
+&lt;li&gt;Breadboard, Jumper cables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pins-to-focus&#34;&gt;Pins to focus&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ESP32 ADC1 Pins (32, 33, 34, 35, 36, 39)&lt;/li&gt;
+&lt;li&gt;DF Player Mini DAC_L or DAC_R&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First of all, we need to make a bias circuit. Which works like a transistor. We are going to use this bias circuit to eliminate the DC signal coming from the DAC of DF Player mini. Hopefully, you can see the schematic. However, I am trying to explain the schematic in my words.&lt;/p&gt;
+&lt;p&gt;First things is to do, put two 10K resistor in series within esp32 VIN and GND. The middle point of these two resistors is called the biasing point. in this point we are going to connect our DAC of DF Player mini and ADC1 of ESP32. Don&amp;rsquo;t forget to check the voltage in the biasing point. It should be somewhere around 1.6V. Now connect the DAC_L or DAC_R to the biasing point and through a capacitor. The capacitance can be somewhere between 1uF to 10uF. I have used a 2.2uF. Positive side of capacitor to the biasing point and the negative to the DAC. Then let&amp;rsquo;s connect the ESP32 ADC (32 for my case) to biasing point. But through a 1K resistor. I am going to explain all these &amp;lsquo;Why&amp;rsquo; questions later. Finally, time to use the 0.1uF capacitor. Use this capacitor to connect the ADC pin to GND. Thus we are done with our wiring.&lt;/p&gt;
+&lt;p&gt;Let us talk about some technical stuff. Why did I used those random components? There is obviously a reason, right? The 2.2uF capacitor now works as a decoupling capacitor. It doesn&amp;rsquo;t let the DC signals coming to ESP32, it only lets the AC to come. Audio signals are AC because it does up down from positive volts to negative volts to express its characteristic. Whereas DC signals do not jump. Here DC is only used to provide power not to do anything with the actual sound components. So use that capacitor.&lt;/p&gt;
+&lt;p&gt;Now what about those two 10K resistor? Those are to create 1.6 volts. ESP32 can only measure 0 to 3.3V. In analog reading it stands 0 to 4095. You can see it can&amp;rsquo;t work with negative values. So we have to somehow make those negative values. Thus we provide external volts to make the scale a bit higher. We provide the half of actual voltage, which is 1.65 volts. This voltage values may differ just a bit, so nothing to worry about. Sometimes we call it the center. Because it actually creates a center axis of a graph, if we are to plot.&lt;/p&gt;
+&lt;p&gt;I used the 0.1uF capacitor and 1K resistor to remove noises from the pins and surrounding. I don&amp;rsquo;t know how well they work. But I guess it should it.&lt;/p&gt;
+&lt;h1 id=&#34;coding&#34;&gt;Coding&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//========== Wave visualizer ==========
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define SAMPLES 128
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define SAMPLE_DELAY  80
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define ADC_PIN 32
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define CENTER 1950
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define GAIN 6
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define DEADZONE 20
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt; lastSampleTime &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sampleIndex &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; samples[SAMPLES];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;captureWaveform&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; SAMPLES; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; raw_adc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;analogRead&lt;/span&gt;(ADC_PIN);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// center around 0
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; centered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; raw_adc &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; CENTER;          &lt;span style=&#34;color:#75715e&#34;&gt;// CENTER = ADC_BIAS VOLT 1.67 in analogValue.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                                              &lt;span style=&#34;color:#75715e&#34;&gt;// We use this center to make AC signals. ESP32 ADC
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                                              &lt;span style=&#34;color:#75715e&#34;&gt;// can&amp;#39;t read negative volt. We create a bias so that
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                                              &lt;span style=&#34;color:#75715e&#34;&gt;// the negative volts get positve by substracting the bias
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                                              &lt;span style=&#34;color:#75715e&#34;&gt;// thus we can constrain the AC signal in 0 to 4095
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                                              &lt;span style=&#34;color:#75715e&#34;&gt;// typically the positve value goes above (4095/2) and negative
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                                              &lt;span style=&#34;color:#75715e&#34;&gt;// stays below that value. thus we get a center (4095/2) ~ 2048
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                                              &lt;span style=&#34;color:#75715e&#34;&gt;// It can also be called the idle volts reading from ADC. 1950 is
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;                                              &lt;span style=&#34;color:#75715e&#34;&gt;// in my case.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;abs&lt;/span&gt;(centered) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; DEADZONE) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      centered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// software gain
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    centered &lt;span style=&#34;color:#f92672&#34;&gt;*=&lt;/span&gt; GAIN;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// shift back
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; amplified &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; centered &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; CENTER;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// clamp
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    samples[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;constrain&lt;/span&gt;(amplified, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4095&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;delayMicroseconds&lt;/span&gt;(SAMPLE_DELAY);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;drawMusicVisualizer&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;captureWaveform&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  u8g2.&lt;span style=&#34;color:#a6e22e&#34;&gt;clearBuffer&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  u8g2.&lt;span style=&#34;color:#a6e22e&#34;&gt;setDrawColor&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; SAMPLES; x&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; y1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;map&lt;/span&gt;(samples[x &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;], &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4095&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;63&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; y2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;map&lt;/span&gt;(samples[x], &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4095&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;63&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    u8g2.&lt;span style=&#34;color:#a6e22e&#34;&gt;drawLine&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, y1, x, y2);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  u8g2.&lt;span style=&#34;color:#a6e22e&#34;&gt;sendBuffer&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// ===================================
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Explaining the functions,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;captureWaveform&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This function collects (SAMPLES = 128) amount of values from ADC pins using analogRead function. Now what is centered? I already added a comment in the code. Hopefully reading it will clarify. Then there is an if statement which does work like a deadzone filter. That means when we centered value is less than the (DEADZONE = 20) then we don&amp;rsquo;t count it and set it to 0. This approach was taken to reduce unwanted noises. Finally adding a software gain to make the value amplified a bit from the software side. The next line, I just added the value to another variable after adding gain. Clamping the value within a certain range and ending with a slight delay. So we are done with data scraping. It is time to visualize those data.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;drawMusicVisualizer&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We here only need the basics of u8g2 library. Used the drawLine function to connect the dots. Also used map function to do some simple math to convert big values to equivalent small values so that those value could be printed in my small display. Why 63? Because the display I used is 128x64, so width is 64. Now 64 is represented from 0 to 63 in the buffer and that is why 63.&lt;/p&gt;
+&lt;h1 id=&#34;so-that-was-it&#34;&gt;So that was it!&lt;/h1&gt;
+
+&lt;iframe width=&#34;315&#34; height=&#34;560&#34; src=&#34;https://youtube.com/embed/2eIA-SE-zJw?si=gbyZwh-N6XPosBYD&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen style=&#34;align-self: center;&#34;&gt;&lt;/iframe&gt;
+
+</description> 
+    </item>
     
     <item>
       <title>ATmega8a bootloader burning and programming</title>
@@ -895,7 +1008,8 @@ The only way you can fully enjoy the love in your life is to choose to make some
       <pubDate>Sat, 15 Feb 2025 17:18:32 +0600</pubDate>
       
       <guid>https://8amiul.github.io/posts/games-i-have-played/</guid>
-      <description>&lt;h3 id=&#34;games-i-have-completed&#34;&gt;Games I have completed&lt;/h3&gt;
+      <description>&lt;h2 id=&#34;just-visit-my-backloggdhttpsbcklggppva-for-the-latest-ones-listed&#34;&gt;Just visit my &lt;a href=&#34;https://bckl.gg/ppvA&#34;&gt;Backloggd&lt;/a&gt; for the latest ones listed&lt;/h2&gt;
+&lt;h3 id=&#34;games-i-have-completed&#34;&gt;Games I have completed&lt;/h3&gt;
 &lt;p&gt;Grand Theft Auto V&lt;/p&gt;
 &lt;p&gt;Grand Theft Auto Vice City&lt;/p&gt;
 &lt;p&gt;Grand Theft Auto San Andreas&lt;/p&gt;

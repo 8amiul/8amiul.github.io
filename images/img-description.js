@@ -116,5 +116,13 @@ let images = [
 			It has been 2 months not posting here! Prolly, subdued a phase of life. I've started working with electronics.
 			Tinkering with this thing is so satisfying (sometimes annoying). I guess, that's my first... idk what exactly it does. But, look at that saturn spinning! Used ESP32, 128x64 OLED DISP. ICD2IMG for bitmap and some basic loops.
 		`
+	},
+	{
+		img: "alkatra.jpg",
+		date: "22 March 2026 | 7:37 AM",
+		description:
+		`
+			After another long break, I am back with something way cooler. I present you my music player. It's chonky af. Can play music, show lyrics, has a waveform visualizer and more cool features yet to be implemented!
+		`
 	}
 	]
