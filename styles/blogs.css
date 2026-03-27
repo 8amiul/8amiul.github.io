@@ -192,4 +192,11 @@ nav.pagination a:first-child,
 nav.pagination a:last-child {
     font-weight: 600;
 }
+
+nav.blog-pagination span.ellipsis {
+    color: var(--blog-post-list-title);
+    border: none;
+    cursor: default;
+}
+
 /* -------------------------- */

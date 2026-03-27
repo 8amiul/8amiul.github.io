@@ -140,4 +140,17 @@
     .div-4 {
         width: 300px;
     }
+    
+    nav.pagination a,
+    nav.pagination span.active {
+        font-size: 1rem;
+        
+    }
+
+    nav.pagination span.active {
+        font-weight: bold;
+        cursor: default;
+        font-size: 1.5rem;
+    }
+
 }
