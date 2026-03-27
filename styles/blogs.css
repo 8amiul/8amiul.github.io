@@ -151,3 +151,45 @@
     height: auto; 
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
+
+
+/* -------------------------- */
+/* Pagination container */
+nav.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 3rem;
+    padding: 1rem 0;
+}
+
+/* All links and the active span */
+nav.pagination a,
+nav.pagination span.active {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    text-decoration: none;
+    color: var(--blog-post-list-title);
+    font-size: 0.95rem;
+}
+
+/* Hover state for links */
+nav.pagination a:hover {
+    font-size: 1.2rem;
+}
+
+/* Active/current page */
+nav.pagination span.active {
+    font-weight: bold;
+    cursor: default;
+    font-size: 1.5rem;
+}
+
+/* Prev / Next arrows */
+nav.pagination a[href*="prev"],
+nav.pagination a:first-child,
+nav.pagination a:last-child {
+    font-weight: 600;
+}
+/* -------------------------- */
