@@ -113,14 +113,32 @@
     width: 300px;
     height: 300px;
     border: 3px solid var(--homepage-bottom-box-border);
+
 }
 
 .div-3 iframe {
     border: 3px solid var(--homepage-bottom-box-border);
 }
 
-.div-3 .music-album, .chatbox{
+.div-3 .music-album, .chatbox {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cstrEmbed {
+    border: 2px solid var(--homepage-bottom-box-border);
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: none;
+}
+
+.div-4 {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 0;
+    max-width: 700px;
 }

@@ -136,4 +136,8 @@
     .bookmarks-content ul {
         list-style: lower-greek;
     }
+    
+    .div-4 {
+        width: 300px;
+    }
 }
