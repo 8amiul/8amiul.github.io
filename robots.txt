@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://8amiul.github.io/sitemap.xml
