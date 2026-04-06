@@ -22,7 +22,25 @@
       
 </head>
 <body>
-	<div id="header"><nav class="navbar">
+	<div id="header"><script src="/images/img-description.js"></script>
+<div class="scroll-container">
+    
+        <span class="scroll-text">
+                New blog post -> [22 Mar 2026] <a href="/posts/march-26/eidal-fitr26/">Eid Al-Fitr Mubarak 2026</a>
+        </span> 
+    
+    <script>
+        image_updates = document.querySelector(".scroll-text");
+        latest_image = images.slice(-1)[0]
+       
+        if (latest_image["description"].split(" ").length > 5)
+            image_updates.innerHTML += "&nbsp;".repeat(50) + "New image post -> " + "[" + latest_image["date"] + "]" + " " + '<a href="/images">' +  latest_image["description"].split(' ').slice(0, 5).join(" ") + "&nbsp;..." + "</a>"
+        else
+            image_updates.innerHTML += "&nbsp;".repeat(50) + "New image post -> " + "[" + latest_image["date"] + "]" + " " + '<a href="/images">' +  latest_image["description"] + "</a>"
+    </script>
+</div>
+
+<nav class="navbar">
 	<span class="header-title">8amiul&#39;s Webpage</span>
 	<ul class="link-list">
 		
@@ -65,23 +83,7 @@
 </div>
 
 	<div id="content">
-	<script src="/images/img-description.js"></script>
-<div class="scroll-container">
-    
-        <span class="scroll-text">
-                New blog post -> [22 Mar 2026] <a href="/posts/march-26/eidal-fitr26/">Eid Al-Fitr Mubarak 2026</a>
-        </span> 
-    
-    <script>
-        image_updates = document.querySelector(".scroll-text");
-        latest_image = images.slice(-1)[0]
-       
-        if (latest_image["description"].split(" ").length > 5)
-            image_updates.innerHTML += "&nbsp;".repeat(50) + "New image post -> " + "[" + latest_image["date"] + "]" + " " + '<a href="/images">' +  latest_image["description"].split(' ').slice(0, 5).join(" ") + "&nbsp;..." + "</a>"
-        else
-            image_updates.innerHTML += "&nbsp;".repeat(50) + "New image post -> " + "[" + latest_image["date"] + "]" + " " + '<a href="/images">' +  latest_image["description"] + "</a>"
-    </script>
-</div>
+	
 <div id="homepage">
     <div class="homepage-top">
         <img class="homepage-cover-pfp" src="https://avatars.githubusercontent.com/u/93048025?v=4">
@@ -95,7 +97,7 @@
             I am Samiul Islam aka 8amiul. A college student from Bangladesh.
         </p>
         <p>
-            Probably a guy with <span style="color: var(--header-bg)">good sense of humor</span>. I mostly remain calm and observe what people do. I like to meet new people and learn new ideas. You can read my posts to know more about me.
+            Probably a guy with <span style="color: var(--header-bg)">good sense of humor</span>. I mostly remain calm and observe what people do. I like to meet new people and learn new ideas. You can read my <a href="/posts/" style="color: var(--homepage-social-link);">posts</a> to know more about me.
         </p>
         <p style="color: var(--header-bg)">
             One may see these in me,
