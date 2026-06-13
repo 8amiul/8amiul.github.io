@@ -40,6 +40,11 @@ body {
 
     font-family: "JetBrains Mono", sans-serif;
     color: var(--default-site-text-color);
+    cursor: url('your-cursor-image.png'), auto;
+}
+
+a:hover {
+  cursor: url('your-hover-image.svg'), pointer;
 }
 
 .scroll-container {
