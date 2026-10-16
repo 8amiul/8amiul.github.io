@@ -6,7 +6,7 @@
     <description>Recent content on 8amiul&#39;s Webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2026 09:00:59 +0600</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 00:12:50 +0600</lastBuildDate>
     
 	<atom:link href="https://8amiul.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
@@ -190,6 +190,24 @@ For windows SDL2 library and ncurses is necessary for compiling. One can provide
 &lt;/ul&gt;
 &lt;h2 id=&#34;how-the-program-works&#34;&gt;How the program works?&lt;/h2&gt;
 &lt;p&gt;At first the main function will sequentially call other functions. Inside the main function it will call &lt;code&gt;menu(args)&lt;/code&gt; where selection between menu or exit will be returned. If returned value is news then &lt;code&gt;get_news_lines(args)&lt;/code&gt;  will be called and from &lt;a href=&#34;https://www.thedailystar.net/todays-news&#34;&gt;Latest News&lt;/a&gt; all news will be scraped and the data would be in a dictionary(which will be returned). By using the dictionary user will get a chance to select a news. The selected news will go through &lt;code&gt;get_news(args)&lt;/code&gt; and it will use BeautifulSoup4 to scrape headline and the whole news from the website. Finally &lt;code&gt;show_news(args)&lt;/code&gt; will modify the headline and news paragraph. The modification will effect the size of text per line subject to the height and weight of the terminal screen. At the end of the program the curses module will call the main function inside curses.wrapper().&lt;/p&gt;
+</description> 
+    </item>
+    
+    <item>
+      <title>Such a Long Time</title>
+      <link>https://8amiul.github.io/posts/oct-26/such-a-long-time/</link>
+      <pubDate>Sat, 17 Oct 2026 00:12:50 +0600</pubDate>
+      
+      <guid>https://8amiul.github.io/posts/oct-26/such-a-long-time/</guid>
+      <description>&lt;p&gt;Hello! As you can see, I am back again, writing on my site. Ah, I haven&amp;rsquo;t updated it and it has been idk maybe 6 months? I just didn&amp;rsquo;t feel like writing about the stuff I was doing. A lot&amp;hellip; lot of things have happened. This few months were a something new which I&amp;rsquo;ve never done before. I got in to a university. Now I&amp;rsquo;ve become a first year electrical engineering student at AUST. I&amp;rsquo;ve got new friends, new people around me, new goals and finally a new way of living life&lt;/p&gt;
+&lt;p&gt;I always wanted to do something with computers. I had the chance to take it but then I came up with a new plan and chose this subject. I actually am doing well, at least for now. For the last few months I&amp;rsquo;ve involved myself in the most productive stuff that my passion follows. However, now it seems overwhelming. I don&amp;rsquo;t want to be jack of all trades and master of none. Isn&amp;rsquo;t it better to be jack of all trades and master of one? I think so. Let&amp;rsquo;s see where I head towards next.&lt;/p&gt;
+&lt;p&gt;By the way, I am writing thin on the ThinkPad that I bought. It is ThinkPad L14. I always wanted to buy a used ThinkPad because it is so freaking cool. No other laptops match the vibe of it. It feels nice to write stuff on it.&lt;/p&gt;
+&lt;p&gt;I actually don&amp;rsquo;t know what to right. I used to write stuff once now I just don&amp;rsquo;t Currently, I have a lot of topics to write about. But, where can I find the energy? Oh, yeah.. I am not the same guy anymore. I have changed myself a lot. I had to change a lot of things and had to accept it. I think it is for the best.&lt;/p&gt;
+&lt;p&gt;Let us see where life takes me to! I don&amp;rsquo;t know when I will write again. So if there is something anyone wants to know then, just email me or just find me on instagram.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;mailto:8amiul@gmail.com&#34;&gt;8amiul@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://instagram.com/8amiul&#34;&gt;@8amiul&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description> 
     </item>
     
