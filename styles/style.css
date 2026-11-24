@@ -11,7 +11,8 @@
 
 @font-face {
     font-family: "BlogPostFont1";
-    src: url("/fonts/SortsMillGoudy.ttf") format("truetype");
+    /* src: url("/fonts/SortsMillGoudy.ttf") format("truetype"); */
+    src: url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
 }
 
 @font-face {
